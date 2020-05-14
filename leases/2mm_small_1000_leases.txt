@@ -1,0 +1,424 @@
+Start to init hits and costs
+Finished to init hits and costs
+Ref 0000082c RI 2 CNT 9
+Ref 82c RISETSIZE 1
+Ref 00000838 RI 5 CNT 4
+Ref 838 RISETSIZE 1
+Ref 00000858 RI 2 CNT 94
+Ref 858 RISETSIZE 1
+Ref 00000864 RI 4 CNT 84
+Ref 864 RISETSIZE 1
+Ref 0000086c RI 2 CNT 91
+Ref 86c RISETSIZE 1
+Ref 00000878 RI d CNT 85
+Ref 878 RISETSIZE 1
+Ref 0000087c RI 2 CNT 8b
+Ref 87c RISETSIZE 1
+Ref 00000888 RI 3 CNT 86
+Ref 888 RISETSIZE 1
+Ref 00000890 RI 3 CNT 96
+Ref 890 RISETSIZE 1
+Ref 0000089c RI 15 CNT 79
+Ref 0000089c RI 48e CNT 7
+Ref 0000089c RI 4b8 CNT 1
+Ref 0000089c RI 50c CNT 3
+Ref 0000089c RI 560 CNT 1
+Ref 0000089c RI 5b4 CNT 1
+Ref 89c RISETSIZE 6
+Ref 000008a0 RI 6 CNT 8e
+Ref 8a0 RISETSIZE 1
+Ref 000008a8 RI 1 CNT 86
+Ref 8a8 RISETSIZE 1
+Ref 000008b4 RI 1 CNT 8b
+Ref 8b4 RISETSIZE 1
+Ref 000008bc RI 2 CNT 89
+Ref 8bc RISETSIZE 1
+Ref 000008c8 RI 5c9 CNT 87
+Ref 000008c8 RI 5e5 CNT 2
+Ref 8c8 RISETSIZE 2
+Ref 000008d0 RI 2 CNT 8f
+Ref 8d0 RISETSIZE 1
+Ref 000008dc RI 6 CNT 8d
+Ref 8dc RISETSIZE 1
+Ref 000008e8 RI 2 CNT 8d
+Ref 8e8 RISETSIZE 1
+Ref 000008f4 RI 8 CNT 88
+Ref 8f4 RISETSIZE 1
+Ref 000008f8 RI 1 CNT 8f
+Ref 8f8 RISETSIZE 1
+Ref 00000900 RI 1 CNT 8d
+Ref 900 RISETSIZE 1
+Ref 00000904 RI 2 CNT 96
+Ref 904 RISETSIZE 1
+Ref 00000908 RI 2 CNT 8d
+Ref 908 RISETSIZE 1
+Ref 00000950 RI 1 CNT 4
+Ref 950 RISETSIZE 1
+Ref 00000968 RI 1 CNT 3
+Ref 968 RISETSIZE 1
+Ref 00000970 RI 2 CNT 3
+Ref 970 RISETSIZE 1
+Ref 0000097c RI 5 CNT 3
+Ref 97c RISETSIZE 1
+Ref 00000980 RI 1 CNT 3
+Ref 980 RISETSIZE 1
+Ref 00000998 RI 2 CNT 3
+Ref 998 RISETSIZE 1
+Ref 000009a0 RI 5 CNT 3
+Ref 9a0 RISETSIZE 1
+Ref 000009a8 RI 2 CNT 3
+Ref 9a8 RISETSIZE 1
+Ref 000009b4 RI 7 CNT 3
+Ref 9b4 RISETSIZE 1
+Ref 000009b8 RI 1 CNT 3
+Ref 9b8 RISETSIZE 1
+Ref 000009c0 RI 1 CNT a0
+Ref 9c0 RISETSIZE 1
+Ref 000009d8 RI 1 CNT a0
+Ref 9d8 RISETSIZE 1
+Ref 000009e0 RI 2 CNT a0
+Ref 9e0 RISETSIZE 1
+Ref 000009ec RI c CNT a0
+Ref 9ec RISETSIZE 1
+Ref 000009f0 RI 2 CNT a0
+Ref 9f0 RISETSIZE 1
+Ref 000009fc RI e CNT a0
+Ref 9fc RISETSIZE 1
+Ref 00000a04 RI 2 CNT a0
+Ref a04 RISETSIZE 1
+Ref 00000a10 RI 14 CNT 93
+Ref 00000a10 RI 2cc CNT 6
+Ref 00000a10 RI 2f4 CNT 3
+Ref 00000a10 RI 3bc CNT 4
+Ref a10 RISETSIZE 4
+Ref 00000a14 RI 1 CNT a0
+Ref a14 RISETSIZE 1
+Ref 00000a2c RI 1 CNT a0
+Ref a2c RISETSIZE 1
+Ref 00000a34 RI 2 CNT a0
+Ref a34 RISETSIZE 1
+Ref 00000a40 RI 3f8 CNT 96
+Ref 00000a40 RI 101ff CNT 2
+Ref a40 RISETSIZE 2
+Ref 00000a48 RI 1 CNT a0
+Ref a48 RISETSIZE 1
+Ref 00000a60 RI 1 CNT a0
+Ref a60 RISETSIZE 1
+Ref 00000a6c RI 2 CNT a0
+Ref a6c RISETSIZE 1
+Ref 00000a78 RI 8 CNT 9d
+Ref 00000a78 RI c CNT 3
+Ref a78 RISETSIZE 2
+Ref 00000a7c RI 1 CNT a0
+Ref a7c RISETSIZE 1
+Ref 00000a84 RI 1 CNT a1
+Ref a84 RISETSIZE 1
+Ref 00000a88 RI 2 CNT a3
+Ref a88 RISETSIZE 1
+Ref 00000a8c RI 4 CNT 4
+Ref 00000a8c RI 6 CNT a0
+Ref a8c RISETSIZE 2
+Ref 00000a94 RI 1 CNT 3
+Ref a94 RISETSIZE 1
+Ref 00000a9c RI 1 CNT 3
+Ref a9c RISETSIZE 1
+Ref 00000aa0 RI 2 CNT 3
+Ref aa0 RISETSIZE 1
+Ref 00000aa4 RI 7 CNT 4
+Ref aa4 RISETSIZE 1
+Average RISETSIZE for each reference 1.21053
+refT 6212999 cache size 16 sample distance 1002 targetCost 99209
+Dump lease assignement procedure
+Assign lease 1 to ref 000008a8 avg cache size 2.15677e-05 miss ratio 0.999978
+totalCost 86
+Assign lease 1 to ref 000008b4 avg cache size 4.39401e-05 miss ratio 0.999956
+totalCost 111
+Assign lease 1 to ref 000008f8 avg cache size 6.69564e-05 miss ratio 0.999933
+totalCost 1a0
+Assign lease 1 to ref 00000900 avg cache size 8.96507e-05 miss ratio 0.99991
+totalCost 22d
+Assign lease 1 to ref 00000950 avg cache size 9.02946e-05 miss ratio 0.99991
+totalCost 231
+Assign lease 1 to ref 00000968 avg cache size 9.07774e-05 miss ratio 0.999909
+totalCost 234
+Assign lease 1 to ref 00000980 avg cache size 9.12603e-05 miss ratio 0.999909
+totalCost 237
+Assign lease 1 to ref 000009b8 avg cache size 9.17431e-05 miss ratio 0.999908
+totalCost 23a
+Assign lease 1 to ref 000009c0 avg cache size 0.000117496 miss ratio 0.999883
+totalCost 2da
+Assign lease 1 to ref 000009d8 avg cache size 0.000143248 miss ratio 0.999857
+totalCost 37a
+Assign lease 1 to ref 00000a14 avg cache size 0.000169001 miss ratio 0.999831
+totalCost 41a
+Assign lease 1 to ref 00000a2c avg cache size 0.000194753 miss ratio 0.999805
+totalCost 4ba
+Assign lease 1 to ref 00000a48 avg cache size 0.000220505 miss ratio 0.999779
+totalCost 55a
+Assign lease 1 to ref 00000a60 avg cache size 0.000246258 miss ratio 0.999754
+totalCost 5fa
+Assign lease 1 to ref 00000a7c avg cache size 0.00027201 miss ratio 0.999728
+totalCost 69a
+Assign lease 1 to ref 00000a84 avg cache size 0.000297924 miss ratio 0.999702
+totalCost 73b
+Assign lease 1 to ref 00000a94 avg cache size 0.000298407 miss ratio 0.999702
+totalCost 73e
+Assign lease 1 to ref 00000a9c avg cache size 0.000298889 miss ratio 0.999701
+totalCost 741
+Assign lease 2 to ref 0000082c avg cache size 0.000301787 miss ratio 0.9997
+totalCost 753
+Assign lease 2 to ref 00000858 avg cache size 0.000349429 miss ratio 0.999676
+totalCost 87b
+Assign lease 2 to ref 0000086c avg cache size 0.000396105 miss ratio 0.999653
+totalCost 99d
+Assign lease 2 to ref 0000087c avg cache size 0.00044085 miss ratio 0.99963
+totalCost ab3
+Assign lease 2 to ref 000008bc avg cache size 0.000484951 miss ratio 0.999608
+totalCost bc5
+Assign lease 2 to ref 000008d0 avg cache size 0.000530984 miss ratio 0.999585
+totalCost ce3
+Assign lease 2 to ref 000008e8 avg cache size 0.000576372 miss ratio 0.999562
+totalCost dfd
+Assign lease 2 to ref 00000904 avg cache size 0.000624658 miss ratio 0.999538
+totalCost f29
+Assign lease 2 to ref 00000908 avg cache size 0.000670047 miss ratio 0.999516
+totalCost 1043
+Assign lease 2 to ref 00000970 avg cache size 0.000671013 miss ratio 0.999515
+totalCost 1049
+Assign lease 2 to ref 00000998 avg cache size 0.000671978 miss ratio 0.999515
+totalCost 104f
+Assign lease 2 to ref 000009a8 avg cache size 0.000672944 miss ratio 0.999514
+totalCost 1055
+Assign lease 2 to ref 000009e0 avg cache size 0.000724449 miss ratio 0.999488
+totalCost 1195
+Assign lease 2 to ref 000009f0 avg cache size 0.000775954 miss ratio 0.999463
+totalCost 12d5
+Assign lease 2 to ref 00000a04 avg cache size 0.000827459 miss ratio 0.999437
+totalCost 1415
+Assign lease 2 to ref 00000a34 avg cache size 0.000878964 miss ratio 0.999411
+totalCost 1555
+Assign lease 2 to ref 00000a6c avg cache size 0.000930469 miss ratio 0.999385
+totalCost 1695
+Assign lease 2 to ref 00000a88 avg cache size 0.000982939 miss ratio 0.999359
+totalCost 17db
+Assign lease 2 to ref 00000aa0 avg cache size 0.000983905 miss ratio 0.999359
+totalCost 17e1
+Assign lease 3 to ref 00000888 avg cache size 0.00104861 miss ratio 0.999337
+totalCost 1973
+Assign lease 3 to ref 00000890 avg cache size 0.00112104 miss ratio 0.999313
+totalCost 1b35
+Assign lease 4 to ref 00000864 avg cache size 0.00120602 miss ratio 0.999292
+totalCost 1d45
+Assign lease 5 to ref 00000838 avg cache size 0.00120924 miss ratio 0.999291
+totalCost 1d59
+Assign lease 5 to ref 0000097c avg cache size 0.00121165 miss ratio 0.999291
+totalCost 1d68
+Assign lease 5 to ref 000009a0 avg cache size 0.00121407 miss ratio 0.99929
+totalCost 1d77
+Assign lease 6 to ref 00000a8c avg cache size 0.00137116 miss ratio 0.999264
+totalCost 2147
+Assign lease 6 to ref 000008a0 avg cache size 0.00150829 miss ratio 0.999241
+totalCost 249b
+Assign lease 6 to ref 000008dc avg cache size 0.00164446 miss ratio 0.999218
+totalCost 27e9
+Assign lease 7 to ref 000009b4 avg cache size 0.00164784 miss ratio 0.999218
+totalCost 27fe
+Assign lease 7 to ref 00000aa4 avg cache size 0.00165234 miss ratio 0.999217
+totalCost 281a
+Assign lease 8 to ref 000008f4 avg cache size 0.00182746 miss ratio 0.999195
+totalCost 2c5a
+Assign lease c to ref 00000a78 avg cache size 0.00203541 miss ratio 0.999169
+totalCost 3166
+Assign lease c to ref 000009ec avg cache size 0.00234444 miss ratio 0.999144
+totalCost 38e6
+Assign lease d to ref 00000878 avg cache size 0.00262273 miss ratio 0.999122
+totalCost 3fa7
+Assign lease e to ref 000009fc avg cache size 0.00298326 miss ratio 0.999096
+totalCost 4867
+Assign lease 14 to ref 00000a10 avg cache size 0.00349831 miss ratio 0.999073
+totalCost 54e7
+Assign lease 15 to ref 0000089c avg cache size 0.00395123 miss ratio 0.999053
+totalCost 5fe5
+Assign lease 3bc to ref 00000a10 avg cache size 0.00558136 miss ratio 0.999051
+totalCost 8775
+Assign lease 3f8 to ref 00000a40 with percentage 0.589895
+             0 to ref 00000a40 with percentage 0.410105
+ avg cache size 0.015968 miss ratio 0.999027
+totalCost 2e2b5
+finished dumping the assignment procedure
+Dump single leases (last one may be dual)
+0000082c 2
+00000838 5
+00000858 2
+00000864 4
+0000086c 2
+00000878 d
+0000087c 2
+00000888 3
+00000890 3
+0000089c 15
+000008a0 6
+000008a8 1
+000008b4 1
+000008bc 2
+000008c8 0
+000008d0 2
+000008dc 6
+000008e8 2
+000008f4 8
+000008f8 1
+00000900 1
+00000904 2
+00000908 2
+00000950 1
+00000968 1
+00000970 2
+0000097c 5
+00000980 1
+00000998 2
+000009a0 5
+000009a8 2
+000009b4 7
+000009b8 1
+000009c0 1
+000009d8 1
+000009e0 2
+000009ec c
+000009f0 2
+000009fc e
+00000a04 2
+00000a10 3bc
+00000a14 1
+00000a2c 1
+00000a34 2
+00000a40 3f8 percentage 0.410105
+00000a40 0 percentage 0.589895
+00000a48 1
+00000a60 1
+00000a6c 2
+00000a78 c
+00000a7c 1
+00000a84 1
+00000a88 2
+00000a8c 6
+00000a94 1
+00000a9c 1
+00000aa0 2
+00000aa4 7
+
+Dump dual leases
+0000082c 2 percentage 1
+0000082c 2 percentage 0
+00000838 5 percentage 1
+00000838 5 percentage 0
+00000858 2 percentage 1
+00000858 2 percentage 0
+00000864 4 percentage 1
+00000864 4 percentage 0
+0000086c 2 percentage 1
+0000086c 2 percentage 0
+00000878 d percentage 1
+00000878 d percentage 0
+0000087c 2 percentage 1
+0000087c 2 percentage 0
+00000888 3 percentage 1
+00000888 3 percentage 0
+00000890 3 percentage 1
+00000890 3 percentage 0
+0000089c 0 percentage 0
+0000089c 15 percentage 1
+000008a0 6 percentage 1
+000008a0 6 percentage 0
+000008a8 1 percentage 1
+000008a8 1 percentage 0
+000008b4 1 percentage 1
+000008b4 1 percentage 0
+000008bc 2 percentage 1
+000008bc 2 percentage 0
+000008c8 0 percentage 0
+000008c8 0 percentage 1
+000008d0 2 percentage 1
+000008d0 2 percentage 0
+000008dc 6 percentage 1
+000008dc 6 percentage 0
+000008e8 2 percentage 1
+000008e8 2 percentage 0
+000008f4 8 percentage 1
+000008f4 8 percentage 0
+000008f8 1 percentage 1
+000008f8 1 percentage 0
+00000900 1 percentage 1
+00000900 1 percentage 0
+00000904 2 percentage 1
+00000904 2 percentage 0
+00000908 2 percentage 1
+00000908 2 percentage 0
+00000950 1 percentage 1
+00000950 1 percentage 0
+00000968 1 percentage 1
+00000968 1 percentage 0
+00000970 2 percentage 1
+00000970 2 percentage 0
+0000097c 5 percentage 1
+0000097c 5 percentage 0
+00000980 1 percentage 1
+00000980 1 percentage 0
+00000998 2 percentage 1
+00000998 2 percentage 0
+000009a0 5 percentage 1
+000009a0 5 percentage 0
+000009a8 2 percentage 1
+000009a8 2 percentage 0
+000009b4 7 percentage 1
+000009b4 7 percentage 0
+000009b8 1 percentage 1
+000009b8 1 percentage 0
+000009c0 1 percentage 1
+000009c0 1 percentage 0
+000009d8 1 percentage 1
+000009d8 1 percentage 0
+000009e0 2 percentage 1
+000009e0 2 percentage 0
+000009ec c percentage 1
+000009ec c percentage 0
+000009f0 2 percentage 1
+000009f0 2 percentage 0
+000009fc e percentage 1
+000009fc e percentage 0
+00000a04 2 percentage 1
+00000a04 2 percentage 0
+00000a10 0 percentage 0
+00000a10 3bc percentage 1
+00000a14 1 percentage 1
+00000a14 1 percentage 0
+00000a2c 1 percentage 1
+00000a2c 1 percentage 0
+00000a34 2 percentage 1
+00000a34 2 percentage 0
+00000a40 0 percentage 0
+00000a40 3f8 percentage 1
+00000a48 1 percentage 1
+00000a48 1 percentage 0
+00000a60 1 percentage 1
+00000a60 1 percentage 0
+00000a6c 2 percentage 1
+00000a6c 2 percentage 0
+00000a78 c percentage 1
+00000a78 c percentage 0
+00000a7c 1 percentage 1
+00000a7c 1 percentage 0
+00000a84 1 percentage 1
+00000a84 1 percentage 0
+00000a88 2 percentage 1
+00000a88 2 percentage 0
+00000a8c 6 percentage 1
+00000a8c 6 percentage 0
+00000a94 1 percentage 1
+00000a94 1 percentage 0
+00000a9c 1 percentage 1
+00000a9c 1 percentage 0
+00000aa0 2 percentage 1
+00000aa0 2 percentage 0
+00000aa4 7 percentage 1
+00000aa4 7 percentage 0
+

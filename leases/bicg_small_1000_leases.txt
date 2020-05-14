@@ -1,0 +1,33 @@
+Start to init hits and costs
+Finished to init hits and costs
+Ref 000007ec RI a CNT 91
+Ref 7ec RISETSIZE 1
+Ref 00000840 RI 14 CNT 85
+Ref 00000840 RI 1e CNT 1
+Ref 840 RISETSIZE 2
+Ref 00000884 RI 1 CNT 91
+Ref 884 RISETSIZE 1
+Average RISETSIZE for each reference 1.33333
+refT 432999 cache size 16 sample distance 1021 targetCost 6785
+Dump lease assignement procedure
+Assign lease 1 to ref 00000884 avg cache size 0.000334874 miss ratio 0.999665
+totalCost 91
+Assign lease a to ref 000007ec avg cache size 0.00368361 miss ratio 0.99933
+totalCost 63b
+Assign lease 1e to ref 00000840 avg cache size 0.0098961 miss ratio 0.999021
+totalCost 10bd
+finished dumping the assignment procedure
+Dump single leases (last one may be dual)
+000007ec a
+00000840 1e percentage 1
+00000840 0 percentage 0
+00000884 1
+
+Dump dual leases
+000007ec a percentage 1
+000007ec a percentage 0
+00000840 0 percentage 0
+00000840 1e percentage 1
+00000884 1 percentage 1
+00000884 1 percentage 0
+
