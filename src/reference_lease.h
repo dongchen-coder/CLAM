@@ -300,6 +300,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
             
 			// Dump entire lease assignment procedure
 			if (totalCost > targetCost) {
+
 				lastLeasePercentage = 1 - double (totalCost - targetCost) / (newLease - Lease[ref_to_assign]) / (*RI[ref_to_assign])[newLease];
 				oldLeaseForLast = Lease[ref_to_assign];
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
@@ -309,6 +310,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 
 				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
 				totalCost = targetCost;
+
 			} else {
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
             	cout << " avg cache size " << double(totalCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
