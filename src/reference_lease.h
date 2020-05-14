@@ -308,6 +308,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 					 << " with percentage " << lastLeasePercentage << endl;
 
 				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
+				totalCost = targetCost;
 			} else {
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
             	cout << " avg cache size " << double(totalCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
@@ -318,8 +319,8 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 			break;
 		}
         
-		cout << "totalCost " << totalCost << endl;
-        if (totalCost > targetCost && targetCost != 0) {
+		cout << "totalCost " << dec << totalCost << " target cost " << targetCost  << endl;
+        if (totalCost >= targetCost && targetCost != 0) {
             break;
         }
 	}
