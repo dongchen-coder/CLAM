@@ -116,7 +116,7 @@ void dumpRI() {
         std::set<uint64_t> riset;
         for (map<uint64_t, uint64_t>::iterator ri_it = (*(ref_it->second)).begin(), ri_eit = (*(ref_it->second)).end(); ri_it != ri_eit; ++ri_it) {
             cout << "Ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_it->first;
-			cout << " RI " << ri_it->first << " CNT " << ri_it->second << endl;
+			cout << " RI " << dec << ri_it->first << " CNT " << ri_it->second << endl;
             riset.insert(ri_it->first);
         }
         cout << "Ref " << ref_it->first << " RISETSIZE " << riset.size() << endl;
@@ -184,6 +184,7 @@ void initHitsCosts() {
 		uint64_t pre_lease = 0;
 		uint64_t pre_cost = 0;
 		for (map<uint64_t, uint64_t>::iterator ri_it = (*(ref_it->second)).begin(), ri_eit = (*(ref_it->second)).end(); ri_it != ri_eit; ++ri_it) {
+			//cout << ri_it->first << " ";
 			total_hits += ri_it->second;
 			(*hits[ref_it->first])[ri_it->first] = total_hits;
 
@@ -192,6 +193,7 @@ void initHitsCosts() {
 			pre_cost = (*costs[ref_it->first])[ri_it->first];
 			pre_lease = ri_it->first;
 		}
+		//cout << endl;
 	}
 
 }
@@ -300,13 +302,42 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
             
 			// Dump entire lease assignment procedure
 			if (totalCost > targetCost) {
+				/*
+				cout << "totalCost " << totalCost << endl;
+				cout << "targetCost " << targetCost << endl;
+				cout << "newLease " << newLease << endl;
+				cout << "Lease[ref_to_assign] " << Lease[ref_to_assign] << endl; 
+				cout << totalCost - targetCost << " " << newLease - Lease[ref_to_assign] << " " << (*RI[ref_to_assign])[newLease] << endl;
+				*/
+				uint64_t numOfRITolength = 0;
+				uint64_t numOfRILeqOldLease = 0;
+				for(map<uint64_t, uint64_t>::iterator ri_it = RI[ref_to_assign]->begin(), ri_eit = RI[ref_to_assign]->end(); ri_it != ri_eit; ++ri_it) {
+					if (ri_it->first > Lease[ref_to_assign] && ri_it->first <= newLease) {
+						numOfRITolength += ri_it->second;
+					} 
+					if (ri_it->first <= Lease[ref_to_assign]) {
+						numOfRILeqOldLease += ri_it->second;
+					}
+				}
+				if (numOfRITolength == 0) {
+					cout << "Error: numOfRITolength is zero" << endl;
+				} else {
+					cout << "numOfRITolength " << numOfRITolength << endl;
+				}
+				
+				// only this percentage of newLease assigned to the right block can be realized
+				// lastLeasePercentage = 1 - double (totalCost - targetCost) / (newLease - Lease[ref_to_assign]) / numOfRITolength;
+				
+				// percentage based on hit
+				double numOfRITolength_withinBudget = (double) numOfRITolength - double (totalCost - targetCost) / (newLease - Lease[ref_to_assign]);
+				lastLeasePercentage =  numOfRITolength_withinBudget / (numOfRITolength_withinBudget + numOfRILeqOldLease);
 
-				lastLeasePercentage = 1 - double (totalCost - targetCost) / (newLease - Lease[ref_to_assign]) / (*RI[ref_to_assign])[newLease];
 				oldLeaseForLast = Lease[ref_to_assign];
+				
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
-				     << " with percentage " << 1 - lastLeasePercentage << endl;
+				     << " with percentage " << lastLeasePercentage << endl;
                 cout << "             " << Lease[ref_to_assign]   << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
-					 << " with percentage " << lastLeasePercentage << endl;
+					 << " with percentage " << 1 - lastLeasePercentage << endl;
 
 				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
 				totalCost = targetCost;

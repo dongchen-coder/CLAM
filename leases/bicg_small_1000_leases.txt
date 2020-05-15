@@ -1,12 +1,12 @@
 Start to init hits and costs
 Finished to init hits and costs
-Ref 000007ec RI a CNT 91
-Ref 7ec RISETSIZE 1
-Ref 00000840 RI 14 CNT 85
-Ref 00000840 RI 1e CNT 1
-Ref 840 RISETSIZE 2
-Ref 00000884 RI 1 CNT 91
-Ref 884 RISETSIZE 1
+Ref 000007ec RI 10 CNT 145
+Ref 2028 RISETSIZE 1
+Ref 00000840 RI 20 CNT 133
+Ref 00000840 RI 30 CNT 1
+Ref 2112 RISETSIZE 2
+Ref 00000884 RI 1 CNT 145
+Ref 2180 RISETSIZE 1
 Average RISETSIZE for each reference 1.33333
 refT 432999 cache size 16 sample distance 1021 targetCost 6785
 Dump lease assignement procedure
