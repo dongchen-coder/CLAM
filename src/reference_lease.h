@@ -330,7 +330,11 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 				
 				// percentage based on hit
 				double numOfRITolength_withinBudget = (double) numOfRITolength - double (totalCost - targetCost) / (newLease - Lease[ref_to_assign]);
-				lastLeasePercentage =  numOfRITolength_withinBudget / (numOfRITolength_withinBudget + numOfRILeqOldLease);
+				if (numOfRILeqOldLease == 0) {
+					lastLeasePercentage = numOfRITolength_withinBudget / (*RI[ref_to_assign])[newLease];
+				} else {
+					lastLeasePercentage =  numOfRITolength_withinBudget / (numOfRITolength_withinBudget + numOfRILeqOldLease);
+				}
 
 				oldLeaseForLast = Lease[ref_to_assign];
 				
