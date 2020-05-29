@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <limits>
 #include "reference_lease.h"
 using namespace std;
 
@@ -19,7 +20,15 @@ void process(string fileName, int cacheSize) {
         ifs.get();
 		ifs >> dec >> time;
 		ifs.get();
-		sample_count++;
+		if (ifs.eof()) {
+			break;
+		}
+
+		if ( (ri & (1 << 31)) != 0) {
+			ri = numeric_limits<uint64_t>::max();
+        } else {
+			sample_count++;
+		}
 
         // Accumulate RI to hist
         if (RI.find(ip) != RI.end()) {
@@ -32,8 +41,8 @@ void process(string fileName, int cacheSize) {
             RI[ip] = new map<uint64_t, uint64_t>;
             (*RI[ip])[ri] = 1;
         }
+
     	refT = time;
-		time -= ri;
 	}
     ifs.close();
     

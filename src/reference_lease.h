@@ -1,6 +1,7 @@
 #include <iostream>
 #include <set>
 #include <map>
+#include <limits>
 using namespace std;
 
 #define CLS 64
@@ -185,8 +186,10 @@ void initHitsCosts() {
 		uint64_t pre_cost = 0;
 		for (map<uint64_t, uint64_t>::iterator ri_it = (*(ref_it->second)).begin(), ri_eit = (*(ref_it->second)).end(); ri_it != ri_eit; ++ri_it) {
 			//cout << ri_it->first << " ";
-			total_hits += ri_it->second;
-			(*hits[ref_it->first])[ri_it->first] = total_hits;
+			if (ri_it->first != numeric_limits<uint64_t>::max()) {
+				total_hits += ri_it->second;
+			}
+			(*hits[ref_it->first])[ri_it->first] = total_hits;			
 
 			(*costs[ref_it->first])[ri_it->first] =  pre_cost + (ri_it->first - pre_lease) * total_cnt;
 			total_cnt -= ri_it->second;
@@ -238,6 +241,9 @@ void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease) {
 		for(map<uint64_t, uint64_t>::iterator ri_it = (*(ref_it->second)).begin(), ri_eit = (*(ref_it->second)).end(); ri_it != ri_eit; ++ri_it) {
 			//cout << "compare ri " << ri_it->first << " with lease " << Lease[ref_it->first] << " for reference " << ref_it->first << endl;
 			if (ri_it->first > Lease[ref_it->first]) {
+				if (ri_it->first == numeric_limits<uint64_t>::max()) {
+					continue;
+				}
 				double ppuc = getPPUC(ref_it->first, Lease[ref_it->first], ri_it->first);
 				//cout << "  compare ppuc " << ppuc << " with max PPUC " << maxPPUC << endl;
 				if (ppuc > maxPPUC) {
@@ -343,12 +349,12 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
                 cout << "             " << Lease[ref_to_assign]   << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
 					 << " with percentage " << 1 - lastLeasePercentage << endl;
 
-				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
+				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / (N / sample_distance) << endl;
 				totalCost = targetCost;
 
 			} else {
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
-            	cout << " avg cache size " << double(totalCost) / N  << " miss ratio " << 1 - double(totalHits) / N << endl;
+            	cout << " avg cache size " << double(totalCost) / N  << " miss ratio " << 1 - double(totalHits) / (N / sample_distance) << endl;
 			}
 			laseRefAssigned = ref_to_assign;
 			Lease[ref_to_assign] = newLease;

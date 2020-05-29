@@ -89,10 +89,11 @@ Ref 00000788 RI 648715 CNT 1
 Ref 00000788 RI 648795 CNT 1
 Ref 00000788 RI 648956 CNT 85
 Ref 00000788 RI 648963 CNT 1195
-Ref 1928 RISETSIZE 29
+Ref 00000788 RI 18446744073709551615 CNT 8
+Ref 1928 RISETSIZE 30
 Ref 0000078c RI 1 CNT 22657
 Ref 1932 RISETSIZE 1
-Ref 00000794 RI 1 CNT 22724
+Ref 00000794 RI 1 CNT 22723
 Ref 1940 RISETSIZE 1
 Ref 00000798 RI 1 CNT 22762
 Ref 1944 RISETSIZE 1
@@ -112,87 +113,87 @@ Ref 000007c4 RI 1 CNT 1
 Ref 1988 RISETSIZE 1
 Ref 000007c8 RI 1 CNT 2
 Ref 1992 RISETSIZE 1
-Average RISETSIZE for each reference 3
-refT 116868018 cache size 128 sample distance 257 targetCost 58206639
+Average RISETSIZE for each reference 3.03571
+refT 116868071 cache size 128 sample distance 257 targetCost 58206665
 Dump lease assignement procedure
-Assign lease 1 to ref 000006e4 avg cache size 9.58346e-07 miss ratio 1
-totalCost 112 target cost 58206639
-Assign lease 1 to ref 000006ec avg cache size 0.000195426 miss ratio 0.999999
-totalCost 22839 target cost 58206639
-Assign lease 1 to ref 000006f8 avg cache size 0.000389431 miss ratio 0.999998
-totalCost 45512 target cost 58206639
-Assign lease 1 to ref 00000710 avg cache size 0.000583744 miss ratio 0.999998
-totalCost 68221 target cost 58206639
-Assign lease 1 to ref 0000071c avg cache size 0.000778827 miss ratio 0.999997
-totalCost 91020 target cost 58206639
-Assign lease 1 to ref 00000738 avg cache size 0.000972986 miss ratio 0.999996
-totalCost 113711 target cost 58206639
-Assign lease 1 to ref 00000744 avg cache size 0.00116826 miss ratio 0.999995
-totalCost 136532 target cost 58206639
-Assign lease 1 to ref 0000075c avg cache size 0.00136211 miss ratio 0.999995
-totalCost 159187 target cost 58206639
-Assign lease 1 to ref 00000768 avg cache size 0.00155693 miss ratio 0.999994
-totalCost 181955 target cost 58206639
-Assign lease 1 to ref 0000078c avg cache size 0.0017508 miss ratio 0.999993
-totalCost 204612 target cost 58206639
-Assign lease 1 to ref 00000794 avg cache size 0.00194524 miss ratio 0.999992
-totalCost 227336 target cost 58206639
-Assign lease 1 to ref 00000798 avg cache size 0.00214 miss ratio 0.999992
-totalCost 250098 target cost 58206639
-Assign lease 1 to ref 0000079c avg cache size 0.00233551 miss ratio 0.999991
-totalCost 272947 target cost 58206639
-Assign lease 1 to ref 000007a4 avg cache size 0.00233663 miss ratio 0.999991
-totalCost 273077 target cost 58206639
-Assign lease 1 to ref 000007ac avg cache size 0.00233745 miss ratio 0.999991
-totalCost 273173 target cost 58206639
-Assign lease 1 to ref 000007b0 avg cache size 0.00233872 miss ratio 0.999991
-totalCost 273321 target cost 58206639
-Assign lease 1 to ref 000007b4 avg cache size 0.00233972 miss ratio 0.999991
-totalCost 273439 target cost 58206639
-Assign lease 1 to ref 000007bc avg cache size 0.00233973 miss ratio 0.999991
-totalCost 273440 target cost 58206639
-Assign lease 1 to ref 000007c4 avg cache size 0.00233974 miss ratio 0.999991
-totalCost 273441 target cost 58206639
-Assign lease 1 to ref 000007c8 avg cache size 0.00233976 miss ratio 0.999991
-totalCost 273443 target cost 58206639
-Assign lease 2 to ref 00000700 avg cache size 0.00272638 miss ratio 0.99999
-totalCost 318627 target cost 58206639
-Assign lease 2 to ref 00000724 avg cache size 0.00311352 miss ratio 0.999989
-totalCost 363871 target cost 58206639
-Assign lease 2 to ref 0000074c avg cache size 0.00350192 miss ratio 0.999989
-totalCost 409263 target cost 58206639
-Assign lease 2 to ref 0000077c avg cache size 0.00389112 miss ratio 0.999988
-totalCost 454747 target cost 58206639
-Assign lease 4 to ref 00000758 avg cache size 0.00466649 miss ratio 0.999987
-totalCost 545363 target cost 58206639
-Assign lease 16 to ref 00000788 avg cache size 0.0076305 miss ratio 0.999986
-totalCost 891761 target cost 58206639
-Assign lease 20 to ref 0000070c avg cache size 0.0113109 miss ratio 0.999986
-totalCost 1321877 target cost 58206639
-Assign lease 20 to ref 00000730 avg cache size 0.015158 miss ratio 0.999985
-totalCost 1771485 target cost 58206639
-Assign lease 23 to ref 00000788 avg cache size 0.0152427 miss ratio 0.999985
-totalCost 1781386 target cost 58206639
-Assign lease 3547 to ref 00000730 avg cache size 0.057312 miss ratio 0.999985
-totalCost 6697942 target cost 58206639
-Assign lease 21353 to ref 00000730 avg cache size 0.0585309 miss ratio 0.999985
-totalCost 6840390 target cost 58206639
-Assign lease 75458 to ref 00000730 avg cache size 0.0617716 miss ratio 0.999985
-totalCost 7219125 target cost 58206639
-Assign lease 573224 to ref 00000730 avg cache size 0.0812776 miss ratio 0.999985
-totalCost 9498749 target cost 58206639
+Assign lease 1 to ref 000006e4 avg cache size 9.58346e-07 miss ratio 0.999754
+totalCost 112 target cost 58206665
+Assign lease 1 to ref 000006ec avg cache size 0.000195425 miss ratio 0.949776
+totalCost 22839 target cost 58206665
+Assign lease 1 to ref 000006f8 avg cache size 0.000389431 miss ratio 0.899916
+totalCost 45512 target cost 58206665
+Assign lease 1 to ref 00000710 avg cache size 0.000583744 miss ratio 0.849978
+totalCost 68221 target cost 58206665
+Assign lease 1 to ref 0000071c avg cache size 0.000778827 miss ratio 0.799841
+totalCost 91020 target cost 58206665
+Assign lease 1 to ref 00000738 avg cache size 0.000972986 miss ratio 0.749942
+totalCost 113711 target cost 58206665
+Assign lease 1 to ref 00000744 avg cache size 0.00116826 miss ratio 0.699757
+totalCost 136532 target cost 58206665
+Assign lease 1 to ref 0000075c avg cache size 0.00136211 miss ratio 0.649938
+totalCost 159187 target cost 58206665
+Assign lease 1 to ref 00000768 avg cache size 0.00155693 miss ratio 0.599869
+totalCost 181955 target cost 58206665
+Assign lease 1 to ref 0000078c avg cache size 0.00175079 miss ratio 0.550045
+totalCost 204612 target cost 58206665
+Assign lease 1 to ref 00000794 avg cache size 0.00194523 miss ratio 0.500076
+totalCost 227335 target cost 58206665
+Assign lease 1 to ref 00000798 avg cache size 0.00213999 miss ratio 0.450021
+totalCost 250097 target cost 58206665
+Assign lease 1 to ref 0000079c avg cache size 0.00233551 miss ratio 0.399774
+totalCost 272946 target cost 58206665
+Assign lease 1 to ref 000007a4 avg cache size 0.00233662 miss ratio 0.399488
+totalCost 273076 target cost 58206665
+Assign lease 1 to ref 000007ac avg cache size 0.00233744 miss ratio 0.399277
+totalCost 273172 target cost 58206665
+Assign lease 1 to ref 000007b0 avg cache size 0.00233871 miss ratio 0.398952
+totalCost 273320 target cost 58206665
+Assign lease 1 to ref 000007b4 avg cache size 0.00233972 miss ratio 0.398692
+totalCost 273438 target cost 58206665
+Assign lease 1 to ref 000007bc avg cache size 0.00233972 miss ratio 0.39869
+totalCost 273439 target cost 58206665
+Assign lease 1 to ref 000007c4 avg cache size 0.00233973 miss ratio 0.398688
+totalCost 273440 target cost 58206665
+Assign lease 1 to ref 000007c8 avg cache size 0.00233975 miss ratio 0.398684
+totalCost 273442 target cost 58206665
+Assign lease 2 to ref 00000700 avg cache size 0.00272637 miss ratio 0.349002
+totalCost 318626 target cost 58206665
+Assign lease 2 to ref 00000724 avg cache size 0.00311351 miss ratio 0.299255
+totalCost 363870 target cost 58206665
+Assign lease 2 to ref 0000074c avg cache size 0.00350191 miss ratio 0.249345
+totalCost 409262 target cost 58206665
+Assign lease 2 to ref 0000077c avg cache size 0.00389111 miss ratio 0.199334
+totalCost 454746 target cost 58206665
+Assign lease 4 to ref 00000758 avg cache size 0.00466648 miss ratio 0.149517
+totalCost 545362 target cost 58206665
+Assign lease 16 to ref 00000788 avg cache size 0.00763158 miss ratio 0.102771
+totalCost 891888 target cost 58206665
+Assign lease 20 to ref 0000070c avg cache size 0.0113119 miss ratio 0.0532129
+totalCost 1322004 target cost 58206665
+Assign lease 20 to ref 00000730 avg cache size 0.0151591 miss ratio 0.0068215
+totalCost 1771612 target cost 58206665
+Assign lease 23 to ref 00000788 avg cache size 0.0152443 miss ratio 0.00659719
+totalCost 1781569 target cost 58206665
+Assign lease 3547 to ref 00000730 avg cache size 0.0573136 miss ratio 0.00334697
+totalCost 6698125 target cost 58206665
+Assign lease 21353 to ref 00000730 avg cache size 0.0585324 miss ratio 0.00334478
+totalCost 6840573 target cost 58206665
+Assign lease 75458 to ref 00000730 avg cache size 0.0617731 miss ratio 0.00334258
+totalCost 7219308 target cost 58206665
+Assign lease 573224 to ref 00000730 avg cache size 0.0812791 miss ratio 0.00332938
+totalCost 9498932 target cost 58206665
 numOfRITolength 152
-Assign lease 648095 to ref 0000070c with percentage 0.00342396
+Assign lease 648095 to ref 0000070c with percentage 0.00342394
              14 to ref 0000070c with percentage 0.996576
- avg cache size 0.498054 miss ratio 0.999985
-totalCost 58206639 target cost 58206639
+ avg cache size 0.498054 miss ratio 0.00299512
+totalCost 58206665 target cost 58206665
 finished dumping the assignment procedure
 Dump single leases (last one may be dual)
 000006e4 1
 000006ec 1
 000006f8 1
 00000700 2
-0000070c 9e39f percentage 0.00342396
+0000070c 9e39f percentage 0.00342394
 0000070c 14 percentage 0.996576
 00000710 1
 0000071c 1
@@ -251,8 +252,8 @@ Dump dual leases
 00000768 1 percentage 0
 0000077c 2 percentage 1
 0000077c 2 percentage 0
-00000788 17 percentage 0.942087
-00000788 17 percentage 0.0579128
+00000788 17 percentage 0.941755
+00000788 17 percentage 0.0582451
 0000078c 1 percentage 1
 0000078c 1 percentage 0
 00000794 1 percentage 1
