@@ -294,6 +294,8 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 	cout << "targetCost " << targetCost << endl;
 
 	cout << "Dump lease assignement procedure" << endl;
+	double finalAvgCacheSize = 0;
+	double finalMissRatio = 0;
 	while(true) {
 		bool finished = false;
 		uint64_t ref_to_assign;
@@ -305,7 +307,8 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 		if (finished == false) {
 			totalCost += (*costs[ref_to_assign])[newLease] - (*costs[ref_to_assign])[Lease[ref_to_assign]];
             totalHits += (*hits[ref_to_assign])[newLease] - (*hits[ref_to_assign])[Lease[ref_to_assign]];
-            
+   			uint64_t hitsIncreased = (*hits[ref_to_assign])[newLease] - (*hits[ref_to_assign])[Lease[ref_to_assign]];         
+
 			// Dump entire lease assignment procedure
 			if (totalCost > targetCost) {
 				/*
@@ -349,12 +352,18 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
                 cout << "             " << Lease[ref_to_assign]   << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
 					 << " with percentage " << 1 - lastLeasePercentage << endl;
 
-				cout << " avg cache size " << double(targetCost) / N  << " miss ratio " << 1 - double(totalHits) / (N / sample_distance) << endl;
+				cout << " avg cache size " << double(targetCost) / (double(N) / sample_distance)  << " miss ratio " << 1 - double(totalHits - hitsIncreased * (1 - lastLeasePercentage)) / (double(N) / sample_distance) << endl;
 				totalCost = targetCost;
+				
+				finalAvgCacheSize = double(targetCost) / (double (N) / sample_distance);
+				finalMissRatio = 1 - double(totalHits - hitsIncreased * (1 - lastLeasePercentage)) / (double(N) / sample_distance);			
 
 			} else {
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
-            	cout << " avg cache size " << double(totalCost) / N  << " miss ratio " << 1 - double(totalHits) / (N / sample_distance) << endl;
+            	cout << " avg cache size " << double(totalCost) / (double(N) / sample_distance)  << " miss ratio " << 1 - double(totalHits) / (double(N) / sample_distance) << endl;
+
+				finalAvgCacheSize = double(totalCost) / (double(N) / sample_distance);
+				finalMissRatio = 1 - double(totalHits) / (double(N) / sample_distance);
 			}
 			laseRefAssigned = ref_to_assign;
 			Lease[ref_to_assign] = newLease;
@@ -368,7 +377,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
         }
 	}
 	cout << "finished dumping the assignment procedure" << endl;
-
+	cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl; 
     /*
     double totalCost = 0;
     double totalHitRatio = 0;
