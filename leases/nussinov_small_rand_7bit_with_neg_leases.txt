@@ -2136,13 +2136,11 @@ Assign lease 202752 to ref 00000938 avg cache size 107.249 miss ratio 0.0134278
 totalCost 33601989 target cost 40103558
 Assign lease 299043 to ref 00000798 avg cache size 119.12 miss ratio 0.013348
 totalCost 37321367 target cost 40103558
-numOfRITolength 1123
-Assign lease 318157 to ref 00000904 with percentage 0.0357723
-             e0e to ref 00000904 with percentage 0.964228
- avg cache size 128 miss ratio 0.0132198
+Assign lease 318157 to ref 00000904 with percentage 0.0140285
+             e0e to ref 00000904 with percentage 0.985971
 totalCost 40103558 target cost 40103558
 finished dumping the assignment procedure
-the FINAL avg cache size 128 miss ratio 0.0132198
+the FINAL avg cache size 128 miss ratio 0.0132977
 Dump single leases (last one may be dual)
 00000604 1
 0000060c 1
@@ -2219,8 +2217,8 @@ Dump single leases (last one may be dual)
 000008e0 1
 000008f0 1
 000008f8 2
-00000904 4dacd percentage 0.0357723
-00000904 e0e percentage 0.964228
+00000904 4dacd percentage 1
+00000904 0 percentage 0
 0000090c 1
 00000918 1
 0000092c 2
