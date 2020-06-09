@@ -321,6 +321,8 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 				cout << totalCost - targetCost << " " << newLease - Lease[ref_to_assign] << " " << (*RI[ref_to_assign])[newLease] << endl;
 				*/
 				
+				oldLeaseForLast = Lease[ref_to_assign];
+
 				lastLeasePercentage = double (targetCost - (totalCost - costIncreased)) / costIncreased;
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
                      << " with percentage " << lastLeasePercentage << endl;
