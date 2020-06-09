@@ -321,15 +321,15 @@ void OSL_ref(uint64_t CacheSize, uint64_t sample_distance) {
 				cout << totalCost - targetCost << " " << newLease - Lease[ref_to_assign] << " " << (*RI[ref_to_assign])[newLease] << endl;
 				*/
 				
-				double newLeasePercentage = double (targetCost - (totalCost - costIncreased)) / costIncreased;
+				lastLeasePercentage = double (targetCost - (totalCost - costIncreased)) / costIncreased;
 				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
-                     << " with percentage " << newLeasePercentage << endl;
+                     << " with percentage " << lastLeasePercentage << endl;
                 cout << "             " << Lease[ref_to_assign]   << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign 
-                     << " with percentage " << 1 - newLeasePercentage << endl;
+                     << " with percentage " << 1 - lastLeasePercentage << endl;
 				
-				totalCost -= costIncreased * (1-newLeasePercentage);				
+				totalCost -= costIncreased * (1-lastLeasePercentage);				
 				finalAvgCacheSize = double(totalCost) / (double (N) / sample_distance);
-				finalMissRatio = 1 - double(totalHits - hitsIncreased * (1 - newLeasePercentage)) / (double(N) / sample_distance);
+				finalMissRatio = 1 - double(totalHits - hitsIncreased * (1 - lastLeasePercentage)) / (double(N) / sample_distance);
 
 				/*
 				uint64_t numOfRITolength = 0;

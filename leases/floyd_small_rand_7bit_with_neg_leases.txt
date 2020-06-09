@@ -268,8 +268,8 @@ Dump single leases (last one may be dual)
 000006ec 1
 000006f8 1
 00000700 2
-0000070c 9e66f percentage 1
-0000070c 0 percentage 0
+0000070c 9e66f percentage 0.670692
+0000070c 0 percentage 0.329308
 00000710 1
 0000071c 1
 00000724 2
