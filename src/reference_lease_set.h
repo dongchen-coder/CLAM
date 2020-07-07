@@ -281,18 +281,22 @@ void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease) {
 // dump cache utilization for each set
 void dumpCacheUtilization(map<uint64_t, uint64_t> totalCostSet, uint64_t numOfSet, uint64_t targetCostSingleSet) {
 	cout << "******Cache status (each X/- means 1% occupy/empty) ******" << endl;
+    uint64_t occupied = 0;
+    uint64_t empty = 0;
     for (int i = 0; i < numOfSet; i++) {
 		cout << "Set " << setfill (' ') << setw(5) << i << ": ";
 		int utilization = 100 * (double(totalCostSet[i]) / targetCostSingleSet);
 		for (int i = 0; i < utilization; i++) {
 			cout << "X";
+            occupied++;
 		}
 		for (int i = utilization; i < 100; i++) {
 			cout << "-";
+            empty++;
 		}
 		cout << endl;
 	}
-	cout << "*********************" << endl;
+	cout << "******Overall utilization " << double(occupied) / (occupied + empty) << "***************" << endl;
 	return;
 }
 
@@ -426,7 +430,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 		cout << "total cost (single set) " << dec << maxCostSingleSet << " set ID " << maxCostSetId << " target cost (single set) " << targetCostSingleSet  << endl;
         dumpCacheUtilization(totalCostSet, numOfSet, targetCostSingleSet);
         
-        if (maxCostSingleSet >= targetCostSingleSet && targetCostSingleSet != 0) {
+        if ((maxCostSingleSet >= targetCostSingleSet || lastLeasePercentage != 1.0) && targetCostSingleSet != 0 ) {
             break;
         }
 	}
