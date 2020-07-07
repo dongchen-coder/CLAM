@@ -375,11 +375,27 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 				
 				oldLeaseForLast = Lease[ref_to_assign];
                 
-                lastLeasePercentage = double (targetCostSingleSet - (maxCostSingleSet - costsIncreased[maxCostSetId])) / costsIncreased[maxCostSetId];
+                map<uint64_t, double> lastLeasePercentagePerSet;
+                for (int i = 0; i < numOfSet; i++) {
+                    if (totalCostSet[i] > targetCostSingleSet) {
+                        lastLeasePercentagePerSet[i] = double (targetCostSingleSet - (totalCostSet[i] - costsIncreased[i])) / costsIncreased[i];
+                    } else {
+                        lastLeasePercentagePerSet[i] = 1;
+                    }
+                    if (lastLeasePercentagePerSet[i] < lastLeasePercentage) {
+                        maxCostSingleSet = totalCostSet[i];
+                        lastLeasePercentage = lastLeasePercentagePerSet[i];
+                        maxCostSetId = i;
+                    }
+                }
+                
+                //lastLeasePercentage = double (targetCostSingleSet - (maxCostSingleSet - costsIncreased[maxCostSetId])) / costsIncreased[maxCostSetId];
+                
                 cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign
                      << " with percentage " << lastLeasePercentage << endl;
                 cout << "             " << Lease[ref_to_assign]   << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign
                      << " with percentage " << 1 - lastLeasePercentage << endl;
+                cout << "             max set ID " << maxCostSetId << endl;
                 
                 maxCostSingleSet -= costsIncreased[maxCostSetId] * (1-lastLeasePercentage);
                 finalAvgCacheSize = double(maxCostSingleSet) / (double (N) / sample_distance);

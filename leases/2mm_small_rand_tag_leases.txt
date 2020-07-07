@@ -3784,6 +3784,7 @@ Set    15: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------
 ******Overall utilization 0.509375***************
 Assign lease 57766 to ref 000008c8 with percentage 0.609662
              5e5 to ref 000008c8 with percentage 0.390338
+             max set ID c
 total cost (single set) 776724 set ID 12 target cost (single set) 776724
 ******Cache status (each X/- means 1% occupy/empty) ******
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
