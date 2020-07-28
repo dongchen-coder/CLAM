@@ -2,6 +2,7 @@
 #include <set>
 #include <map>
 #include <limits>
+ #include<iomanip>
 using namespace std;
 
 #define CLS 64
@@ -30,6 +31,7 @@ void OSL_reset() {
 	hits_set.clear();
 	costs_set.clear();
 	Lease.clear();
+    lastLeasePercentage = 1.0;
 	return;
 }
 
@@ -89,35 +91,6 @@ void dumpLeases() {
     }
     cout << endl;
 }
-
-/*
-void dumpDualLeases(uint64_t boundFirstLease) {
-    cout << "Dump dual leases" << endl;
-    for (map<uint64_t, uint64_t>::iterator it = Lease.begin(), eit = Lease.end(); it != eit; ++it) {
-		uint64_t ref_id = it->first;
-		uint64_t assigned_lease = it->second;
-		uint64_t first_lease = 0;
-		uint64_t num_of_ri_before_bound_lease = 0;
-		uint64_t total_acc = 0;
-		bool foundBoundLease = false;
-		for (auto ri_it = RI[ref_id]->begin(), ri_eit = RI[ref_id]->end(); ri_it != ri_eit; ++ri_it) {
-			if (ri_it->first >= boundFirstLease) {
-				foundBoundLease = true;
-			}
-			if (foundBoundLease == true) {
-				total_acc += ri_it->second;
-			} else {
-				first_lease = ri_it->first;
-				num_of_ri_before_bound_lease += ri_it->second;
-				total_acc += ri_it->second;
-			}
-		}
-		cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << first_lease << " percentage " << double(num_of_ri_before_bound_lease) / total_acc << endl;
-        cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << " percentage " << 1 - double(num_of_ri_before_bound_lease) / total_acc  << endl;
-    }
-    cout << endl;
-}
-*/
 
 // calculate hits and costs for each reuse interval 
 void initHitsCosts() {
@@ -300,6 +273,74 @@ void dumpCacheUtilization(map<uint64_t, uint64_t> totalCostSet, uint64_t numOfSe
 	return;
 }
 
+void checkAllPossibleDualLeases(map<uint64_t, uint64_t> totalHitsSet,
+                                map<uint64_t, uint64_t> totalCostSet,
+                                map<uint64_t, uint64_t> hitsIncreased,
+                                map<uint64_t, uint64_t> costsIncreased,
+                                uint64_t ref_to_assign,
+                                uint64_t oldLease,
+                                uint64_t newLease,
+                                uint64_t numOfSet,
+                                uint64_t targetCostSingleSet) {
+    
+    map<double, uint64_t> numOfSetOverallocatingAllPercentage;
+    map<double, uint64_t> numOfHitsIncreaseWithOutOverallocatingAllPercentage;
+    
+    for (int percentage = 0; percentage <= 100; percentage += 5) {
+        map<uint64_t, uint64_t> totalCostSetSinglePercentage = totalCostSet;
+        map<uint64_t, uint64_t> HitsIncreasedSinglePercentage = hitsIncreased;
+        for (map<uint64_t, uint64_t>::iterator it = totalCostSetSinglePercentage.begin(), eit = totalCostSetSinglePercentage.end(); it != eit; ++it) {
+            totalCostSetSinglePercentage[it->first] -= costsIncreased[it->first];
+            totalCostSetSinglePercentage[it->first] += costsIncreased[it->first] * percentage / 100;
+            HitsIncreasedSinglePercentage[it->first] = hitsIncreased[it->first] * percentage / 100;
+        }
+        
+        cout << "******Cache status (each X/- means 1% occupy/empty) ****** dual lease percentage: " + to_string(double(percentage) / 100) << endl;
+        uint64_t occupied = 0;
+        uint64_t empty = 0;
+        
+        uint64_t numOfSetOverallocating = 0;
+        uint64_t numOfHitsIncreaseWithOutOverallocating = 0;
+        
+        for (int i = 0; i < numOfSet; i++) {
+            cout << "Set " << setfill (' ') << setw(5) << i << ": ";
+            int utilization = 100 * (double(totalCostSetSinglePercentage[i]) / targetCostSingleSet);
+            for (int i = 0; i < utilization && i < 100; i++) {
+                cout << "X";
+                occupied++;
+            }
+            for (int i = utilization; i < 100; i++) {
+                cout << "-";
+                empty++;
+            }
+            cout << " Hit inc by dual lease: " << HitsIncreasedSinglePercentage[i];
+            if (utilization > 100) {
+                cout << " over allocating " << double(utilization - 100) / 100;
+                numOfSetOverallocating++;
+            } else {
+                numOfHitsIncreaseWithOutOverallocating += HitsIncreasedSinglePercentage[i];
+            }
+            cout << endl;
+        }
+        
+        cout << "******Overall utilization " << double(occupied) / (occupied + empty) << "***************";
+        cout << " NumOfSetOverAllocating: " << numOfSetOverallocating << "/" << numOfSet << " numOfHitsIncreasedFromNonOverallocatingSets: " << numOfHitsIncreaseWithOutOverallocating;
+        cout << endl;
+        
+        numOfSetOverallocatingAllPercentage[double(percentage) / 100] = numOfSetOverallocating;
+        numOfHitsIncreaseWithOutOverallocatingAllPercentage[double(percentage) / 100] = numOfHitsIncreaseWithOutOverallocating;
+    }
+    
+    for (int percentage = 0; percentage <= 100; percentage += 5) {
+        cout << "Long lease percentage: " << setw(5) << double(percentage) / 100;
+        cout << " NumOfSetOverAllocating: " << setw(5) << numOfSetOverallocatingAllPercentage[double(percentage) / 100];
+        cout << " numOfHitsIncreasedFromNonOverallocatingSets: " << numOfHitsIncreaseWithOutOverallocatingAllPercentage[double(percentage) / 100];
+        cout << endl;
+    }
+    
+    return;
+}
+
 // main OSL_ref alg
 void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 	
@@ -308,8 +349,8 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 	cout << "Finished to init hits and costs" << endl;
     
     dumpRI();
-	dumpHits();
-    dumpCosts();
+	//dumpHits();
+    //dumpCosts();
 
 	cout << "refT " << dec << refT << " ";
 	cout << "cache size (per set) " << CacheSize << " ";
@@ -366,13 +407,10 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 			// Dump entire lease assignment procedure
 			if (maxCostSingleSet > targetCostSingleSet) {
 				
-				//cout << "totalCost " << totalCost << endl;
-				//cout << "targetCost " << targetCost << endl;
-				//cout << "newLease " << newLease << endl;
-				//cout << "Lease[ref_to_assign] " << Lease[ref_to_assign] << endl;
-				//cout << totalCost - targetCost << " " << newLease - Lease[ref_to_assign] << " " << (*RI[ref_to_assign])[newLease] << endl;
-				
-				
+                /* scale the dual lease percentage to understand the per set utilization */
+                //checkAllPossibleDualLeases(totalHitsSet, totalCostSet, hitsIncreased, costsIncreased, ref_to_assign, Lease[ref_to_assign], newLease, numOfSet, targetCostSingleSet);
+                
+                /* search for dual lease */
 				oldLeaseForLast = Lease[ref_to_assign];
                 
                 map<uint64_t, double> lastLeasePercentagePerSet;
@@ -388,8 +426,6 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
                         maxCostSetId = i;
                     }
                 }
-                
-                //lastLeasePercentage = double (targetCostSingleSet - (maxCostSingleSet - costsIncreased[maxCostSetId])) / costsIncreased[maxCostSetId];
                 
                 cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign
                      << " with percentage " << lastLeasePercentage << endl;
@@ -444,7 +480,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
         }
         
 		cout << "total cost (single set) " << dec << maxCostSingleSet << " set ID " << maxCostSetId << " target cost (single set) " << targetCostSingleSet  << endl;
-        dumpCacheUtilization(totalCostSet, numOfSet, targetCostSingleSet);
+        //dumpCacheUtilization(totalCostSet, numOfSet, targetCostSingleSet);
         
         if ((maxCostSingleSet >= targetCostSingleSet || lastLeasePercentage != 1.0) && targetCostSingleSet != 0 ) {
             break;

@@ -5,7 +5,7 @@
 using namespace std;
 
 uint64_t num_capacity = 128;
-uint64_t num_way = 8;
+uint64_t num_way = 2;//2;//8;
 
 uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 // n_block_capacity:        number of blocks that fit into cache memory 
@@ -27,13 +27,22 @@ uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 void process(string fileName, int cacheSize) {
 
 	ifstream ifs;
-	ifs.open (fileName, ifstream::in);
-
+    ifs.open(fileName, ifstream::in);
+    
+    uint64_t phase_id = 0;
+    
 	uint64_t ip;
+    uint64_t cur_phase = -1;
+    uint64_t pre_phase = -1;
     uint64_t ri;
 	uint64_t time;
+    uint64_t pre_time;
 	uint64_t tag;
 	uint64_t sample_count;
+    
+    uint64_t phase_start_time = 0;
+    bool phase_end = false;
+    
     while (ifs.good()) {
         ifs >> hex >> ip;
         ifs.get(); 
@@ -46,7 +55,40 @@ void process(string fileName, int cacheSize) {
 		if (ifs.eof()) {
 			break;
 		}
-
+        
+        cur_phase = (ip & 0xFF000000) >> 24;
+        ip = ip & 0x00FFFFFF;
+        
+        if (pre_phase != -1 && cur_phase < pre_phase) {
+            continue;
+        }
+        
+        
+        if (pre_phase != -1) {
+            if (cur_phase != pre_phase) {
+                cout << "Phase change from " << pre_phase << " to " << cur_phase << endl;
+                phase_end = true;
+            }
+        }
+        
+        if (phase_end == true) {
+            refT = time - phase_start_time;
+            uint64_t sample_distance = 1000;
+            if (sample_count > 0) {
+                sample_distance = (pre_time - phase_start_time) / (sample_count);
+            }
+            
+            cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
+            phase_id ++;
+            OSL_ref(num_capacity, num_capacity / num_way, sample_distance);
+            
+            phase_start_time = pre_time;
+            sample_count = 0;
+            OSL_reset();
+            phase_end = false;
+        }
+        
+        
 		if ( (ri & (1 << 31)) != 0) {
 			ri = numeric_limits<uint64_t>::max();
         } else {
@@ -73,15 +115,23 @@ void process(string fileName, int cacheSize) {
 			(*(*RI_set[ip])[cset])[ri] = 1;
 		}
 
-    	refT = time;
+    	refT = time - phase_start_time;
+        
+        pre_time = time;
+        pre_phase = cur_phase;
+        
 	}
     ifs.close();
     
 	uint64_t sample_distance = 1000;
 	if (sample_count > 0) {
-		sample_distance = time / (sample_count);
+		sample_distance = (time - phase_start_time) / (sample_count);
     }
+    
+    cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
+    phase_id ++;
 	OSL_ref(num_capacity, num_capacity / num_way, sample_distance);
+    
 }
 
 int main(int argc, char** argv) {
