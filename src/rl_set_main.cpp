@@ -5,7 +5,7 @@
 using namespace std;
 
 uint64_t num_capacity = 128;
-uint64_t num_way = 2;//2;//8;
+uint64_t num_way = 4;//2;//8;
 
 uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 // n_block_capacity:        number of blocks that fit into cache memory 
@@ -79,8 +79,8 @@ void process(string fileName, int cacheSize) {
             }
             
             cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
+            OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
             phase_id ++;
-            OSL_ref(num_capacity, num_capacity / num_way, sample_distance);
             
             phase_start_time = pre_time;
             sample_count = 0;
@@ -129,8 +129,10 @@ void process(string fileName, int cacheSize) {
     }
     
     cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
+	OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
     phase_id ++;
-	OSL_ref(num_capacity, num_capacity / num_way, sample_distance);
+    
+    dumpLeasesFormated();
     
 }
 

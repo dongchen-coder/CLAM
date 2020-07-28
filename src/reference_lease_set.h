@@ -2,7 +2,7 @@
 #include <set>
 #include <map>
 #include <limits>
- #include<iomanip>
+#include<iomanip>
 using namespace std;
 
 #define CLS 64
@@ -20,6 +20,9 @@ map<uint64_t, map<uint64_t, map<uint64_t, double>* >* > hits_set;
 map<uint64_t, map<uint64_t, map<uint64_t, double>* >* > costs_set;
 
 map<uint64_t, uint64_t> Lease;
+
+// Final Lease format: phase -> addr -> (lease0, lease1) -> lease0 probability
+map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* > LeasesFormated;
 
 double lastLeasePercentage = 1.0;
 uint64_t oldLeaseForLast;
@@ -78,15 +81,40 @@ void dumpRI() {
     cout << endl;
 }
 
+void dumpLeasesFormated() {
+    cout << "Dump formated leases " << endl;
+    for (map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* >::iterator phase_it = LeasesFormated.begin(), phase_eit = LeasesFormated.end(); phase_it != phase_eit; ++phase_it) {
+        for (map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >::iterator addr_it =
+             phase_it->second->begin(), addr_eit = phase_it->second->end(); addr_it != addr_eit; ++ addr_it) {
+            
+            map<pair<uint64_t, uint64_t>, double> tmp = *(addr_it->second);
+            cout << phase_it->first << ", " << addr_it->first << ", ";
+            map<pair<uint64_t, uint64_t>, double>::iterator lease_it = tmp.begin();
+            cout << get<0>(lease_it->first) << ", ";
+            cout << get<1>(lease_it->first) << ", ";
+            cout << lease_it->second << endl;
+        }
+    }
+}
 
-void dumpLeases() {
+void addToFormatedLeases(uint64_t phaseId, uint64_t addr, uint64_t lease0, uint64_t lease1, double lease0prob) {
+    if (LeasesFormated.find(phaseId) == LeasesFormated.end()) {
+        LeasesFormated[phaseId] = new map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >;
+    }
+    (*LeasesFormated[phaseId])[addr] = new map<pair<uint64_t, uint64_t>, double>;
+    (*(*LeasesFormated[phaseId])[addr])[make_pair(lease0, lease1)] = lease0prob;
+}
+
+void dumpLeases(uint64_t phaseId) {
     cout << "Dump single leases (last one may be dual)" << endl;
     for (map<uint64_t, uint64_t>::iterator it = Lease.begin(), eit = Lease.end(); it != eit; ++it) {
 		if (it->first != laseRefAssigned) {
         	cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << endl;
+            addToFormatedLeases(phaseId, it->first, it->second, 0, 1);
 		} else {
 			cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << " percentage " << lastLeasePercentage << endl;
 			cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << oldLeaseForLast << " percentage " << 1 - lastLeasePercentage << endl;
+            addToFormatedLeases(phaseId, it->first, oldLeaseForLast, it->second, 1 - lastLeasePercentage);
 		}
     }
     cout << endl;
@@ -342,7 +370,7 @@ void checkAllPossibleDualLeases(map<uint64_t, uint64_t> totalHitsSet,
 }
 
 // main OSL_ref alg
-void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
+void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, uint64_t phaseId) {
 	
 	cout << "Start to init hits and costs" << endl;
 	initHitsCosts();
@@ -489,7 +517,7 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance) {
 	cout << "finished dumping the assignment procedure" << endl;
 	cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl;
 
-	dumpLeases();
+	dumpLeases(phaseId);
 	
 	//dumpDualLeases(CacheSize);
     
