@@ -196,82 +196,66 @@ Ref 00000940 Set 14 RI 1 CNT 56
 Ref 00000944 Set 14 RI 1 CNT 58
 Ref 00000948 Set 14 RI 1 CNT 56
 
-refT 245749 cache size (per set) 128 sample distance 19215358410113860 targetCost (single set) 0
+refT 245749 cache size (per set) 128 sample distance 255 targetCost (single set) 7709
 Dump lease assignement procedure
-Assign lease 1 to ref 000008c4 with percentage 0
-             0 to ref 000008c4 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 000008d8 with percentage 0
-             0 to ref 000008d8 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 000008f0 with percentage 0
-             0 to ref 000008f0 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000908 with percentage 0
-             0 to ref 00000908 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000920 with percentage 0
-             0 to ref 00000920 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000938 with percentage 0
-             0 to ref 00000938 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000940 with percentage 0
-             0 to ref 00000940 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000944 with percentage 0
-             0 to ref 00000944 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1 to ref 00000948 with percentage 0
-             0 to ref 00000948 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 2 to ref 000008cc with percentage 0
-             0 to ref 000008cc with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 2 to ref 000008f8 with percentage 0
-             0 to ref 000008f8 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 2 to ref 00000910 with percentage 0
-             0 to ref 00000910 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 2 to ref 00000928 with percentage 0
-             0 to ref 00000928 with percentage 1
-             max set ID e
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 14 to ref 00000934 with percentage 0
-             0 to ref 00000934 with percentage 1
-             max set ID 6
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 10 to ref 000008d4 with percentage 0
-             0 to ref 000008d4 with percentage 1
-             max set ID 4
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 17 to ref 00000918 with percentage 0
-             0 to ref 00000918 with percentage 1
-             max set ID 2
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 1792 to ref 00000918 with percentage 0
-             11 to ref 00000918 with percentage 1
-             max set ID 4
-total cost (single set) 0 set ID 0 target cost (single set) 0
-Assign lease 2047 to ref 00000904 with percentage 0
-             0 to ref 00000904 with percentage 1
+Assign lease 1 to ref 000008c4 avg cache size (max among all sets) 0.0674469 miss ratio 0.932553
+total cost (single set) 65 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 000008d8 avg cache size (max among all sets) 0.12348 miss ratio 0.87652
+total cost (single set) 119 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 000008f0 avg cache size (max among all sets) 0.18055 miss ratio 0.81945
+total cost (single set) 174 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000908 avg cache size (max among all sets) 0.235545 miss ratio 0.764455
+total cost (single set) 227 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000920 avg cache size (max among all sets) 0.297804 miss ratio 0.702196
+total cost (single set) 287 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000938 avg cache size (max among all sets) 0.350724 miss ratio 0.649276
+total cost (single set) 338 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000940 avg cache size (max among all sets) 0.408832 miss ratio 0.591168
+total cost (single set) 394 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000944 avg cache size (max among all sets) 0.469015 miss ratio 0.530985
+total cost (single set) 452 set ID 14 target cost (single set) 7709
+Assign lease 1 to ref 00000948 avg cache size (max among all sets) 0.527123 miss ratio 0.472877
+total cost (single set) 508 set ID 14 target cost (single set) 7709
+Assign lease 2 to ref 000008cc avg cache size (max among all sets) 0.635038 miss ratio 0.418919
+total cost (single set) 612 set ID 14 target cost (single set) 7709
+Assign lease 2 to ref 000008f8 avg cache size (max among all sets) 0.763706 miss ratio 0.354585
+total cost (single set) 736 set ID 14 target cost (single set) 7709
+Assign lease 2 to ref 00000910 avg cache size (max among all sets) 0.871621 miss ratio 0.300628
+total cost (single set) 840 set ID 14 target cost (single set) 7709
+Assign lease 2 to ref 00000928 avg cache size (max among all sets) 0.989912 miss ratio 0.241482
+total cost (single set) 954 set ID 14 target cost (single set) 7709
+Assign lease 14 to ref 00000934 avg cache size (max among all sets) 0.989912 miss ratio 0.181299
+total cost (single set) 954 set ID 14 target cost (single set) 7709
+Assign lease 10 to ref 000008d4 avg cache size (max among all sets) 0.989912 miss ratio 0.122153
+total cost (single set) 954 set ID 14 target cost (single set) 7709
+Assign lease 17 to ref 00000918 avg cache size (max among all sets) 0.989912 miss ratio 0.0650827
+total cost (single set) 954 set ID 14 target cost (single set) 7709
+Assign lease 1792 to ref 00000918 avg cache size (max among all sets) 3.92956 miss ratio 0.0630074
+total cost (single set) 3787 set ID 4 target cost (single set) 7709
+Assign lease 2047 to ref 00000904 with percentage 0.47075
+             0 to ref 00000904 with percentage 0.52925
              max set ID 8
-total cost (single set) 0 set ID 0 target cost (single set) 0
+total cost (single set) 7709 set ID 8 target cost (single set) 7709
+******Cache status (each X/- means 1% occupy/empty) ******
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------------
+Set     1: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     2: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------
+Set     3: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------
+Set     4: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------------------------
+Set     5: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------
+Set     6: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------------------
+Set     7: XXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------------------------------------------------
+Set     8: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Set     9: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------------------------------------
+Set    10: XXXXXXXXXXXX----------------------------------------------------------------------------------------
+Set    11: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------------------------------------------------
+Set    12: XXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------------------
+Set    13: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------------------------------------------------
+Set    14: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------
+Set    15: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------
+******Overall utilization 0.4925***************
 finished dumping the assignment procedure
-the FINAL avg cache size 0 miss ratio 1
+the FINAL avg cache size 7.9992 miss ratio 0.0453674
 Dump single leases (last one may be dual)
 000008c4 1
 000008cc 2
@@ -279,8 +263,8 @@ Dump single leases (last one may be dual)
 000008d8 1
 000008f0 1
 000008f8 2
-00000904 7ff percentage 0
-00000904 0 percentage 1
+00000904 7ff percentage 0.47075
+00000904 0 percentage 0.52925
 00000908 1
 00000910 2
 00000918 700
@@ -320,7 +304,7 @@ Dump formated leases
 1, 8d8, 1, 0, 1
 1, 8f0, 1, 0, 1
 1, 8f8, 2, 0, 1
-1, 904, 0, 7ff, 1
+1, 904, 0, 7ff, 0.52925
 1, 908, 1, 0, 1
 1, 910, 2, 0, 1
 1, 918, 700, 0, 1
