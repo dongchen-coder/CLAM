@@ -5,7 +5,7 @@
 using namespace std;
 
 uint64_t num_capacity = 128;
-uint64_t num_way = 4;//2;//8;
+uint64_t num_way = 8;//8;//2;//8;
 
 uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 // n_block_capacity:        number of blocks that fit into cache memory 
@@ -26,19 +26,19 @@ uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 
 void process(string fileName, int cacheSize) {
 
-	ifstream ifs;
+    ifstream ifs;
     ifs.open(fileName, ifstream::in);
     
     uint64_t phase_id = 0;
     
-	uint64_t ip;
+    uint64_t ip;
     uint64_t cur_phase = -1;
     uint64_t pre_phase = -1;
     uint64_t ri;
-	uint64_t time;
+    uint64_t time;
     uint64_t pre_time;
-	uint64_t tag;
-	uint64_t sample_count;
+    uint64_t tag;
+    uint64_t sample_count;
     
     uint64_t phase_start_time = 0;
     bool phase_end = false;
@@ -48,14 +48,14 @@ void process(string fileName, int cacheSize) {
         ifs.get(); 
         ifs >> hex >> ri;
         ifs.get();
-		ifs >> hex >> tag;
-		ifs.get();
-		ifs >> dec >> time;
-		ifs.get();
-		if (ifs.eof()) {
-			break;
-		}
-        
+        ifs >> hex >> tag;
+        ifs.get();
+        ifs >> dec >> time;
+        ifs.get();
+        if (ifs.eof()) {
+            break;
+        }
+       
         cur_phase = (ip & 0xFF000000) >> 24;
         ip = ip & 0x00FFFFFF;
         
@@ -89,47 +89,47 @@ void process(string fileName, int cacheSize) {
         }
         
         
-		if ( (ri & (1 << 31)) != 0) {
-			ri = numeric_limits<uint64_t>::max();
+        if ( (ri & (1 << 31)) != 0) {
+            ri = numeric_limits<uint64_t>::max();
         } else {
-			sample_count++;
-		}
+            sample_count++;
+        }
 
-		uint64_t cset = get_set(num_capacity, tag, num_way); 
+        uint64_t cset = get_set(num_capacity, tag, num_way); 
 
         // Accumulate RI to hist
         if (RI_set.find(ip) != RI_set.end()) {
-			if ((*RI_set[ip]).find(cset) != (*RI_set[ip]).end()) {
-            	if ((*(*RI_set[ip])[cset]).find(ri) != (*(*RI_set[ip])[cset]).end()) {
-                	(*(*RI_set[ip])[cset])[ri] += 1;
-           		} else {
-                	(*(*RI_set[ip])[cset])[ri] = 1;
-            	}
-        	} else {
-            	(*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
-            	(*(*RI_set[ip])[cset])[ri] = 1;
-        	}
-		} else {
-			RI_set[ip] = new map<uint64_t, map<uint64_t, uint64_t>* >;
-			(*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
-			(*(*RI_set[ip])[cset])[ri] = 1;
-		}
+            if ((*RI_set[ip]).find(cset) != (*RI_set[ip]).end()) {
+                if ((*(*RI_set[ip])[cset]).find(ri) != (*(*RI_set[ip])[cset]).end()) {
+                    (*(*RI_set[ip])[cset])[ri] += 1;
+                   } else {
+                    (*(*RI_set[ip])[cset])[ri] = 1;
+                }
+            } else {
+                (*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
+                (*(*RI_set[ip])[cset])[ri] = 1;
+            }
+        } else {
+            RI_set[ip] = new map<uint64_t, map<uint64_t, uint64_t>* >;
+            (*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
+            (*(*RI_set[ip])[cset])[ri] = 1;
+        }
 
-    	refT = time - phase_start_time;
+        refT = time - phase_start_time;
         
         pre_time = time;
         pre_phase = cur_phase;
         
-	}
+    }
     ifs.close();
     
-	uint64_t sample_distance = 1000;
-	if (sample_count > 0) {
-		sample_distance = (time - phase_start_time) / (sample_count);
+    uint64_t sample_distance = 1000;
+    if (sample_count > 0) {
+        sample_distance = (time - phase_start_time) / (sample_count);
     }
     
     cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
-	OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
+    OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
     phase_id ++;
     
     dumpLeasesFormated();
@@ -137,17 +137,17 @@ void process(string fileName, int cacheSize) {
 }
 
 int main(int argc, char** argv) {
-	
-	string fileName;
-	int c;
-	if (argc != 3) {
-		cout << "executable takes two arguments: sample file, cache size(KB)";
-	} else {
-		fileName = argv[1];
-		c = stoi(argv[2]);
-	}
-	
-	// data block size is 8 Byte
-	process(fileName, c * 1024 / 64);
-	return 0;
+    
+    string fileName;
+    int c;
+    if (argc != 3) {
+        cout << "executable takes two arguments: sample file, cache size(KB)";
+    } else {
+        fileName = argv[1];
+        c = stoi(argv[2]);
+    }
+    
+    // data block size is 8 Byte
+    process(fileName, c * 1024 / 64);
+    return 0;
 }

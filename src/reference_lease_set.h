@@ -29,25 +29,25 @@ uint64_t oldLeaseForLast;
 uint64_t laseRefAssigned;
 
 void OSL_reset() {
-	refT = 0;
-	RI_set.clear();
-	hits_set.clear();
-	costs_set.clear();
-	Lease.clear();
+    refT = 0;
+    RI_set.clear();
+    hits_set.clear();
+    costs_set.clear();
+    Lease.clear();
     lastLeasePercentage = 1.0;
-	return;
+    return;
 }
 
 // dump hits
 void dumpHits() {
     cout << "Dump hits" << endl;
     for (map<uint64_t, map<uint64_t, map<uint64_t, double>* >* >::iterator ref_it = hits_set.begin(), ref_eit = hits_set.end(); ref_it != ref_eit; ++ref_it) {
-		for (map<uint64_t, map<uint64_t, double>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
-        	for (map<uint64_t, double>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
+        for (map<uint64_t, map<uint64_t, double>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
+            for (map<uint64_t, double>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
                 cout << "Ref " << setfill ('0') << setw(sizeof(unsigned long)) << hex << ref_it->first
                 << " Set " << dec << set_it->first  << " Lease " << ri_it->first << " Hits " << (*(*hits_set[ref_it->first])[set_it->first])[ri_it->first] << endl;
-        	}
-		}
+            }
+        }
         cout << endl;
     }
 }
@@ -55,7 +55,7 @@ void dumpHits() {
 // dump costs
 void dumpCosts() {
     cout << "Dump costs" << endl;
-	for (map<uint64_t, map<uint64_t, map<uint64_t, double>* >* >::iterator ref_it = costs_set.begin(), ref_eit = costs_set.end(); ref_it != ref_eit; ++ref_it) {
+    for (map<uint64_t, map<uint64_t, map<uint64_t, double>* >* >::iterator ref_it = costs_set.begin(), ref_eit = costs_set.end(); ref_it != ref_eit; ++ref_it) {
         for (map<uint64_t, map<uint64_t, double>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
             for (map<uint64_t, double>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
                 cout << "Ref " << setfill ('0') << setw(sizeof(unsigned long)) << hex << ref_it->first
@@ -108,14 +108,14 @@ void addToFormatedLeases(uint64_t phaseId, uint64_t addr, uint64_t lease0, uint6
 void dumpLeases(uint64_t phaseId) {
     cout << "Dump single leases (last one may be dual)" << endl;
     for (map<uint64_t, uint64_t>::iterator it = Lease.begin(), eit = Lease.end(); it != eit; ++it) {
-		if (it->first != laseRefAssigned) {
-        	cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << endl;
+        if (it->first != laseRefAssigned) {
+            cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << endl;
             addToFormatedLeases(phaseId, it->first, it->second, 0, 1);
-		} else {
-			cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << " percentage " << lastLeasePercentage << endl;
-			cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << oldLeaseForLast << " percentage " << 1 - lastLeasePercentage << endl;
+        } else {
+            cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << it->second << " percentage " << lastLeasePercentage << endl;
+            cout << setfill ('0') << setw(sizeof(unsigned long))  << hex << it->first << " " << oldLeaseForLast << " percentage " << 1 - lastLeasePercentage << endl;
             addToFormatedLeases(phaseId, it->first, oldLeaseForLast, it->second, 1 - lastLeasePercentage);
-		}
+        }
     }
     cout << endl;
 }
@@ -123,7 +123,7 @@ void dumpLeases(uint64_t phaseId) {
 // calculate hits and costs for each reuse interval 
 void initHitsCosts() {
 
-	for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
+    for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
         set<uint64_t> ris;
         set<uint64_t> cset;
         
@@ -136,8 +136,8 @@ void initHitsCosts() {
             }
         }
         
-		hits_set[ref_it->first] = new map<uint64_t, map<uint64_t, double>* >;
-		costs_set[ref_it->first] = new map<uint64_t, map<uint64_t, double>* >;
+        hits_set[ref_it->first] = new map<uint64_t, map<uint64_t, double>* >;
+        costs_set[ref_it->first] = new map<uint64_t, map<uint64_t, double>* >;
         for (set<uint64_t>::iterator set_it = cset.begin(), set_eit = cset.end(); set_it != set_eit; ++set_it) {
             (*hits_set[ref_it->first])[*set_it] = new map<uint64_t, double>;
             (*costs_set[ref_it->first])[*set_it] = new map<uint64_t, double>;
@@ -177,17 +177,17 @@ void initHitsCosts() {
                 pre_lease_set[set_it->first] = *ri_all_set_it;
             }
         }
-	}
+    }
 }
 
 
 // calculate PPUC
 double getPPUC(uint64_t ref_id, uint64_t oldLease, uint64_t newLease) {
-	
-	if (hits_set.find(ref_id) == hits_set.end() || costs_set.find(ref_id) == costs_set.end()) {
-		cout << "No such ref for hits/costs" << endl;
-		return -1;
-	}
+    
+    if (hits_set.find(ref_id) == hits_set.end() || costs_set.find(ref_id) == costs_set.end()) {
+        cout << "No such ref for hits/costs" << endl;
+        return -1;
+    }
     
     set<uint64_t> ris_hits;
     for (map<uint64_t, map<uint64_t, double>* >::iterator set_it = (*(hits_set[ref_id])).begin(), set_eit = (*(hits_set[ref_id])).end(); set_it != set_eit; ++set_it) {
@@ -201,10 +201,10 @@ double getPPUC(uint64_t ref_id, uint64_t oldLease, uint64_t newLease) {
             ris_costs.insert(ri_it->first);
         }
     }
-	if (ris_hits.find(newLease) == ris_hits.end()) {
-		cout << "No RI/Newlease " << newLease << " for ref " << ref_id << " in hits" << endl;
-		return -1;
-	}
+    if (ris_hits.find(newLease) == ris_hits.end()) {
+        cout << "No RI/Newlease " << newLease << " for ref " << ref_id << " in hits" << endl;
+        return -1;
+    }
     if (ris_costs.find(newLease) == ris_costs.end()) {
         cout << "No RI/Newlease " << newLease << " for ref " << ref_id << " in costs" << endl;
         return -1;
@@ -232,15 +232,15 @@ double getPPUC(uint64_t ref_id, uint64_t oldLease, uint64_t newLease) {
         costs_new += (*(*costs_set[ref_id])[set_it->first])[newLease];
     }
     
-	return double(hits_new - hits_old) / (costs_new - costs_old);
+    return double(hits_new - hits_old) / (costs_new - costs_old);
 }
 
 // find max PPUC
 void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease) {
-	
-	double maxPPUC = -1;
-	uint64_t bestRef = -1;
-	uint64_t bestLease = -1;
+    
+    double maxPPUC = -1;
+    uint64_t bestRef = -1;
+    uint64_t bestLease = -1;
     
     for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
         
@@ -268,37 +268,37 @@ void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease) {
         }
     }
     
-	if (maxPPUC != -1) {
-		*finished = false;
-		*ref_to_assign = bestRef;
-		*newLease = bestLease;
-	} else {
-		*finished = true;
-	}
+    if (maxPPUC != -1) {
+        *finished = false;
+        *ref_to_assign = bestRef;
+        *newLease = bestLease;
+    } else {
+        *finished = true;
+    }
 
-	return;
+    return;
 }
 
 // dump cache utilization for each set
 void dumpCacheUtilization(map<uint64_t, uint64_t> totalCostSet, uint64_t numOfSet, uint64_t targetCostSingleSet) {
-	cout << "******Cache status (each X/- means 1% occupy/empty) ******" << endl;
+    cout << "******Cache status (each X/- means 1% occupy/empty) ******" << endl;
     uint64_t occupied = 0;
     uint64_t empty = 0;
     for (int i = 0; i < numOfSet; i++) {
-		cout << "Set " << setfill (' ') << setw(5) << i << ": ";
-		int utilization = 100 * (double(totalCostSet[i]) / targetCostSingleSet);
-		for (int i = 0; i < utilization; i++) {
-			cout << "X";
+        cout << "Set " << setfill (' ') << setw(5) << i << ": ";
+        int utilization = 100 * (double(totalCostSet[i]) / targetCostSingleSet);
+        for (int i = 0; i < utilization; i++) {
+            cout << "X";
             occupied++;
-		}
-		for (int i = utilization; i < 100; i++) {
-			cout << "-";
+        }
+        for (int i = utilization; i < 100; i++) {
+            cout << "-";
             empty++;
-		}
-		cout << endl;
-	}
-	cout << "******Overall utilization " << double(occupied) / (occupied + empty) << "***************" << endl;
-	return;
+        }
+        cout << endl;
+    }
+    cout << "******Overall utilization " << double(occupied) / (occupied + empty) << "***************" << endl;
+    return;
 }
 
 void checkAllPossibleDualLeases(map<uint64_t, uint64_t> totalHitsSet,
@@ -371,42 +371,44 @@ void checkAllPossibleDualLeases(map<uint64_t, uint64_t> totalHitsSet,
 
 // main OSL_ref alg
 void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, uint64_t phaseId) {
-	
-	cout << "Start to init hits and costs" << endl;
-	initHitsCosts();
-	cout << "Finished to init hits and costs" << endl;
+    
+    cout << "Start to init hits and costs" << endl;
+    initHitsCosts();
+    cout << "Finished to init hits and costs" << endl;
     
     dumpRI();
-	//dumpHits();
+    //dumpHits();
     //dumpCosts();
 
-	cout << "refT " << dec << refT << " ";
-	cout << "cache size (per set) " << CacheSize << " ";
-	cout << "sample distance " << sample_distance << " ";
+    cout << "here " << refT << endl;
 
-	uint64_t N = refT;
-	map<uint64_t, uint64_t> totalCostSet;
+    cout << "refT " << dec << refT << " ";
+    cout << "cache size (per set) " << CacheSize << " ";
+    cout << "sample distance " << sample_distance << " ";
+
+    uint64_t N = refT;
+    map<uint64_t, uint64_t> totalCostSet;
     map<uint64_t, uint64_t> totalHitsSet;
-	uint64_t targetCostSingleSet = ( CacheSize / numOfSet) * N /  sample_distance;
+    uint64_t targetCostSingleSet = ( CacheSize / numOfSet) * N /  sample_distance;
     for (int i = 0; i < numOfSet; i++) {
         totalCostSet[i] = 0;
         totalHitsSet[i] = 0;
     }
     
-	cout << "targetCost (single set) " << targetCostSingleSet << endl;
+    cout << "targetCost (single set) " << targetCostSingleSet << endl;
     
-	cout << "Dump lease assignement procedure" << endl;
-	double finalAvgCacheSize = 0;
-	double finalMissRatio = 0;
-	while(true) {
-		bool finished = false;
-		uint64_t ref_to_assign;
-		uint64_t newLease;
-		
-		getMaxPPUC(&finished, &ref_to_assign, &newLease);
-		//cout << "get max ppuc: " << finished << " " << ref_to_assign << " " << newLease << endl;
+    cout << "Dump lease assignement procedure" << endl;
+    double finalAvgCacheSize = 0;
+    double finalMissRatio = 0;
+    while(true) {
+        bool finished = false;
+        uint64_t ref_to_assign;
+        uint64_t newLease;
+        
+        getMaxPPUC(&finished, &ref_to_assign, &newLease);
+        //cout << "get max ppuc: " << finished << " " << ref_to_assign << " " << newLease << endl;
 
-		if (finished == false) {
+        if (finished == false) {
             
             map<uint64_t, uint64_t> costsIncreased;
             map<uint64_t, uint64_t> hitsIncreased;
@@ -432,14 +434,14 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, ui
                 }
             }
 
-			// Dump entire lease assignment procedure
-			if (maxCostSingleSet > targetCostSingleSet) {
-				
+            // Dump entire lease assignment procedure
+            if (maxCostSingleSet > targetCostSingleSet) {
+                
                 /* scale the dual lease percentage to understand the per set utilization */
                 //checkAllPossibleDualLeases(totalHitsSet, totalCostSet, hitsIncreased, costsIncreased, ref_to_assign, Lease[ref_to_assign], newLease, numOfSet, targetCostSingleSet);
                 
                 /* search for dual lease */
-				oldLeaseForLast = Lease[ref_to_assign];
+                oldLeaseForLast = Lease[ref_to_assign];
                 
                 map<uint64_t, double> lastLeasePercentagePerSet;
                 for (int i = 0; i < numOfSet; i++) {
@@ -477,26 +479,26 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, ui
                 
                 finalMissRatio = 1 - double(totalHits) / (double(N) / sample_distance);
                 
-			} else {
+            } else {
                 
-				cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
+                cout << "Assign lease " << newLease << " to ref " << setfill ('0') << setw(sizeof(unsigned long))  << hex << ref_to_assign;
                 
                 uint64_t totalHits = 0;
                 for (int i = 0; i < numOfSet; i++) {
                     totalHits += totalHitsSet[i];
                 }
                 
-            	cout << " avg cache size (max among all sets) " << double(maxCostSingleSet) / (double(N) / sample_distance)  << " miss ratio " << 1 - double(totalHits) / (double(N) / sample_distance) << endl;
+                cout << " avg cache size (max among all sets) " << double(maxCostSingleSet) / (double(N) / sample_distance)  << " miss ratio " << 1 - double(totalHits) / (double(N) / sample_distance) << endl;
                 
-				finalAvgCacheSize = double(maxCostSingleSet) / (double(N) / sample_distance);
-				finalMissRatio = 1 - double(totalHits) / (double(N) / sample_distance);
+                finalAvgCacheSize = double(maxCostSingleSet) / (double(N) / sample_distance);
+                finalMissRatio = 1 - double(totalHits) / (double(N) / sample_distance);
                 
-			}
-			laseRefAssigned = ref_to_assign;
-			Lease[ref_to_assign] = newLease;
-		} else {
-			break;
-		}
+            }
+            laseRefAssigned = ref_to_assign;
+            Lease[ref_to_assign] = newLease;
+        } else {
+            break;
+        }
         
         uint64_t maxCostSingleSet = 0;
         uint64_t maxCostSetId = 0;
@@ -507,21 +509,22 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, ui
             }
         }
         
-		cout << "total cost (single set) " << dec << maxCostSingleSet << " set ID " << maxCostSetId << " target cost (single set) " << targetCostSingleSet  << endl;
+        cout << "total cost (single set) " << dec << maxCostSingleSet << " set ID " << maxCostSetId << " target cost (single set) " << targetCostSingleSet  << endl;
         //dumpCacheUtilization(totalCostSet, numOfSet, targetCostSingleSet);
         
         if ((maxCostSingleSet >= targetCostSingleSet || lastLeasePercentage != 1.0) && targetCostSingleSet != 0 ) {
+            dumpCacheUtilization(totalCostSet, numOfSet, targetCostSingleSet);
             break;
         }
-	}
-	cout << "finished dumping the assignment procedure" << endl;
-	cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl;
+    }
+    cout << "finished dumping the assignment procedure" << endl;
+    cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl;
 
-	dumpLeases(phaseId);
-	
-	//dumpDualLeases(CacheSize);
+    dumpLeases(phaseId);
     
-	return;
+    //dumpDualLeases(CacheSize);
+    
+    return;
 }
 
 
