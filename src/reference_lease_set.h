@@ -1,12 +1,14 @@
 #include <iostream>
 #include <set>
 #include <map>
+#include <vector>
 #include <limits>
-#include<iomanip>
+#include <iomanip>
 using namespace std;
 
 #define CLS 64
 #define DS 8
+
 
 uint64_t refT = 0;
 
@@ -23,6 +25,9 @@ map<uint64_t, uint64_t> Lease;
 
 // Final Lease format: phase -> addr -> (lease0, lease1) -> lease0 probability
 map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* > LeasesFormated;
+
+// phase->ref->ri->cnt
+map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* > RI_per_phase;
 
 double lastLeasePercentage = 1.0;
 uint64_t oldLeaseForLast;
@@ -81,6 +86,7 @@ void dumpRI() {
     cout << endl;
 }
 
+// dump formated leases
 void dumpLeasesFormated() {
     cout << "Dump formated leases " << endl;
     for (map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* >::iterator phase_it = LeasesFormated.begin(), phase_eit = LeasesFormated.end(); phase_it != phase_eit; ++phase_it) {
@@ -88,11 +94,64 @@ void dumpLeasesFormated() {
              phase_it->second->begin(), addr_eit = phase_it->second->end(); addr_it != addr_eit; ++ addr_it) {
             
             map<pair<uint64_t, uint64_t>, double> tmp = *(addr_it->second);
-            cout << phase_it->first << ", " << addr_it->first << ", ";
+            cout << hex << phase_it->first << ", " << addr_it->first << ", ";
             map<pair<uint64_t, uint64_t>, double>::iterator lease_it = tmp.begin();
             cout << get<0>(lease_it->first) << ", ";
             cout << get<1>(lease_it->first) << ", ";
             cout << lease_it->second << endl;
+        }
+    }
+    cout << endl;
+}
+
+// dump formated leases with limited entries
+bool sortBySec(const pair<int,int> &a, const pair<int,int> &b) {
+    return (a.second > b.second);
+}
+
+void dumpLeasesFormantedWithLimitedEntry(int numOfEntries = 128) {
+    cout << "Dump formated leases with limited entry " << dec << numOfEntries << endl;
+
+    int numOfPhases = LeasesFormated.size();
+    int numOfEntriesPerPhase =  numOfEntries / numOfPhases;
+
+    for (map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* >::iterator phase_it = LeasesFormated.begin(), phase_eit = LeasesFormated.end(); phase_it != phase_eit; ++phase_it) {
+        if (phase_it->second->size() <= numOfEntriesPerPhase) {
+            for (map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >::iterator addr_it = phase_it->second->begin(), addr_eit = phase_it->second->end(); addr_it != addr_eit; ++ addr_it) {
+                map<pair<uint64_t, uint64_t>, double> tmp = *(addr_it->second);
+                cout << hex << phase_it->first << ", " << addr_it->first << ", ";
+                map<pair<uint64_t, uint64_t>, double>::iterator lease_it = tmp.begin();
+                cout << get<0>(lease_it->first) << ", ";
+                cout << get<1>(lease_it->first) << ", ";
+                cout << lease_it->second << endl;
+            }
+            numOfEntries -= phase_it->second->size();
+            numOfPhases -= 1;
+            if (numOfPhases != 0) numOfEntriesPerPhase =  numOfEntries / numOfPhases;
+        } else {
+            // pair< ref, hits >
+            vector<pair<int, int> > ref_hits;
+            for (map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >::iterator addr_it = phase_it->second->begin(), addr_eit = phase_it->second->end(); addr_it != addr_eit; ++ addr_it) {
+                map<pair<uint64_t, uint64_t>, double> tmp = *(addr_it->second);
+                map<pair<uint64_t, uint64_t>, double>::iterator lease_it = tmp.begin();
+                int hits = 0;
+                int ref = addr_it->first;
+                hits += (*(*RI_per_phase[phase_it->first])[addr_it->first])[get<0>(lease_it->first)] * lease_it->second;
+                hits += (*(*RI_per_phase[phase_it->first])[addr_it->first])[get<1>(lease_it->first)] * (1 - lease_it->second);
+                ref_hits.push_back(make_pair(ref, hits));
+            }
+            sort(ref_hits.begin(), ref_hits.end(), sortBySec);
+            for (int i = 0; i < numOfEntriesPerPhase; i++) {
+                int refId = get<0>(ref_hits[i]);
+                cout << hex << phase_it->first << ", " << refId << ", ";
+                map<pair<uint64_t, uint64_t>, double>::iterator lease_it = (*(phase_it->second))[refId]->begin();
+                cout << get<0>(lease_it->first) << ", ";
+                cout << get<1>(lease_it->first) << ", ";
+                cout << lease_it->second << endl;
+            }
+            numOfEntries -= numOfEntriesPerPhase;
+            numOfPhases -= 1;
+            if (numOfPhases != 0) numOfEntriesPerPhase = numOfEntries / numOfPhases;
         }
     }
 }
@@ -521,9 +580,29 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, ui
     cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl;
 
     dumpLeases(phaseId);
-    
     //dumpDualLeases(CacheSize);
     
+    // accumulate RI for current phase to RI_per_phase
+    if (RI_per_phase.find(phaseId) == RI_per_phase.end()) {
+        RI_per_phase[phaseId] = new map<uint64_t, map<uint64_t, uint64_t>* >;
+    }
+    // ref->set->ri->cnt
+    // phase->ref->ri->cnt
+    for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
+        if (RI_per_phase[phaseId]->find(ref_it->first) == RI_per_phase[phaseId]->end()) {
+            (*RI_per_phase[phaseId])[ref_it->first] = new map<uint64_t, uint64_t>;
+        }
+        for (map<uint64_t, map<uint64_t, uint64_t>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
+            for (map<uint64_t, uint64_t>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
+                if ((*RI_per_phase[phaseId])[ref_it->first]->find(ri_it->first) == (*RI_per_phase[phaseId])[ref_it->first]->end()) {
+                    (*(*RI_per_phase[phaseId])[ref_it->first])[ri_it->first] = ri_it->second;
+                } else {
+                    (*(*RI_per_phase[phaseId])[ref_it->first])[ri_it->first] = ri_it->second;
+                }
+            }
+        }
+    }
+
     return;
 }
 

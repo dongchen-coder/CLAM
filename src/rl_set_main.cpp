@@ -133,7 +133,7 @@ void process(string fileName, int cacheSize) {
     phase_id ++;
     
     dumpLeasesFormated();
-    
+    dumpLeasesFormantedWithLimitedEntry(128);
 }
 
 int main(int argc, char** argv) {
