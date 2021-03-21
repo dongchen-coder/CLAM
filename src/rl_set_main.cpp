@@ -24,7 +24,7 @@ uint32_t get_set(uint32_t n_block_capacity, uint32_t idx_tag, uint32_t n_way){
 }
 
 
-void process(string fileName, int cacheSize) {
+void process(string fileName, int cacheSize, int* sample_distance) {
 
     ifstream ifs;
     ifs.open(fileName, ifstream::in);
@@ -38,9 +38,11 @@ void process(string fileName, int cacheSize) {
     uint64_t time;
     uint64_t pre_time;
     uint64_t tag;
-    uint64_t sample_count;
     
-    uint64_t phase_start_time = 0;
+    uint64_t start_time = -1;
+    uint64_t end_time = -1;
+    uint64_t sample_count = 0;
+    
     bool phase_end = false;
     
     while (ifs.good()) {
@@ -56,84 +58,58 @@ void process(string fileName, int cacheSize) {
             break;
         }
        
-        cur_phase = (ip & 0xFF000000) >> 24;
-        ip = ip & 0x00FFFFFF;
-        
-        if (pre_phase != -1 && cur_phase < pre_phase) {
-            continue;
+        if (start_time == -1) {
+            start_time = time;
         }
-        
-        
-        if (pre_phase != -1) {
-            if (cur_phase != pre_phase) {
-                cout << "Phase change from " << pre_phase << " to " << cur_phase << endl;
-                phase_end = true;
-            }
+        if (end_time == -1) {
+            end_time = time;
         }
-        
-        if (phase_end == true) {
-            refT = time - phase_start_time;
-            uint64_t sample_distance = 1000;
-            if (sample_count > 0) {
-                sample_distance = (pre_time - phase_start_time) / (sample_count);
-            }
-            
-            cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
-            OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
-            phase_id ++;
-            
-            phase_start_time = pre_time;
-            sample_count = 0;
-            OSL_reset();
-            phase_end = false;
-        }
-        
+        start_time = min(time, start_time);
+        end_time = max(time, end_time);
+        sample_count++;
         
         if ( (ri & (1 << 31)) != 0) {
             ri = numeric_limits<uint64_t>::max();
-        } else {
-            sample_count++;
         }
-
-        uint64_t cset = get_set(num_capacity, tag, num_way); 
-
-        // Accumulate RI to hist
-        if (RI_set.find(ip) != RI_set.end()) {
-            if ((*RI_set[ip]).find(cset) != (*RI_set[ip]).end()) {
-                if ((*(*RI_set[ip])[cset]).find(ri) != (*(*RI_set[ip])[cset]).end()) {
-                    (*(*RI_set[ip])[cset])[ri] += 1;
-                   } else {
-                    (*(*RI_set[ip])[cset])[ri] = 1;
-                }
-            } else {
-                (*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
-                (*(*RI_set[ip])[cset])[ri] = 1;
-            }
-        } else {
-            RI_set[ip] = new map<uint64_t, map<uint64_t, uint64_t>* >;
-            (*RI_set[ip])[cset] = new map<uint64_t, uint64_t>;
-            (*(*RI_set[ip])[cset])[ri] = 1;
-        }
-
-        refT = time - phase_start_time;
         
-        pre_time = time;
-        pre_phase = cur_phase;
+        cur_phase = (ip & 0xFF000000) >> 24;
+        ip = ip & 0x00FFFFFF;
+        uint64_t cset = get_set(num_capacity, tag, num_way);
+        
+        if (phase_ref_set_ri_cnt.find(cur_phase) == phase_ref_set_ri_cnt.end()) {
+            phase_ref_set_ri_cnt[cur_phase] = new map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >;
+            RI_per_phase[cur_phase] = new map<uint64_t, map<uint64_t, uint64_t>* >;
+        }
+        if ((*phase_ref_set_ri_cnt[cur_phase]).find(ip) == (*phase_ref_set_ri_cnt[cur_phase]).end()) {
+            (*phase_ref_set_ri_cnt[cur_phase])[ip] = new map<uint64_t, map<uint64_t, uint64_t>* >;
+            (*RI_per_phase[cur_phase])[ip] = new map<uint64_t, uint64_t>;
+        }
+        if ((*(*phase_ref_set_ri_cnt[cur_phase])[ip]).find(cset) == (*(*phase_ref_set_ri_cnt[cur_phase])[ip]).end()) {
+            (*(*phase_ref_set_ri_cnt[cur_phase])[ip])[cset] = new map<uint64_t, uint64_t>;
+        }
+        
+        if ((*(*(*phase_ref_set_ri_cnt[cur_phase])[ip])[cset]).find(ri) == (*(*(*phase_ref_set_ri_cnt[cur_phase])[ip])[cset]).end()) {
+            (*(*(*phase_ref_set_ri_cnt[cur_phase])[ip])[cset])[ri] = 1;
+        } else {
+            (*(*(*phase_ref_set_ri_cnt[cur_phase])[ip])[cset])[ri] += 1;
+        }
+        
+        if ((*(*RI_per_phase[cur_phase])[ip]).find(ri) == (*(*RI_per_phase[cur_phase])[ip]).end()) {
+            (*(*RI_per_phase[cur_phase])[ip])[ri] = 1;
+        } else {
+            (*(*RI_per_phase[cur_phase])[ip])[ri] += 1;
+        }
+        
+        if (phase_scnt.find(cur_phase) == phase_scnt.end()) {
+            phase_scnt[cur_phase] = 1;
+        } else {
+            phase_scnt[cur_phase] += 1;
+        }
         
     }
     ifs.close();
     
-    uint64_t sample_distance = 1000;
-    if (sample_count > 0) {
-        sample_distance = (time - phase_start_time) / (sample_count);
-    }
-    
-    cout << "Finished phase " << phase_id << ">>>>>>>>>>>" << endl;
-    OSL_ref(num_capacity, num_capacity / num_way, sample_distance, phase_id);
-    phase_id ++;
-    
-    dumpLeasesFormated();
-    dumpLeasesFormantedWithLimitedEntry(128);
+    *sample_distance = (end_time - start_time) / sample_count;
 }
 
 int main(int argc, char** argv) {
@@ -147,7 +123,19 @@ int main(int argc, char** argv) {
         c = stoi(argv[2]);
     }
     
+    int sample_distance = 1000;
+    
     // data block size is 8 Byte
-    process(fileName, c * 1024 / 64);
+    process(fileName, c * 1024 / 64, &sample_distance);
+    
+    for (auto it = phase_ref_set_ri_cnt.begin(), eit = phase_ref_set_ri_cnt.end(); it != eit; ++it) {
+        OSL_reset();
+        OSL_ref(num_capacity, num_capacity / num_way, sample_distance, it->first);
+    }
+    
+    
+    dumpLeasesFormated();
+    dumpLeasesFormantedWithLimitedEntry(128);
+    
     return 0;
 }

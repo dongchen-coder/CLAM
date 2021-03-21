@@ -1,4 +1,3 @@
-Finished phase 0>>>>>>>>>>>
 Start to init hits and costs
 Finished to init hits and costs
 Dump RI
@@ -1224,337 +1223,339 @@ Ref 00000dc8 Set 14 RI 1 CNT 3
 Ref 00000dd0 Set 14 RI 1 CNT 3
 Ref 00000e6c Set 15 RI 1 CNT 1
 
-here 29118614
-refT 29118614 cache size (per set) 128 sample distance 257 targetCost (single set) 906416
+phase ID 0
+refT 113286 cache size (per set) 128 sample distance 257 here
+here
+targetCost (single set) 906288
 Dump lease assignement procedure
-Assign lease 1 to ref 000006f8 avg cache size (max among all sets) 3.53039e-05 miss ratio 0.999965
-total cost (single set) 4 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000704 avg cache size (max among all sets) 0.000450124 miss ratio 0.99955
-total cost (single set) 51 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000070c avg cache size (max among all sets) 0.00870241 miss ratio 0.991298
-total cost (single set) 986 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000071c avg cache size (max among all sets) 0.0166281 miss ratio 0.983372
-total cost (single set) 1884 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000724 avg cache size (max among all sets) 0.0247215 miss ratio 0.975278
-total cost (single set) 2801 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000074c avg cache size (max among all sets) 0.0327532 miss ratio 0.967247
-total cost (single set) 3711 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000758 avg cache size (max among all sets) 0.0409525 miss ratio 0.959048
-total cost (single set) 4640 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000760 avg cache size (max among all sets) 0.0487458 miss ratio 0.951254
-total cost (single set) 5523 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000790 avg cache size (max among all sets) 0.0566186 miss ratio 0.943381
-total cost (single set) 6415 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000007a0 avg cache size (max among all sets) 0.0646767 miss ratio 0.935323
-total cost (single set) 7328 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000007a8 avg cache size (max among all sets) 0.0730525 miss ratio 0.926947
-total cost (single set) 8277 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000007e0 avg cache size (max among all sets) 0.0813401 miss ratio 0.91866
-total cost (single set) 9216 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000007ec avg cache size (max among all sets) 0.0892659 miss ratio 0.910734
-total cost (single set) 10114 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000007f4 avg cache size (max among all sets) 0.097474 miss ratio 0.902526
-total cost (single set) 11044 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000820 avg cache size (max among all sets) 0.105426 miss ratio 0.894574
-total cost (single set) 11945 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000082c avg cache size (max among all sets) 0.113484 miss ratio 0.886516
-total cost (single set) 12858 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000834 avg cache size (max among all sets) 0.121366 miss ratio 0.878634
-total cost (single set) 13751 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000864 avg cache size (max among all sets) 0.129221 miss ratio 0.870779
-total cost (single set) 14641 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000870 avg cache size (max among all sets) 0.137703 miss ratio 0.862297
-total cost (single set) 15602 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000878 avg cache size (max among all sets) 0.145884 miss ratio 0.854116
-total cost (single set) 16529 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000008b8 avg cache size (max among all sets) 0.153704 miss ratio 0.846296
-total cost (single set) 17415 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000008c4 avg cache size (max among all sets) 0.161709 miss ratio 0.838291
-total cost (single set) 18322 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000008cc avg cache size (max among all sets) 0.169715 miss ratio 0.830285
-total cost (single set) 19229 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000008f8 avg cache size (max among all sets) 0.177843 miss ratio 0.822157
-total cost (single set) 20150 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000904 avg cache size (max among all sets) 0.185804 miss ratio 0.814196
-total cost (single set) 21052 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000090c avg cache size (max among all sets) 0.193801 miss ratio 0.806199
-total cost (single set) 21958 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000093c avg cache size (max among all sets) 0.201656 miss ratio 0.798344
-total cost (single set) 22848 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000948 avg cache size (max among all sets) 0.209749 miss ratio 0.790251
-total cost (single set) 23765 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000950 avg cache size (max among all sets) 0.217587 miss ratio 0.782413
-total cost (single set) 24653 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000990 avg cache size (max among all sets) 0.225371 miss ratio 0.774629
-total cost (single set) 25535 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 0000099c avg cache size (max among all sets) 0.23342 miss ratio 0.76658
-total cost (single set) 26447 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000009a4 avg cache size (max among all sets) 0.241611 miss ratio 0.758389
-total cost (single set) 27375 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000009cc avg cache size (max among all sets) 0.249793 miss ratio 0.750207
-total cost (single set) 28302 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000009d8 avg cache size (max among all sets) 0.257568 miss ratio 0.742432
-total cost (single set) 29183 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 000009e4 avg cache size (max among all sets) 0.265618 miss ratio 0.734382
-total cost (single set) 30095 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a0c avg cache size (max among all sets) 0.273605 miss ratio 0.726395
-total cost (single set) 31000 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a14 avg cache size (max among all sets) 0.281601 miss ratio 0.718399
-total cost (single set) 31906 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a18 avg cache size (max among all sets) 0.289615 miss ratio 0.710385
-total cost (single set) 32814 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a20 avg cache size (max among all sets) 0.298062 miss ratio 0.701938
-total cost (single set) 33771 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a28 avg cache size (max among all sets) 0.298565 miss ratio 0.701435
-total cost (single set) 33828 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a30 avg cache size (max among all sets) 0.298989 miss ratio 0.701011
-total cost (single set) 33876 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a34 avg cache size (max among all sets) 0.299492 miss ratio 0.700508
-total cost (single set) 33933 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a3c avg cache size (max among all sets) 0.300021 miss ratio 0.699979
-total cost (single set) 33993 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a44 avg cache size (max among all sets) 0.300074 miss ratio 0.699926
-total cost (single set) 33999 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a4c avg cache size (max among all sets) 0.300083 miss ratio 0.699917
-total cost (single set) 34000 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a50 avg cache size (max among all sets) 0.300118 miss ratio 0.699882
-total cost (single set) 34004 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a58 avg cache size (max among all sets) 0.300127 miss ratio 0.699873
-total cost (single set) 34005 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a70 avg cache size (max among all sets) 0.30018 miss ratio 0.69982
-total cost (single set) 34011 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a7c avg cache size (max among all sets) 0.300718 miss ratio 0.699282
-total cost (single set) 34072 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a84 avg cache size (max among all sets) 0.308644 miss ratio 0.691356
-total cost (single set) 34970 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a94 avg cache size (max among all sets) 0.316941 miss ratio 0.683059
-total cost (single set) 35910 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000a9c avg cache size (max among all sets) 0.324699 miss ratio 0.675301
-total cost (single set) 36789 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000ac4 avg cache size (max among all sets) 0.333074 miss ratio 0.666926
-total cost (single set) 37738 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000ad0 avg cache size (max among all sets) 0.340894 miss ratio 0.659106
-total cost (single set) 38624 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000ad8 avg cache size (max among all sets) 0.348838 miss ratio 0.651162
-total cost (single set) 39524 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b08 avg cache size (max among all sets) 0.356975 miss ratio 0.643025
-total cost (single set) 40446 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b18 avg cache size (max among all sets) 0.364998 miss ratio 0.635002
-total cost (single set) 41355 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b20 avg cache size (max among all sets) 0.372606 miss ratio 0.627394
-total cost (single set) 42217 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b58 avg cache size (max among all sets) 0.380717 miss ratio 0.619283
-total cost (single set) 43136 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b64 avg cache size (max among all sets) 0.388846 miss ratio 0.611154
-total cost (single set) 44057 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b6c avg cache size (max among all sets) 0.396683 miss ratio 0.603317
-total cost (single set) 44945 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000b98 avg cache size (max among all sets) 0.404671 miss ratio 0.595329
-total cost (single set) 45850 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000ba4 avg cache size (max among all sets) 0.41257 miss ratio 0.58743
-total cost (single set) 46745 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000bac avg cache size (max among all sets) 0.420575 miss ratio 0.579425
-total cost (single set) 47652 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000bdc avg cache size (max among all sets) 0.42888 miss ratio 0.57112
-total cost (single set) 48593 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000be8 avg cache size (max among all sets) 0.436788 miss ratio 0.563212
-total cost (single set) 49489 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000bf0 avg cache size (max among all sets) 0.444829 miss ratio 0.555171
-total cost (single set) 50400 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c30 avg cache size (max among all sets) 0.453011 miss ratio 0.546989
-total cost (single set) 51327 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c3c avg cache size (max among all sets) 0.460963 miss ratio 0.539037
-total cost (single set) 52228 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c44 avg cache size (max among all sets) 0.468977 miss ratio 0.531023
-total cost (single set) 53136 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c70 avg cache size (max among all sets) 0.476823 miss ratio 0.523177
-total cost (single set) 54025 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c7c avg cache size (max among all sets) 0.484987 miss ratio 0.515013
-total cost (single set) 54950 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000c84 avg cache size (max among all sets) 0.493239 miss ratio 0.506761
-total cost (single set) 55885 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000cb4 avg cache size (max among all sets) 0.501359 miss ratio 0.498641
-total cost (single set) 56805 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000cc0 avg cache size (max among all sets) 0.509356 miss ratio 0.490644
-total cost (single set) 57711 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000cc8 avg cache size (max among all sets) 0.517546 miss ratio 0.482454
-total cost (single set) 58639 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d08 avg cache size (max among all sets) 0.525622 miss ratio 0.474378
-total cost (single set) 59554 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d14 avg cache size (max among all sets) 0.533353 miss ratio 0.466647
-total cost (single set) 60430 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d1c avg cache size (max among all sets) 0.541288 miss ratio 0.458712
-total cost (single set) 61329 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d44 avg cache size (max among all sets) 0.549399 miss ratio 0.450601
-total cost (single set) 62248 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d50 avg cache size (max among all sets) 0.557501 miss ratio 0.442499
-total cost (single set) 63166 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d5c avg cache size (max among all sets) 0.565577 miss ratio 0.434423
-total cost (single set) 64081 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d84 avg cache size (max among all sets) 0.573397 miss ratio 0.426603
-total cost (single set) 64967 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d8c avg cache size (max among all sets) 0.581137 miss ratio 0.418863
-total cost (single set) 65844 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d90 avg cache size (max among all sets) 0.589663 miss ratio 0.410337
-total cost (single set) 66810 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000d98 avg cache size (max among all sets) 0.598154 miss ratio 0.401846
-total cost (single set) 67772 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000da0 avg cache size (max among all sets) 0.598683 miss ratio 0.401317
-total cost (single set) 67832 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000da8 avg cache size (max among all sets) 0.599107 miss ratio 0.400893
-total cost (single set) 67880 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000dac avg cache size (max among all sets) 0.59968 miss ratio 0.40032
-total cost (single set) 67945 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000db4 avg cache size (max among all sets) 0.600086 miss ratio 0.399914
-total cost (single set) 67991 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000dbc avg cache size (max among all sets) 0.600113 miss ratio 0.399887
-total cost (single set) 67994 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000dc8 avg cache size (max among all sets) 0.600139 miss ratio 0.399861
-total cost (single set) 67997 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000dd0 avg cache size (max among all sets) 0.600166 miss ratio 0.399834
-total cost (single set) 68000 set ID 14 target cost (single set) 906416
-Assign lease 1 to ref 00000e6c avg cache size (max among all sets) 0.600166 miss ratio 0.399825
-total cost (single set) 68000 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000738 avg cache size (max among all sets) 0.616194 miss ratio 0.391811
-total cost (single set) 69816 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000774 avg cache size (max among all sets) 0.631886 miss ratio 0.383965
-total cost (single set) 71594 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 0000080c avg cache size (max among all sets) 0.647491 miss ratio 0.376163
-total cost (single set) 73362 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000848 avg cache size (max among all sets) 0.663642 miss ratio 0.368087
-total cost (single set) 75192 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 000008d4 avg cache size (max among all sets) 0.679247 miss ratio 0.360285
-total cost (single set) 76960 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000920 avg cache size (max among all sets) 0.695734 miss ratio 0.352041
-total cost (single set) 78828 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 000009b8 avg cache size (max among all sets) 0.711709 miss ratio 0.344054
-total cost (single set) 80638 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 000009f8 avg cache size (max among all sets) 0.727948 miss ratio 0.335934
-total cost (single set) 82478 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000ab0 avg cache size (max among all sets) 0.743764 miss ratio 0.328026
-total cost (single set) 84270 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000aec avg cache size (max among all sets) 0.759492 miss ratio 0.320162
-total cost (single set) 86052 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000b84 avg cache size (max among all sets) 0.775256 miss ratio 0.31228
-total cost (single set) 87838 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000bc0 avg cache size (max among all sets) 0.790913 miss ratio 0.304452
-total cost (single set) 89612 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000c4c avg cache size (max among all sets) 0.806817 miss ratio 0.2965
-total cost (single set) 91414 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000c98 avg cache size (max among all sets) 0.822757 miss ratio 0.28853
-total cost (single set) 93220 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000d30 avg cache size (max among all sets) 0.839173 miss ratio 0.280322
-total cost (single set) 95080 set ID 14 target cost (single set) 906416
-Assign lease 2 to ref 00000d70 avg cache size (max among all sets) 0.85483 miss ratio 0.272493
-total cost (single set) 96854 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 000007bc avg cache size (max among all sets) 0.878978 miss ratio 0.264444
-total cost (single set) 99590 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 00000890 avg cache size (max among all sets) 0.902967 miss ratio 0.256447
-total cost (single set) 102308 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 00000958 avg cache size (max among all sets) 0.926294 miss ratio 0.248672
-total cost (single set) 104951 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 00000b34 avg cache size (max among all sets) 0.94986 miss ratio 0.240817
-total cost (single set) 107621 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 00000c08 avg cache size (max among all sets) 0.973769 miss ratio 0.232847
-total cost (single set) 110330 set ID 14 target cost (single set) 906416
-Assign lease 3 to ref 00000cd0 avg cache size (max among all sets) 0.997997 miss ratio 0.224771
-total cost (single set) 113075 set ID 14 target cost (single set) 906416
-Assign lease 5 to ref 00000c6c avg cache size (max among all sets) 1.00042 miss ratio 0.217313
-total cost (single set) 113350 set ID 14 target cost (single set) 906416
-Assign lease 5 to ref 00000930 avg cache size (max among all sets) 1.00259 miss ratio 0.209546
-total cost (single set) 113595 set ID 14 target cost (single set) 906416
-Assign lease 5 to ref 000008f4 avg cache size (max among all sets) 1.0047 miss ratio 0.202062
-total cost (single set) 113835 set ID 14 target cost (single set) 906416
-Assign lease 5 to ref 00000ca8 avg cache size (max among all sets) 1.007 miss ratio 0.194516
-total cost (single set) 114095 set ID 14 target cost (single set) 906416
-Assign lease 11 to ref 00000930 avg cache size (max among all sets) 1.00716 miss ratio 0.19411
-total cost (single set) 114113 set ID 14 target cost (single set) 906416
-Assign lease 11 to ref 00000ca8 avg cache size (max among all sets) 1.00726 miss ratio 0.193615
-total cost (single set) 114125 set ID 14 target cost (single set) 906416
-Assign lease 6 to ref 00000cf0 avg cache size (max among all sets) 1.0097 miss ratio 0.186157
-total cost (single set) 114401 set ID 14 target cost (single set) 906416
-Assign lease 6 to ref 00000978 avg cache size (max among all sets) 1.01325 miss ratio 0.178576
-total cost (single set) 114803 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000858 avg cache size (max among all sets) 1.0194 miss ratio 0.170606
-total cost (single set) 115500 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000bd0 avg cache size (max among all sets) 1.02477 miss ratio 0.162698
-total cost (single set) 116108 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000784 avg cache size (max among all sets) 1.03169 miss ratio 0.154799
-total cost (single set) 116892 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 000007d8 avg cache size (max among all sets) 1.03169 miss ratio 0.146714
-total cost (single set) 116892 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 000008ac avg cache size (max among all sets) 1.03169 miss ratio 0.138559
-total cost (single set) 116892 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000afc avg cache size (max among all sets) 1.04115 miss ratio 0.130598
-total cost (single set) 117964 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000b50 avg cache size (max among all sets) 1.04115 miss ratio 0.122531
-total cost (single set) 117964 set ID 14 target cost (single set) 906416
-Assign lease 16 to ref 00000c24 avg cache size (max among all sets) 1.04115 miss ratio 0.114623
-total cost (single set) 117964 set ID 14 target cost (single set) 906416
-Assign lease 26 to ref 000009c8 avg cache size (max among all sets) 1.0499 miss ratio 0.107041
-total cost (single set) 118956 set ID 14 target cost (single set) 906416
-Assign lease 19 to ref 00000d40 avg cache size (max among all sets) 1.06013 miss ratio 0.100148
-total cost (single set) 120115 set ID 14 target cost (single set) 906416
-Assign lease 26 to ref 00000d40 avg cache size (max among all sets) 1.06038 miss ratio 0.099857
-total cost (single set) 120143 set ID 14 target cost (single set) 906416
-Assign lease 35 to ref 000008f4 avg cache size (max among all sets) 1.06064 miss ratio 0.0993804
-total cost (single set) 120173 set ID 14 target cost (single set) 906416
-Assign lease 35 to ref 00000c6c avg cache size (max among all sets) 1.06091 miss ratio 0.0989921
-total cost (single set) 120203 set ID 14 target cost (single set) 906416
-Assign lease 44 to ref 00000cfc avg cache size (max among all sets) 1.06091 miss ratio 0.0911105
-total cost (single set) 120203 set ID 14 target cost (single set) 906416
-Assign lease 47 to ref 00000984 avg cache size (max among all sets) 1.06392 miss ratio 0.0832112
-total cost (single set) 120544 set ID 10 target cost (single set) 906416
-Assign lease 56 to ref 000009c8 avg cache size (max among all sets) 1.06551 miss ratio 0.082717
-total cost (single set) 120724 set ID 10 target cost (single set) 906416
-Assign lease 56 to ref 00000d40 avg cache size (max among all sets) 1.06683 miss ratio 0.0822492
-total cost (single set) 120874 set ID 10 target cost (single set) 906416
-Assign lease 69 to ref 0000081c avg cache size (max among all sets) 1.09766 miss ratio 0.075109
-total cost (single set) 124367 set ID 10 target cost (single set) 906416
-Assign lease 69 to ref 00000748 avg cache size (max among all sets) 1.12575 miss ratio 0.0676511
-total cost (single set) 127550 set ID 10 target cost (single set) 906416
-Assign lease 69 to ref 00000a08 avg cache size (max among all sets) 1.15956 miss ratio 0.0603343
-total cost (single set) 131381 set ID 10 target cost (single set) 906416
-Assign lease 69 to ref 000008a0 avg cache size (max among all sets) 1.19038 miss ratio 0.052894
-total cost (single set) 134873 set ID 14 target cost (single set) 906416
-Assign lease 69 to ref 00000b94 avg cache size (max among all sets) 1.22754 miss ratio 0.0449771
-total cost (single set) 139083 set ID 14 target cost (single set) 906416
-Assign lease 69 to ref 00000ac0 avg cache size (max among all sets) 1.2602 miss ratio 0.0371662
-total cost (single set) 142783 set ID 14 target cost (single set) 906416
-Assign lease 69 to ref 000007cc avg cache size (max among all sets) 1.29006 miss ratio 0.0297259
-total cost (single set) 146166 set ID 14 target cost (single set) 906416
-Assign lease 69 to ref 00000c18 avg cache size (max among all sets) 1.3221 miss ratio 0.022365
-total cost (single set) 149797 set ID 14 target cost (single set) 906416
-Assign lease 69 to ref 00000b44 avg cache size (max among all sets) 1.35788 miss ratio 0.0148894
-total cost (single set) 153850 set ID 10 target cost (single set) 906416
-Assign lease 69 to ref 00000d80 avg cache size (max among all sets) 1.39157 miss ratio 0.00729025
-total cost (single set) 157668 set ID 10 target cost (single set) 906416
-Assign lease 233 to ref 000009c8 avg cache size (max among all sets) 1.39314 miss ratio 0.00715786
-total cost (single set) 157845 set ID 10 target cost (single set) 906416
-Assign lease 264 to ref 0000081c avg cache size (max among all sets) 1.40159 miss ratio 0.00669008
-total cost (single set) 158803 set ID 14 target cost (single set) 906416
-Assign lease 264 to ref 00000b94 avg cache size (max among all sets) 1.40799 miss ratio 0.00616053
-total cost (single set) 159528 set ID 14 target cost (single set) 906416
-Assign lease 233 to ref 00000d40 avg cache size (max among all sets) 1.40955 miss ratio 0.00597518
-total cost (single set) 159705 set ID 14 target cost (single set) 906416
-Assign lease 232 to ref 00000978 avg cache size (max among all sets) 1.42254 miss ratio 0.0054721
-total cost (single set) 161177 set ID 14 target cost (single set) 906416
-Assign lease 232 to ref 00000cf0 avg cache size (max among all sets) 1.42804 miss ratio 0.00506611
-total cost (single set) 161800 set ID 14 target cost (single set) 906416
-Assign lease 18742 to ref 00000748 avg cache size (max among all sets) 1.74987 miss ratio 0.0045542
-total cost (single set) 198264 set ID 14 target cost (single set) 906416
-Assign lease 19563 to ref 00000d40 avg cache size (max among all sets) 1.74987 miss ratio 0.00452772
-total cost (single set) 198264 set ID 14 target cost (single set) 906416
-Assign lease 18710 to ref 00000c18 avg cache size (max among all sets) 2.38414 miss ratio 0.00397169
-total cost (single set) 270128 set ID 10 target cost (single set) 906416
-Assign lease 19606 to ref 00000ac0 avg cache size (max among all sets) 3.49969 miss ratio 0.00344213
-total cost (single set) 396522 set ID 5 target cost (single set) 906416
-Assign lease 18710 to ref 000008a0 avg cache size (max among all sets) 4.14685 miss ratio 0.00296553
-total cost (single set) 469846 set ID 5 target cost (single set) 906416
-Assign lease 362008 to ref 00000a08 with percentage 0.287183
-             45 to ref 00000a08 with percentage 0.712817
+Assign lease 1 to ref 000006f8 avg cache size (max among all sets) 3.53089e-05 miss ratio 0.999965
+total cost (single set) 4 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000704 avg cache size (max among all sets) 0.000450188 miss ratio 0.99955
+total cost (single set) 51 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000070c avg cache size (max among all sets) 0.00870364 miss ratio 0.991296
+total cost (single set) 986 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000071c avg cache size (max among all sets) 0.0166305 miss ratio 0.98337
+total cost (single set) 1884 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000724 avg cache size (max among all sets) 0.024725 miss ratio 0.975275
+total cost (single set) 2801 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000074c avg cache size (max among all sets) 0.0327578 miss ratio 0.967242
+total cost (single set) 3711 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000758 avg cache size (max among all sets) 0.0409583 miss ratio 0.959042
+total cost (single set) 4640 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000760 avg cache size (max among all sets) 0.0487527 miss ratio 0.951247
+total cost (single set) 5523 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000790 avg cache size (max among all sets) 0.0566266 miss ratio 0.943373
+total cost (single set) 6415 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000007a0 avg cache size (max among all sets) 0.0646858 miss ratio 0.935314
+total cost (single set) 7328 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000007a8 avg cache size (max among all sets) 0.0730629 miss ratio 0.926937
+total cost (single set) 8277 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000007e0 avg cache size (max among all sets) 0.0813516 miss ratio 0.918648
+total cost (single set) 9216 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000007ec avg cache size (max among all sets) 0.0892785 miss ratio 0.910722
+total cost (single set) 10114 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000007f4 avg cache size (max among all sets) 0.0974878 miss ratio 0.902512
+total cost (single set) 11044 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000820 avg cache size (max among all sets) 0.105441 miss ratio 0.894559
+total cost (single set) 11945 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000082c avg cache size (max among all sets) 0.1135 miss ratio 0.8865
+total cost (single set) 12858 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000834 avg cache size (max among all sets) 0.121383 miss ratio 0.878617
+total cost (single set) 13751 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000864 avg cache size (max among all sets) 0.129239 miss ratio 0.870761
+total cost (single set) 14641 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000870 avg cache size (max among all sets) 0.137722 miss ratio 0.862278
+total cost (single set) 15602 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000878 avg cache size (max among all sets) 0.145905 miss ratio 0.854095
+total cost (single set) 16529 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000008b8 avg cache size (max among all sets) 0.153726 miss ratio 0.846274
+total cost (single set) 17415 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000008c4 avg cache size (max among all sets) 0.161732 miss ratio 0.838268
+total cost (single set) 18322 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000008cc avg cache size (max among all sets) 0.169739 miss ratio 0.830261
+total cost (single set) 19229 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000008f8 avg cache size (max among all sets) 0.177868 miss ratio 0.822132
+total cost (single set) 20150 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000904 avg cache size (max among all sets) 0.185831 miss ratio 0.814169
+total cost (single set) 21052 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000090c avg cache size (max among all sets) 0.193828 miss ratio 0.806172
+total cost (single set) 21958 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000093c avg cache size (max among all sets) 0.201684 miss ratio 0.798316
+total cost (single set) 22848 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000948 avg cache size (max among all sets) 0.209779 miss ratio 0.790221
+total cost (single set) 23765 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000950 avg cache size (max among all sets) 0.217617 miss ratio 0.782383
+total cost (single set) 24653 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000990 avg cache size (max among all sets) 0.225403 miss ratio 0.774597
+total cost (single set) 25535 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 0000099c avg cache size (max among all sets) 0.233453 miss ratio 0.766547
+total cost (single set) 26447 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000009a4 avg cache size (max among all sets) 0.241645 miss ratio 0.758355
+total cost (single set) 27375 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000009cc avg cache size (max among all sets) 0.249828 miss ratio 0.750172
+total cost (single set) 28302 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000009d8 avg cache size (max among all sets) 0.257605 miss ratio 0.742395
+total cost (single set) 29183 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 000009e4 avg cache size (max among all sets) 0.265655 miss ratio 0.734345
+total cost (single set) 30095 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a0c avg cache size (max among all sets) 0.273644 miss ratio 0.726356
+total cost (single set) 31000 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a14 avg cache size (max among all sets) 0.281641 miss ratio 0.718359
+total cost (single set) 31906 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a18 avg cache size (max among all sets) 0.289656 miss ratio 0.710344
+total cost (single set) 32814 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a20 avg cache size (max among all sets) 0.298104 miss ratio 0.701896
+total cost (single set) 33771 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a28 avg cache size (max among all sets) 0.298607 miss ratio 0.701393
+total cost (single set) 33828 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a30 avg cache size (max among all sets) 0.299031 miss ratio 0.700969
+total cost (single set) 33876 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a34 avg cache size (max among all sets) 0.299534 miss ratio 0.700466
+total cost (single set) 33933 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a3c avg cache size (max among all sets) 0.300064 miss ratio 0.699936
+total cost (single set) 33993 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a44 avg cache size (max among all sets) 0.300117 miss ratio 0.699883
+total cost (single set) 33999 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a4c avg cache size (max among all sets) 0.300125 miss ratio 0.699875
+total cost (single set) 34000 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a50 avg cache size (max among all sets) 0.300161 miss ratio 0.699839
+total cost (single set) 34004 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a58 avg cache size (max among all sets) 0.300169 miss ratio 0.699831
+total cost (single set) 34005 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a70 avg cache size (max among all sets) 0.300222 miss ratio 0.699778
+total cost (single set) 34011 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a7c avg cache size (max among all sets) 0.300761 miss ratio 0.699239
+total cost (single set) 34072 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a84 avg cache size (max among all sets) 0.308688 miss ratio 0.691312
+total cost (single set) 34970 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a94 avg cache size (max among all sets) 0.316985 miss ratio 0.683015
+total cost (single set) 35910 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000a9c avg cache size (max among all sets) 0.324744 miss ratio 0.675256
+total cost (single set) 36789 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000ac4 avg cache size (max among all sets) 0.333121 miss ratio 0.666879
+total cost (single set) 37738 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000ad0 avg cache size (max among all sets) 0.340942 miss ratio 0.659058
+total cost (single set) 38624 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000ad8 avg cache size (max among all sets) 0.348887 miss ratio 0.651113
+total cost (single set) 39524 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b08 avg cache size (max among all sets) 0.357026 miss ratio 0.642974
+total cost (single set) 40446 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b18 avg cache size (max among all sets) 0.36505 miss ratio 0.63495
+total cost (single set) 41355 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b20 avg cache size (max among all sets) 0.372659 miss ratio 0.627341
+total cost (single set) 42217 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b58 avg cache size (max among all sets) 0.380771 miss ratio 0.619229
+total cost (single set) 43136 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b64 avg cache size (max among all sets) 0.388901 miss ratio 0.611099
+total cost (single set) 44057 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b6c avg cache size (max among all sets) 0.396739 miss ratio 0.603261
+total cost (single set) 44945 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000b98 avg cache size (max among all sets) 0.404728 miss ratio 0.595272
+total cost (single set) 45850 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000ba4 avg cache size (max among all sets) 0.412628 miss ratio 0.587372
+total cost (single set) 46745 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000bac avg cache size (max among all sets) 0.420635 miss ratio 0.579365
+total cost (single set) 47652 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000bdc avg cache size (max among all sets) 0.428941 miss ratio 0.571059
+total cost (single set) 48593 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000be8 avg cache size (max among all sets) 0.43685 miss ratio 0.56315
+total cost (single set) 49489 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000bf0 avg cache size (max among all sets) 0.444892 miss ratio 0.555108
+total cost (single set) 50400 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c30 avg cache size (max among all sets) 0.453075 miss ratio 0.546925
+total cost (single set) 51327 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c3c avg cache size (max among all sets) 0.461028 miss ratio 0.538972
+total cost (single set) 52228 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c44 avg cache size (max among all sets) 0.469043 miss ratio 0.530957
+total cost (single set) 53136 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c70 avg cache size (max among all sets) 0.47689 miss ratio 0.52311
+total cost (single set) 54025 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c7c avg cache size (max among all sets) 0.485056 miss ratio 0.514944
+total cost (single set) 54950 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000c84 avg cache size (max among all sets) 0.493309 miss ratio 0.506691
+total cost (single set) 55885 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000cb4 avg cache size (max among all sets) 0.50143 miss ratio 0.49857
+total cost (single set) 56805 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000cc0 avg cache size (max among all sets) 0.509427 miss ratio 0.490573
+total cost (single set) 57711 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000cc8 avg cache size (max among all sets) 0.517619 miss ratio 0.482381
+total cost (single set) 58639 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d08 avg cache size (max among all sets) 0.525696 miss ratio 0.474304
+total cost (single set) 59554 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d14 avg cache size (max among all sets) 0.533429 miss ratio 0.466571
+total cost (single set) 60430 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d1c avg cache size (max among all sets) 0.541364 miss ratio 0.458636
+total cost (single set) 61329 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d44 avg cache size (max among all sets) 0.549477 miss ratio 0.450523
+total cost (single set) 62248 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d50 avg cache size (max among all sets) 0.55758 miss ratio 0.44242
+total cost (single set) 63166 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d5c avg cache size (max among all sets) 0.565657 miss ratio 0.434343
+total cost (single set) 64081 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d84 avg cache size (max among all sets) 0.573478 miss ratio 0.426522
+total cost (single set) 64967 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d8c avg cache size (max among all sets) 0.581219 miss ratio 0.418781
+total cost (single set) 65844 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d90 avg cache size (max among all sets) 0.589746 miss ratio 0.410254
+total cost (single set) 66810 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000d98 avg cache size (max among all sets) 0.598238 miss ratio 0.401762
+total cost (single set) 67772 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000da0 avg cache size (max among all sets) 0.598768 miss ratio 0.401232
+total cost (single set) 67832 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000da8 avg cache size (max among all sets) 0.599191 miss ratio 0.400809
+total cost (single set) 67880 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000dac avg cache size (max among all sets) 0.599765 miss ratio 0.400235
+total cost (single set) 67945 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000db4 avg cache size (max among all sets) 0.600171 miss ratio 0.399829
+total cost (single set) 67991 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000dbc avg cache size (max among all sets) 0.600198 miss ratio 0.399802
+total cost (single set) 67994 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000dc8 avg cache size (max among all sets) 0.600224 miss ratio 0.399776
+total cost (single set) 67997 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000dd0 avg cache size (max among all sets) 0.600251 miss ratio 0.399749
+total cost (single set) 68000 set ID 14 target cost (single set) 906288
+Assign lease 1 to ref 00000e6c avg cache size (max among all sets) 0.600251 miss ratio 0.39974
+total cost (single set) 68000 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000738 avg cache size (max among all sets) 0.616281 miss ratio 0.391725
+total cost (single set) 69816 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000774 avg cache size (max among all sets) 0.631976 miss ratio 0.383878
+total cost (single set) 71594 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 0000080c avg cache size (max among all sets) 0.647582 miss ratio 0.376075
+total cost (single set) 73362 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000848 avg cache size (max among all sets) 0.663736 miss ratio 0.367998
+total cost (single set) 75192 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 000008d4 avg cache size (max among all sets) 0.679343 miss ratio 0.360195
+total cost (single set) 76960 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000920 avg cache size (max among all sets) 0.695832 miss ratio 0.35195
+total cost (single set) 78828 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 000009b8 avg cache size (max among all sets) 0.711809 miss ratio 0.343961
+total cost (single set) 80638 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 000009f8 avg cache size (max among all sets) 0.728051 miss ratio 0.33584
+total cost (single set) 82478 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000ab0 avg cache size (max among all sets) 0.743869 miss ratio 0.327931
+total cost (single set) 84270 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000aec avg cache size (max among all sets) 0.7596 miss ratio 0.320066
+total cost (single set) 86052 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000b84 avg cache size (max among all sets) 0.775365 miss ratio 0.312183
+total cost (single set) 87838 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000bc0 avg cache size (max among all sets) 0.791024 miss ratio 0.304354
+total cost (single set) 89612 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000c4c avg cache size (max among all sets) 0.806931 miss ratio 0.2964
+total cost (single set) 91414 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000c98 avg cache size (max among all sets) 0.822873 miss ratio 0.288429
+total cost (single set) 93220 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000d30 avg cache size (max among all sets) 0.839292 miss ratio 0.28022
+total cost (single set) 95080 set ID 14 target cost (single set) 906288
+Assign lease 2 to ref 00000d70 avg cache size (max among all sets) 0.854951 miss ratio 0.27239
+total cost (single set) 96854 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 000007bc avg cache size (max among all sets) 0.879102 miss ratio 0.26434
+total cost (single set) 99590 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 00000890 avg cache size (max among all sets) 0.903095 miss ratio 0.256342
+total cost (single set) 102308 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 00000958 avg cache size (max among all sets) 0.926425 miss ratio 0.248566
+total cost (single set) 104951 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 00000b34 avg cache size (max among all sets) 0.949994 miss ratio 0.240709
+total cost (single set) 107621 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 00000c08 avg cache size (max among all sets) 0.973907 miss ratio 0.232738
+total cost (single set) 110330 set ID 14 target cost (single set) 906288
+Assign lease 3 to ref 00000cd0 avg cache size (max among all sets) 0.998137 miss ratio 0.224661
+total cost (single set) 113075 set ID 14 target cost (single set) 906288
+Assign lease 5 to ref 00000c6c avg cache size (max among all sets) 1.00056 miss ratio 0.217202
+total cost (single set) 113350 set ID 14 target cost (single set) 906288
+Assign lease 5 to ref 00000930 avg cache size (max among all sets) 1.00273 miss ratio 0.209435
+total cost (single set) 113595 set ID 14 target cost (single set) 906288
+Assign lease 5 to ref 000008f4 avg cache size (max among all sets) 1.00485 miss ratio 0.201949
+total cost (single set) 113835 set ID 14 target cost (single set) 906288
+Assign lease 5 to ref 00000ca8 avg cache size (max among all sets) 1.00714 miss ratio 0.194402
+total cost (single set) 114095 set ID 14 target cost (single set) 906288
+Assign lease 11 to ref 00000930 avg cache size (max among all sets) 1.0073 miss ratio 0.193996
+total cost (single set) 114113 set ID 14 target cost (single set) 906288
+Assign lease 11 to ref 00000ca8 avg cache size (max among all sets) 1.00741 miss ratio 0.193501
+total cost (single set) 114125 set ID 14 target cost (single set) 906288
+Assign lease 6 to ref 00000cf0 avg cache size (max among all sets) 1.00984 miss ratio 0.186042
+total cost (single set) 114401 set ID 14 target cost (single set) 906288
+Assign lease 6 to ref 00000978 avg cache size (max among all sets) 1.01339 miss ratio 0.17846
+total cost (single set) 114803 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000858 avg cache size (max among all sets) 1.01954 miss ratio 0.170489
+total cost (single set) 115500 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000bd0 avg cache size (max among all sets) 1.02491 miss ratio 0.16258
+total cost (single set) 116108 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000784 avg cache size (max among all sets) 1.03183 miss ratio 0.154679
+total cost (single set) 116892 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 000007d8 avg cache size (max among all sets) 1.03183 miss ratio 0.146594
+total cost (single set) 116892 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 000008ac avg cache size (max among all sets) 1.03183 miss ratio 0.138437
+total cost (single set) 116892 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000afc avg cache size (max among all sets) 1.04129 miss ratio 0.130475
+total cost (single set) 117964 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000b50 avg cache size (max among all sets) 1.04129 miss ratio 0.122407
+total cost (single set) 117964 set ID 14 target cost (single set) 906288
+Assign lease 16 to ref 00000c24 avg cache size (max among all sets) 1.04129 miss ratio 0.114498
+total cost (single set) 117964 set ID 14 target cost (single set) 906288
+Assign lease 26 to ref 000009c8 avg cache size (max among all sets) 1.05005 miss ratio 0.106915
+total cost (single set) 118956 set ID 14 target cost (single set) 906288
+Assign lease 19 to ref 00000d40 avg cache size (max among all sets) 1.06028 miss ratio 0.100021
+total cost (single set) 120115 set ID 14 target cost (single set) 906288
+Assign lease 26 to ref 00000d40 avg cache size (max among all sets) 1.06053 miss ratio 0.0997299
+total cost (single set) 120143 set ID 14 target cost (single set) 906288
+Assign lease 35 to ref 000008f4 avg cache size (max among all sets) 1.06079 miss ratio 0.0992532
+total cost (single set) 120173 set ID 14 target cost (single set) 906288
+Assign lease 35 to ref 00000c6c avg cache size (max among all sets) 1.06106 miss ratio 0.0988648
+total cost (single set) 120203 set ID 14 target cost (single set) 906288
+Assign lease 44 to ref 00000cfc avg cache size (max among all sets) 1.06106 miss ratio 0.0909821
+total cost (single set) 120203 set ID 14 target cost (single set) 906288
+Assign lease 47 to ref 00000984 avg cache size (max among all sets) 1.06407 miss ratio 0.0830818
+total cost (single set) 120544 set ID 10 target cost (single set) 906288
+Assign lease 56 to ref 000009c8 avg cache size (max among all sets) 1.06566 miss ratio 0.0825874
+total cost (single set) 120724 set ID 10 target cost (single set) 906288
+Assign lease 56 to ref 00000d40 avg cache size (max among all sets) 1.06698 miss ratio 0.0821196
+total cost (single set) 120874 set ID 10 target cost (single set) 906288
+Assign lease 69 to ref 0000081c avg cache size (max among all sets) 1.09781 miss ratio 0.0749784
+total cost (single set) 124367 set ID 10 target cost (single set) 906288
+Assign lease 69 to ref 00000748 avg cache size (max among all sets) 1.12591 miss ratio 0.0675194
+total cost (single set) 127550 set ID 10 target cost (single set) 906288
+Assign lease 69 to ref 00000a08 avg cache size (max among all sets) 1.15973 miss ratio 0.0602016
+total cost (single set) 131381 set ID 10 target cost (single set) 906288
+Assign lease 69 to ref 000008a0 avg cache size (max among all sets) 1.19055 miss ratio 0.0527603
+total cost (single set) 134873 set ID 14 target cost (single set) 906288
+Assign lease 69 to ref 00000b94 avg cache size (max among all sets) 1.22772 miss ratio 0.0448423
+total cost (single set) 139083 set ID 14 target cost (single set) 906288
+Assign lease 69 to ref 00000ac0 avg cache size (max among all sets) 1.26038 miss ratio 0.0370302
+total cost (single set) 142783 set ID 14 target cost (single set) 906288
+Assign lease 69 to ref 000007cc avg cache size (max among all sets) 1.29024 miss ratio 0.0295888
+total cost (single set) 146166 set ID 14 target cost (single set) 906288
+Assign lease 69 to ref 00000c18 avg cache size (max among all sets) 1.32229 miss ratio 0.0222269
+total cost (single set) 149797 set ID 14 target cost (single set) 906288
+Assign lease 69 to ref 00000b44 avg cache size (max among all sets) 1.35807 miss ratio 0.0147503
+total cost (single set) 153850 set ID 10 target cost (single set) 906288
+Assign lease 69 to ref 00000d80 avg cache size (max among all sets) 1.39177 miss ratio 0.00715005
+total cost (single set) 157668 set ID 10 target cost (single set) 906288
+Assign lease 233 to ref 000009c8 avg cache size (max among all sets) 1.39333 miss ratio 0.00701764
+total cost (single set) 157845 set ID 10 target cost (single set) 906288
+Assign lease 264 to ref 0000081c avg cache size (max among all sets) 1.40179 miss ratio 0.00654979
+total cost (single set) 158803 set ID 14 target cost (single set) 906288
+Assign lease 264 to ref 00000b94 avg cache size (max among all sets) 1.40819 miss ratio 0.00602016
+total cost (single set) 159528 set ID 14 target cost (single set) 906288
+Assign lease 233 to ref 00000d40 avg cache size (max among all sets) 1.40975 miss ratio 0.00583479
+total cost (single set) 159705 set ID 14 target cost (single set) 906288
+Assign lease 232 to ref 00000978 avg cache size (max among all sets) 1.42274 miss ratio 0.00533164
+total cost (single set) 161177 set ID 14 target cost (single set) 906288
+Assign lease 232 to ref 00000cf0 avg cache size (max among all sets) 1.42824 miss ratio 0.00492559
+total cost (single set) 161800 set ID 14 target cost (single set) 906288
+Assign lease 18742 to ref 00000748 avg cache size (max among all sets) 1.75012 miss ratio 0.00441361
+total cost (single set) 198264 set ID 14 target cost (single set) 906288
+Assign lease 19563 to ref 00000d40 avg cache size (max among all sets) 1.75012 miss ratio 0.00438713
+total cost (single set) 198264 set ID 14 target cost (single set) 906288
+Assign lease 18710 to ref 00000c18 avg cache size (max among all sets) 2.38448 miss ratio 0.00383101
+total cost (single set) 270128 set ID 10 target cost (single set) 906288
+Assign lease 19606 to ref 00000ac0 avg cache size (max among all sets) 3.50019 miss ratio 0.00330138
+total cost (single set) 396522 set ID 5 target cost (single set) 906288
+Assign lease 18710 to ref 000008a0 avg cache size (max among all sets) 4.14743 miss ratio 0.00282471
+total cost (single set) 469846 set ID 5 target cost (single set) 906288
+Assign lease 362008 to ref 00000a08 with percentage 0.28713
+             45 to ref 00000a08 with percentage 0.71287
              max set ID 9
-total cost (single set) 906416 set ID 9 target cost (single set) 906416
+total cost (single set) 906288 set ID 9 target cost (single set) 906288
 ******Cache status (each X/- means 1% occupy/empty) ******
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------
 Set     1: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-
@@ -1574,7 +1575,7 @@ Set    14: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Set    15: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------
 ******Overall utilization 0.795625***************
 finished dumping the assignment procedure
-the FINAL avg cache size 8 miss ratio 0.00287727
+the FINAL avg cache size 8 miss ratio 0.00273644
 Dump single leases (last one may be dual)
 000006f8 1
 00000704 1
@@ -1635,8 +1636,8 @@ Dump single leases (last one may be dual)
 000009d8 1
 000009e4 1
 000009f8 2
-00000a08 58618 percentage 0.287183
-00000a08 45 percentage 0.712817
+00000a08 58618 percentage 0.28713
+00000a08 45 percentage 0.71287
 00000a0c 1
 00000a14 1
 00000a18 1
@@ -1782,7 +1783,7 @@ Dump formated leases
 0, 9d8, 1, 0, 1
 0, 9e4, 1, 0, 1
 0, 9f8, 2, 0, 1
-0, a08, 45, 58618, 0.712817
+0, a08, 45, 58618, 0.71287
 0, a0c, 1, 0, 1
 0, a14, 1, 0, 1
 0, a18, 1, 0, 1

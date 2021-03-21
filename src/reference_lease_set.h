@@ -10,11 +10,6 @@ using namespace std;
 #define DS 8
 
 
-uint64_t refT = 0;
-
-// ref->set->ri->cnt
-map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* > RI_set;
-
 // ref->set->ri->hits
 map<uint64_t, map<uint64_t, map<uint64_t, double>* >* > hits_set;
 
@@ -26,16 +21,23 @@ map<uint64_t, uint64_t> Lease;
 // Final Lease format: phase -> addr -> (lease0, lease1) -> lease0 probability
 map<uint64_t, map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >* > LeasesFormated;
 
+// phase->ref->set->ri->cnt
+map<uint64_t, map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >* > phase_ref_set_ri_cnt;
+// ref->set->ri->cnt
+map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* > RI_set;
 // phase->ref->ri->cnt
 map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* > RI_per_phase;
+
+// phase->sample_cnt
+map<uint64_t, uint64_t> phase_scnt;
 
 double lastLeasePercentage = 1.0;
 uint64_t oldLeaseForLast;
 uint64_t laseRefAssigned;
 
 void OSL_reset() {
-    refT = 0;
-    RI_set.clear();
+    //refT = 0;
+    //RI_set.clear();
     hits_set.clear();
     costs_set.clear();
     Lease.clear();
@@ -74,6 +76,7 @@ void dumpCosts() {
 // dump RI
 void dumpRI() {
     cout << "Dump RI" << endl;
+    
     for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
         for (map<uint64_t, map<uint64_t, uint64_t>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
             for (map<uint64_t, uint64_t>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
@@ -180,8 +183,10 @@ void dumpLeases(uint64_t phaseId) {
 }
 
 // calculate hits and costs for each reuse interval 
-void initHitsCosts() {
-
+void initHitsCosts() { //(uint64_t phase_ID, uint64_t sample_distance) {
+    
+    //uint64_t phase_length = phase_scnt[phase_ID] * sample_distance;
+    
     for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
         set<uint64_t> ris;
         set<uint64_t> cset;
@@ -236,6 +241,7 @@ void initHitsCosts() {
                 pre_lease_set[set_it->first] = *ri_all_set_it;
             }
         }
+        
     }
 }
 
@@ -295,7 +301,7 @@ double getPPUC(uint64_t ref_id, uint64_t oldLease, uint64_t newLease) {
 }
 
 // find max PPUC
-void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease) {
+void getMaxPPUC(bool*finished, uint64_t* ref_to_assign, uint64_t* newLease ) {
     
     double maxPPUC = -1;
     uint64_t bestRef = -1;
@@ -428,30 +434,87 @@ void checkAllPossibleDualLeases(map<uint64_t, uint64_t> totalHitsSet,
     return;
 }
 
+map<uint64_t, double> cal_over_allocation_from_previous_phase(int previous_phase_ID, uint64_t numOfSet, uint64_t sample_distance) {
+    map<uint64_t, double> allocation_from_previous_phase;
+    for (int i = 0; i < numOfSet; i++) {
+        allocation_from_previous_phase[i] = 0;
+    }
+    
+    cout << "here" << endl;
+    
+    if (previous_phase_ID >= 0) {
+        // ref->(lease1, lease2)->percentage
+        map<uint64_t, map<pair<uint64_t, uint64_t>, double>* >    leases_previous_phase = *LeasesFormated[previous_phase_ID];
+        // ref->set->ri->cnt
+        map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* > RI_previous_set       = *phase_ref_set_ri_cnt[previous_phase_ID];
+        uint64_t prevous_phase_length = phase_scnt[previous_phase_ID] * sample_distance;
+        
+        cout << "here2" << endl;
+        
+        for (auto ref_lease_it = leases_previous_phase.begin(), ref_lease_eit = leases_previous_phase.end(); ref_lease_it != ref_lease_eit; ++ref_lease_it) {
+            auto leases_it = (*ref_lease_it->second).begin();
+            uint64_t lease1 = leases_it->first.first;
+            uint64_t lease2 = leases_it->first.second;
+            double precentage = leases_it->second;
+            cout << "here3" << endl;
+            if (lease1 > prevous_phase_length) {
+                for (auto set_ri_cnt_it = RI_previous_set[ref_lease_it->first]->begin(), set_ri_cnt_eit = RI_previous_set[ref_lease_it->first]->end(); set_ri_cnt_it != set_ri_cnt_eit; ++ set_ri_cnt_it) {
+                        map<uint64_t, uint64_t> ri_cnt = *(set_ri_cnt_it->second);
+                    if (ri_cnt.find(lease1) != ri_cnt.end()) {
+                        allocation_from_previous_phase[set_ri_cnt_it->first] += lease1 * ri_cnt[lease1] / 2 * precentage;
+                    }
+                }
+            }
+            cout << "here4" << endl;
+            if (lease2 > prevous_phase_length) {
+                for (auto set_ri_cnt_it = RI_previous_set[ref_lease_it->first]->begin(), set_ri_cnt_eit = RI_previous_set[ref_lease_it->first]->end(); set_ri_cnt_it != set_ri_cnt_eit; ++ set_ri_cnt_it) {
+                    map<uint64_t, uint64_t> ri_cnt = *(set_ri_cnt_it->second);
+                    if (ri_cnt.find(lease2) != ri_cnt.end()) {
+                        allocation_from_previous_phase[set_ri_cnt_it->first] += lease2 * ri_cnt[lease2] / 2 * (1 - precentage);
+                    }
+                }
+            }
+        }
+    }
+    
+    cout << "here" << endl;
+    
+    return allocation_from_previous_phase;
+}
+
 // main OSL_ref alg
-void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, uint64_t phaseId) {
+void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, uint64_t phase_ID) {
+    
+    RI_set = *phase_ref_set_ri_cnt[phase_ID];
     
     cout << "Start to init hits and costs" << endl;
-    initHitsCosts();
+    initHitsCosts(); //(phase_ID, sample_distance);
     cout << "Finished to init hits and costs" << endl;
     
     dumpRI();
     //dumpHits();
     //dumpCosts();
 
-    cout << "here " << refT << endl;
-
-    cout << "refT " << dec << refT << " ";
+    cout << "phase ID " << phase_ID << endl;
+    cout << "refT " << dec << phase_scnt[phase_ID] << " ";
     cout << "cache size (per set) " << CacheSize << " ";
     cout << "sample distance " << sample_distance << " ";
-
-    uint64_t N = refT;
+    
+    uint64_t N = phase_scnt[phase_ID] * sample_distance;
     map<uint64_t, uint64_t> totalCostSet;
     map<uint64_t, uint64_t> totalHitsSet;
     uint64_t targetCostSingleSet = ( CacheSize / numOfSet) * N /  sample_distance;
+    
     for (int i = 0; i < numOfSet; i++) {
         totalCostSet[i] = 0;
         totalHitsSet[i] = 0;
+    }
+    
+    // allocations from previous phase, set->cost
+    map<uint64_t, double> allocation_from_previous_phase;
+    allocation_from_previous_phase = cal_over_allocation_from_previous_phase(phase_ID - 1, numOfSet, sample_distance);
+    for (int i = 0; i < numOfSet; i++) {
+        totalCostSet[i] += allocation_from_previous_phase[i];
     }
     
     cout << "targetCost (single set) " << targetCostSingleSet << endl;
@@ -579,25 +642,25 @@ void OSL_ref(uint64_t CacheSize, uint64_t numOfSet, uint64_t sample_distance, ui
     cout << "finished dumping the assignment procedure" << endl;
     cout << "the FINAL avg cache size " << finalAvgCacheSize << " miss ratio " << finalMissRatio << endl;
 
-    dumpLeases(phaseId);
+    dumpLeases(phase_ID);
     //dumpDualLeases(CacheSize);
     
     // accumulate RI for current phase to RI_per_phase
-    if (RI_per_phase.find(phaseId) == RI_per_phase.end()) {
-        RI_per_phase[phaseId] = new map<uint64_t, map<uint64_t, uint64_t>* >;
+    if (RI_per_phase.find(phase_ID) == RI_per_phase.end()) {
+        RI_per_phase[phase_ID] = new map<uint64_t, map<uint64_t, uint64_t>* >;
     }
     // ref->set->ri->cnt
     // phase->ref->ri->cnt
     for (map<uint64_t, map<uint64_t, map<uint64_t, uint64_t>* >* >::iterator ref_it = RI_set.begin(), ref_eit = RI_set.end(); ref_it != ref_eit; ++ref_it) {
-        if (RI_per_phase[phaseId]->find(ref_it->first) == RI_per_phase[phaseId]->end()) {
-            (*RI_per_phase[phaseId])[ref_it->first] = new map<uint64_t, uint64_t>;
+        if (RI_per_phase[phase_ID]->find(ref_it->first) == RI_per_phase[phase_ID]->end()) {
+            (*RI_per_phase[phase_ID])[ref_it->first] = new map<uint64_t, uint64_t>;
         }
         for (map<uint64_t, map<uint64_t, uint64_t>* >::iterator set_it = (*(ref_it->second)).begin(), set_eit = (*(ref_it->second)).end(); set_it != set_eit; ++set_it) {
             for (map<uint64_t, uint64_t>::iterator ri_it = (*(set_it->second)).begin(), ri_eit = (*(set_it->second)).end(); ri_it != ri_eit; ++ri_it) {
-                if ((*RI_per_phase[phaseId])[ref_it->first]->find(ri_it->first) == (*RI_per_phase[phaseId])[ref_it->first]->end()) {
-                    (*(*RI_per_phase[phaseId])[ref_it->first])[ri_it->first] = ri_it->second;
+                if ((*RI_per_phase[phase_ID])[ref_it->first]->find(ri_it->first) == (*RI_per_phase[phase_ID])[ref_it->first]->end()) {
+                    (*(*RI_per_phase[phase_ID])[ref_it->first])[ri_it->first] = ri_it->second;
                 } else {
-                    (*(*RI_per_phase[phaseId])[ref_it->first])[ri_it->first] = ri_it->second;
+                    (*(*RI_per_phase[phase_ID])[ref_it->first])[ri_it->first] = ri_it->second;
                 }
             }
         }
