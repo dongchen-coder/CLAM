@@ -370,20 +370,6 @@ map<uint64_t, map<uint64_t, double>* > distribute_cost_to_phases(uint64_t ref_id
         }
     }
     
-    // remove last phase access if its budge is less than 10%
-    /*
-    if (phases_accorssed.size() > 1) {
-        uint64_t last_phase_id = phases_accorssed.back();
-        uint64_t l = remain_last_phase;
-        double budge_last = 0.0;
-        for (int i = 0; i + 1 < phases_accorssed.size(); i++) {
-            
-        }
-        
-    }
-    */
-    
-    
     /* to do add cost calculation */
     map<uint64_t, map<uint64_t, double>* > phase_set_cost;
     
@@ -407,7 +393,8 @@ map<uint64_t, map<uint64_t, double>* > distribute_cost_to_phases(uint64_t ref_id
             
             // calculate cost distribution for all phases
             vector<double> cost_distibute;
-            uint64_t l = lease_assigned;
+            long long l = lease_assigned + phase_length[phases_accorssed[0]];
+            
             double total_area = 0;
             
             uint64_t p0 = 0;
@@ -417,17 +404,23 @@ map<uint64_t, map<uint64_t, double>* > distribute_cost_to_phases(uint64_t ref_id
                     p0 = phase_length[cur_phase_id];
                 }
                 uint64_t p = phase_length[cur_phase_id];
-                l = l - p;
+                
                 if (i + 1 == phases_accorssed.size()) {
+                    //cout << "p0 " << p0 << " p " << p << " l " << l << endl;
                     cost_distibute.push_back(p0 * (2 * l + p0) / 2);
                 } else {
+                    //cout << "p0 " << p0 << " p " << p << " l " << l << endl;
                     cost_distibute.push_back(p0 * p);
                 }
+                
+                l = l - p;
+                
                 total_area += cost_distibute[i];
             }
             
             for (int i = 0; i < phases_accorssed.size(); i++) {
                 cost_distibute[i] /= total_area;
+                //cout << "Phase " << phases_accorssed[i] << " costdist " << cost_distibute[i] << endl;
             }
             
             // distribute cost to phases
@@ -503,22 +496,26 @@ bool assignLease(uint64_t ref_to_assign,
         uint64_t phase_id = elm.first;
         double target_cost = elm.second;
         double budgeIncMax = 0.0;
+        
         if (costsIncreased.find(phase_id) == costsIncreased.end()) {
             continue;
         }
+        //cout << "Phase to consider " << phase_id << " with budget " << target_cost << endl;
+        
         for (pair<uint64_t, double> set_costInc : (*costsIncreased[phase_id])) {
             uint64_t set_id = set_costInc.first;
             double cost_inc = set_costInc.second;
-            double costInc = cost_inc / elm.second;
+            double costInc = cost_inc / target_cost;
             budgeIncMax = max(budgeIncMax, costInc);
+            //cout << "  set " << set_id << " inc " << costInc << endl;
         }
         phase_budageIncMax[phase_id] = budgeIncMax;
     }
-   
-    /*
+    
     uint64_t phase_filtered = -1;
     double minInc = 1;
     for (pair<uint64_t, double> elm : phase_budageIncMax) {
+        cout << elm.first << " " << elm.second << endl;
         if (elm.first != ref_phaseID[ref_to_assign]) {
             if (elm.second < minInc) {
                 phase_filtered = elm.first;
@@ -529,17 +526,18 @@ bool assignLease(uint64_t ref_to_assign,
     if (minInc > 0.1) {
         phase_filtered = -1;
     }
-    */
+    
+    //cout << "Filter phase " << phase_filtered << endl;
     
     // calculate dual leases percentage, if over allocated
     double percentage = 1.0;
     for (pair<uint64_t, double> elm : phase_targetCostSingleSet) {
         uint64_t phase_id = elm.first;
-        /*
+        
         if (phase_filtered == phase_id) {
             continue;
         }
-        */
+        
         double target_cost = elm.second;
         if (costsIncreased.find(phase_id) == costsIncreased.end()) {
             continue;
@@ -555,6 +553,8 @@ bool assignLease(uint64_t ref_to_assign,
         }
     }
     
+    //cout << " Percentage " << percentage << endl;
+    
     // update hit/cost
     uint64_t phase_id = ref_phaseID[ref_to_assign];
     for (pair<uint64_t, double> set_hitInc : hitsIncreased) {
@@ -564,11 +564,11 @@ bool assignLease(uint64_t ref_to_assign,
     }
     for (pair<uint64_t, map<uint64_t, double>* > phase_set_costInc : costsIncreased) {
         phase_id = phase_set_costInc.first;
-        /*
+        
         if (phase_filtered == phase_id) {
             continue;
         }
-        */
+        
         for (pair<uint64_t, double> set_costInc : *(phase_set_costInc.second)) {
             uint64_t set_id = set_costInc.first;
             double cost_inc = set_costInc.second;
