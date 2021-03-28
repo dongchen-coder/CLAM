@@ -1,759 +1,987 @@
+Dump phase appearance count
+    phase 0 cnt 1
+    phase 1 cnt 1
+    phase 2 cnt 1
+Dump phase transition
+Transition From 0
+    To 1 : 1
+Transition From 1
+    To 2 : 1
 Start to init hits and costs
 Finished to init hits and costs
-Dump RI
-Ref 00000628 Set 14 RI 2 CNT 1
-Ref 0000063c Set 14 RI 1 CNT 42
-Ref 00000644 Set 14 RI 2 CNT 18
-Ref 0000064c Set 0 RI 14 CNT 4
-Ref 0000064c Set 1 RI 14 CNT 8
-Ref 0000064c Set 2 RI 14 CNT 6
-Ref 0000064c Set 3 RI 14 CNT 7
-Ref 0000064c Set 4 RI 14 CNT 10
-Ref 00000650 Set 14 RI 1 CNT 27
-Ref 00000668 Set 14 RI 1 CNT 38
-Ref 00000670 Set 14 RI 2 CNT 33
-Ref 0000067c Set 0 RI 1416 CNT 1
-Ref 0000067c Set 1 RI 1416 CNT 2
-Ref 0000067c Set 2 RI 1416 CNT 3
-Ref 0000067c Set 2 RI 161235 CNT 1
-Ref 0000067c Set 4 RI 1416 CNT 3
-Ref 0000067c Set 5 RI 1416 CNT 1
-Ref 0000067c Set 6 RI 108743 CNT 1
-Ref 0000067c Set 7 RI 1416 CNT 4
-Ref 0000067c Set 8 RI 1416 CNT 3
-Ref 0000067c Set 9 RI 1416 CNT 2
-Ref 0000067c Set 11 RI 1416 CNT 4
-Ref 0000067c Set 14 RI 1416 CNT 2
-Ref 0000067c Set 15 RI 1416 CNT 4
-Ref 00000680 Set 14 RI 1 CNT 27
-Ref 00000688 Set 14 RI 2 CNT 34
-Ref 00000694 Set 0 RI 14 CNT 3
-Ref 00000694 Set 1 RI 14 CNT 4
-Ref 00000694 Set 2 RI 14 CNT 5
-Ref 00000694 Set 3 RI 14 CNT 9
-Ref 00000694 Set 4 RI 14 CNT 7
-Ref 00000698 Set 14 RI 1 CNT 35
-Ref 000006a0 Set 14 RI 1 CNT 36
-Ref 000006a4 Set 14 RI 1 CNT 20
-Ref 000006a8 Set 14 RI 1 CNT 24
-Ref 000006b8 Set 14 RI 2 CNT 1
-Ref 000006d4 Set 14 RI 1 CNT 1
-Ref 000006ec Set 14 RI 1 CNT 1
-Ref 00000a8c Set 15 RI 1 CNT 1
-
-phase ID 0
-refT 433 cache size (per set) 128 sample distance 257 here
-here
-targetCost (single set) 3464
+cache size (per set) 128 sample distance 257
+Phase 0 length 111281 single_set_budget 55424
+Phase 1 length 120533 single_set_budget 60032
+Phase 2 length 6574574 single_set_budget 3.2745e+06
 Dump lease assignement procedure
-Assign lease 1 to ref 0000063c avg cache size (max among all sets) 0.0969977 miss ratio 0.903002
-total cost (single set) 42 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 00000650 avg cache size (max among all sets) 0.159353 miss ratio 0.840647
-total cost (single set) 69 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 00000668 avg cache size (max among all sets) 0.247113 miss ratio 0.752887
-total cost (single set) 107 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 00000680 avg cache size (max among all sets) 0.309469 miss ratio 0.690531
-total cost (single set) 134 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 00000698 avg cache size (max among all sets) 0.3903 miss ratio 0.6097
-total cost (single set) 169 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 000006a0 avg cache size (max among all sets) 0.473441 miss ratio 0.526559
-total cost (single set) 205 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 000006a4 avg cache size (max among all sets) 0.51963 miss ratio 0.48037
-total cost (single set) 225 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 000006a8 avg cache size (max among all sets) 0.575058 miss ratio 0.424942
-total cost (single set) 249 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 000006d4 avg cache size (max among all sets) 0.577367 miss ratio 0.422633
-total cost (single set) 250 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 000006ec avg cache size (max among all sets) 0.579677 miss ratio 0.420323
-total cost (single set) 251 set ID 14 target cost (single set) 3464
-Assign lease 1 to ref 00000a8c avg cache size (max among all sets) 0.579677 miss ratio 0.418014
-total cost (single set) 251 set ID 14 target cost (single set) 3464
-Assign lease 2 to ref 00000628 avg cache size (max among all sets) 0.584296 miss ratio 0.415704
-total cost (single set) 253 set ID 14 target cost (single set) 3464
-Assign lease 2 to ref 00000644 avg cache size (max among all sets) 0.667436 miss ratio 0.374134
-total cost (single set) 289 set ID 14 target cost (single set) 3464
-Assign lease 2 to ref 00000670 avg cache size (max among all sets) 0.819861 miss ratio 0.297921
-total cost (single set) 355 set ID 14 target cost (single set) 3464
-Assign lease 2 to ref 00000688 avg cache size (max among all sets) 0.976905 miss ratio 0.2194
-total cost (single set) 423 set ID 14 target cost (single set) 3464
-Assign lease 2 to ref 000006b8 avg cache size (max among all sets) 0.981524 miss ratio 0.21709
-total cost (single set) 425 set ID 14 target cost (single set) 3464
-Assign lease 14 to ref 0000064c avg cache size (max among all sets) 0.981524 miss ratio 0.136259
-total cost (single set) 425 set ID 14 target cost (single set) 3464
-Assign lease 14 to ref 00000694 avg cache size (max among all sets) 0.981524 miss ratio 0.0715935
-total cost (single set) 425 set ID 14 target cost (single set) 3464
-Assign lease 1416 to ref 0000067c with percentage 0.584393
-             0 to ref 0000067c with percentage 0.415607
-             max set ID 2
-total cost (single set) 3464 set ID 2 target cost (single set) 3464
+get max ppuc: 0 ref 1596 phase 0 lease 1
+calculate cost increase
+assign leases
 ******Cache status (each X/- means 1% occupy/empty) ******
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------------------------------------------------
-Set     1: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-Set     2: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Set     3: XXXXXX----------------------------------------------------------------------------------------------
-Set     4: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------
-Set     5: XXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------------------
-Set     6: XXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------------------
-Set     7: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----
-Set     8: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------
-Set     9: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------
-Set    10: ----------------------------------------------------------------------------------------------------
-Set    11: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----
-Set    12: ----------------------------------------------------------------------------------------------------
-Set    13: ----------------------------------------------------------------------------------------------------
-Set    14: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------
-Set    15: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----
-******Overall utilization 0.481875***************
-finished dumping the assignment procedure
-the FINAL avg cache size 8 miss ratio 0.0438799
-Dump single leases (last one may be dual)
-00000628 2
-0000063c 1
-00000644 2
-0000064c e
-00000650 1
-00000668 1
-00000670 2
-0000067c 588 percentage 0.584393
-0000067c 0 percentage 0.415607
-00000680 1
-00000688 2
-00000694 e
-00000698 1
-000006a0 1
-000006a4 1
-000006a8 1
-000006b8 2
-000006d4 1
-000006ec 1
-00000a8c 1
-
-Start to init hits and costs
-Finished to init hits and costs
-Dump RI
-Ref 00000710 Set 14 RI 1 CNT 28
-Ref 00000728 Set 14 RI 1 CNT 30
-Ref 00000730 Set 14 RI 2 CNT 36
-Ref 0000073c Set 0 RI 7 CNT 1
-Ref 0000073c Set 1 RI 7 CNT 1
-Ref 0000073c Set 2 RI 7 CNT 2
-Ref 0000073c Set 4 RI 7 CNT 3
-Ref 0000073c Set 5 RI 7 CNT 1
-Ref 0000073c Set 8 RI 7 CNT 2
-Ref 0000073c Set 9 RI 7 CNT 1
-Ref 0000073c Set 10 RI 7 CNT 2
-Ref 0000073c Set 12 RI 7 CNT 3
-Ref 0000073c Set 13 RI 7 CNT 1
-Ref 0000073c Set 14 RI 7 CNT 1
-Ref 00000740 Set 14 RI 1 CNT 27
-Ref 00000748 Set 14 RI 2 CNT 30
-Ref 00000750 Set 0 RI 15 CNT 6
-Ref 00000750 Set 1 RI 15 CNT 9
-Ref 00000750 Set 2 RI 15 CNT 1
-Ref 00000750 Set 3 RI 15 CNT 12
-Ref 00000750 Set 3 RI 982 CNT 2
-Ref 00000750 Set 4 RI 15 CNT 4
-Ref 00000754 Set 14 RI 1 CNT 27
-Ref 0000076c Set 14 RI 1 CNT 30
-Ref 00000778 Set 14 RI 2 CNT 28
-Ref 00000784 Set 0 RI 8 CNT 2
-Ref 00000784 Set 2 RI 8 CNT 1
-Ref 00000784 Set 3 RI 8 CNT 1
-Ref 00000784 Set 4 RI 8 CNT 1
-Ref 00000784 Set 5 RI 8 CNT 2
-Ref 00000784 Set 6 RI 8 CNT 4
-Ref 00000784 Set 7 RI 8 CNT 3
-Ref 00000784 Set 9 RI 8 CNT 2
-Ref 00000784 Set 10 RI 8 CNT 2
-Ref 00000784 Set 11 RI 8 CNT 2
-Ref 00000784 Set 12 RI 8 CNT 2
-Ref 00000784 Set 13 RI 8 CNT 1
-Ref 00000784 Set 14 RI 8 CNT 2
-Ref 00000784 Set 15 RI 8 CNT 2
-Ref 00000788 Set 14 RI 1 CNT 46
-Ref 00000790 Set 14 RI 1 CNT 35
-Ref 00000794 Set 14 RI 1 CNT 36
-Ref 00000798 Set 14 RI 1 CNT 36
-Ref 000007a0 Set 14 RI 1 CNT 1
-
-phase ID 1
-refT 469 cache size (per set) 128 sample distance 257 here
-here2
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here
-targetCost (single set) 3752
-Dump lease assignement procedure
-Assign lease 1 to ref 00000710 avg cache size (max among all sets) 0.0597015 miss ratio 0.940299
-total cost (single set) 28 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000728 avg cache size (max among all sets) 0.123667 miss ratio 0.876333
-total cost (single set) 58 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000740 avg cache size (max among all sets) 0.181237 miss ratio 0.818763
-total cost (single set) 85 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000754 avg cache size (max among all sets) 0.238806 miss ratio 0.761194
-total cost (single set) 112 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 0000076c avg cache size (max among all sets) 0.302772 miss ratio 0.697228
-total cost (single set) 142 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000788 avg cache size (max among all sets) 0.400853 miss ratio 0.599147
-total cost (single set) 188 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000790 avg cache size (max among all sets) 0.47548 miss ratio 0.52452
-total cost (single set) 223 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000794 avg cache size (max among all sets) 0.552239 miss ratio 0.447761
-total cost (single set) 259 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 00000798 avg cache size (max among all sets) 0.628998 miss ratio 0.371002
-total cost (single set) 295 set ID 14 target cost (single set) 3752
-Assign lease 1 to ref 000007a0 avg cache size (max among all sets) 0.63113 miss ratio 0.36887
-total cost (single set) 296 set ID 14 target cost (single set) 3752
-Assign lease 2 to ref 00000730 avg cache size (max among all sets) 0.784648 miss ratio 0.292111
-total cost (single set) 368 set ID 14 target cost (single set) 3752
-Assign lease 2 to ref 00000748 avg cache size (max among all sets) 0.91258 miss ratio 0.228145
-total cost (single set) 428 set ID 14 target cost (single set) 3752
-Assign lease 2 to ref 00000778 avg cache size (max among all sets) 1.03198 miss ratio 0.168443
-total cost (single set) 484 set ID 14 target cost (single set) 3752
-Assign lease 7 to ref 0000073c avg cache size (max among all sets) 1.04691 miss ratio 0.130064
-total cost (single set) 491 set ID 14 target cost (single set) 3752
-Assign lease 8 to ref 00000784 avg cache size (max among all sets) 1.08102 miss ratio 0.0724947
-total cost (single set) 507 set ID 14 target cost (single set) 3752
-Assign lease 15 to ref 00000750 avg cache size (max among all sets) 1.08102 miss ratio 0.00426439
-total cost (single set) 507 set ID 14 target cost (single set) 3752
-Assign lease 982 to ref 00000750 avg cache size (max among all sets) 4.58849 miss ratio 0
-total cost (single set) 2152 set ID 3 target cost (single set) 3752
-finished dumping the assignment procedure
-the FINAL avg cache size 4.58849 miss ratio 0
-Dump single leases (last one may be dual)
-00000710 1
-00000728 1
-00000730 2
-0000073c 7
-00000740 1
-00000748 2
-00000750 3d6 percentage 1
-00000750 0 percentage 0
-00000754 1
-0000076c 1
-00000778 2
-00000784 8
-00000788 1
-00000790 1
-00000794 1
-00000798 1
-000007a0 1
-
-Start to init hits and costs
-Finished to init hits and costs
-Dump RI
-Ref 000007d4 Set 14 RI 1 CNT 16
-Ref 000007ec Set 14 RI 1 CNT 12
-Ref 000007f4 Set 14 RI 2 CNT 14
-Ref 00000800 Set 0 RI 7 CNT 1
-Ref 00000800 Set 1 RI 7 CNT 2
-Ref 00000800 Set 2 RI 7 CNT 1
-Ref 00000800 Set 4 RI 7 CNT 1
-Ref 00000800 Set 5 RI 7 CNT 2
-Ref 00000800 Set 6 RI 7 CNT 1
-Ref 00000800 Set 8 RI 7 CNT 1
-Ref 00000800 Set 9 RI 7 CNT 1
-Ref 00000800 Set 12 RI 7 CNT 1
-Ref 00000800 Set 13 RI 7 CNT 3
-Ref 00000800 Set 14 RI 7 CNT 1
-Ref 00000804 Set 14 RI 1 CNT 15
-Ref 0000080c Set 14 RI 1 CNT 1284
-Ref 00000824 Set 14 RI 1 CNT 1256
-Ref 0000082c Set 14 RI 2 CNT 1238
-Ref 00000838 Set 0 RI 12 CNT 77
-Ref 00000838 Set 1 RI 12 CNT 71
-Ref 00000838 Set 2 RI 12 CNT 82
-Ref 00000838 Set 3 RI 12 CNT 74
-Ref 00000838 Set 4 RI 12 CNT 77
-Ref 00000838 Set 5 RI 12 CNT 84
-Ref 00000838 Set 6 RI 12 CNT 75
-Ref 00000838 Set 7 RI 12 CNT 86
-Ref 00000838 Set 8 RI 12 CNT 66
-Ref 00000838 Set 9 RI 12 CNT 78
-Ref 00000838 Set 10 RI 12 CNT 91
-Ref 00000838 Set 11 RI 12 CNT 72
-Ref 00000838 Set 12 RI 12 CNT 69
-Ref 00000838 Set 13 RI 12 CNT 63
-Ref 00000838 Set 14 RI 12 CNT 75
-Ref 00000838 Set 15 RI 12 CNT 88
-Ref 0000083c Set 14 RI 1 CNT 1297
-Ref 00000854 Set 14 RI 1 CNT 1223
-Ref 0000085c Set 14 RI 2 CNT 1218
-Ref 00000868 Set 0 RI 4 CNT 13
-Ref 00000868 Set 0 RI 2029 CNT 50
-Ref 00000868 Set 0 RI 2037 CNT 2
-Ref 00000868 Set 1 RI 4 CNT 21
-Ref 00000868 Set 1 RI 2029 CNT 61
-Ref 00000868 Set 1 RI 2037 CNT 2
-Ref 00000868 Set 2 RI 4 CNT 27
-Ref 00000868 Set 2 RI 2029 CNT 58
-Ref 00000868 Set 2 RI 2037 CNT 1
-Ref 00000868 Set 3 RI 4 CNT 16
-Ref 00000868 Set 3 RI 2029 CNT 71
-Ref 00000868 Set 3 RI 2037 CNT 1
-Ref 00000868 Set 4 RI 4 CNT 14
-Ref 00000868 Set 4 RI 2029 CNT 61
-Ref 00000868 Set 4 RI 2037 CNT 1
-Ref 00000868 Set 5 RI 4 CNT 21
-Ref 00000868 Set 5 RI 2029 CNT 49
-Ref 00000868 Set 5 RI 2037 CNT 1
-Ref 00000868 Set 6 RI 4 CNT 17
-Ref 00000868 Set 6 RI 2029 CNT 67
-Ref 00000868 Set 6 RI 2037 CNT 3
-Ref 00000868 Set 7 RI 4 CNT 23
-Ref 00000868 Set 7 RI 2029 CNT 66
-Ref 00000868 Set 7 RI 2037 CNT 3
-Ref 00000868 Set 8 RI 4 CNT 13
-Ref 00000868 Set 8 RI 2029 CNT 52
-Ref 00000868 Set 8 RI 2037 CNT 1
-Ref 00000868 Set 9 RI 4 CNT 12
-Ref 00000868 Set 9 RI 2029 CNT 56
-Ref 00000868 Set 9 RI 2037 CNT 3
-Ref 00000868 Set 10 RI 4 CNT 19
-Ref 00000868 Set 10 RI 2029 CNT 80
-Ref 00000868 Set 10 RI 2037 CNT 4
-Ref 00000868 Set 10 RI 18446744073709551615 CNT 1
-Ref 00000868 Set 11 RI 4 CNT 7
-Ref 00000868 Set 11 RI 2029 CNT 58
-Ref 00000868 Set 11 RI 2037 CNT 1
-Ref 00000868 Set 11 RI 18446744073709551615 CNT 1
-Ref 00000868 Set 12 RI 4 CNT 17
-Ref 00000868 Set 12 RI 2029 CNT 81
-Ref 00000868 Set 13 RI 4 CNT 18
-Ref 00000868 Set 13 RI 2029 CNT 50
-Ref 00000868 Set 13 RI 2037 CNT 2
-Ref 00000868 Set 13 RI 18446744073709551615 CNT 1
-Ref 00000868 Set 14 RI 4 CNT 18
-Ref 00000868 Set 14 RI 2029 CNT 71
-Ref 00000868 Set 14 RI 2037 CNT 1
-Ref 00000868 Set 15 RI 4 CNT 14
-Ref 00000868 Set 15 RI 2029 CNT 56
-Ref 00000868 Set 15 RI 2037 CNT 3
-Ref 0000086c Set 14 RI 1 CNT 1266
-Ref 00000884 Set 14 RI 1 CNT 1240
-Ref 0000088c Set 14 RI 2 CNT 1286
-Ref 00000898 Set 0 RI 2025 CNT 28
-Ref 00000898 Set 0 RI 2029 CNT 50
-Ref 00000898 Set 0 RI 30443 CNT 1
-Ref 00000898 Set 0 RI 89284 CNT 1
-Ref 00000898 Set 0 RI 127835 CNT 1
-Ref 00000898 Set 0 RI 129864 CNT 1
-Ref 00000898 Set 1 RI 2025 CNT 17
-Ref 00000898 Set 1 RI 2029 CNT 60
-Ref 00000898 Set 1 RI 42617 CNT 1
-Ref 00000898 Set 1 RI 115661 CNT 1
-Ref 00000898 Set 2 RI 2025 CNT 11
-Ref 00000898 Set 2 RI 2029 CNT 55
-Ref 00000898 Set 2 RI 2033 CNT 1
-Ref 00000898 Set 2 RI 71023 CNT 1
-Ref 00000898 Set 2 RI 87255 CNT 1
-Ref 00000898 Set 3 RI 2025 CNT 21
-Ref 00000898 Set 3 RI 2029 CNT 49
-Ref 00000898 Set 3 RI 2033 CNT 1
-Ref 00000898 Set 3 RI 26385 CNT 1
-Ref 00000898 Set 3 RI 28414 CNT 1
-Ref 00000898 Set 3 RI 87255 CNT 1
-Ref 00000898 Set 3 RI 97400 CNT 1
-Ref 00000898 Set 3 RI 123777 CNT 1
-Ref 00000898 Set 4 RI 2025 CNT 14
-Ref 00000898 Set 4 RI 2029 CNT 46
-Ref 00000898 Set 4 RI 87255 CNT 1
-Ref 00000898 Set 4 RI 95371 CNT 2
-Ref 00000898 Set 4 RI 97400 CNT 1
-Ref 00000898 Set 4 RI 115661 CNT 1
-Ref 00000898 Set 4 RI 121748 CNT 1
-Ref 00000898 Set 4 RI 18446744073709551615 CNT 1
-Ref 00000898 Set 5 RI 2025 CNT 17
-Ref 00000898 Set 5 RI 2029 CNT 56
-Ref 00000898 Set 5 RI 66965 CNT 1
-Ref 00000898 Set 5 RI 89284 CNT 1
-Ref 00000898 Set 5 RI 91313 CNT 1
-Ref 00000898 Set 5 RI 113632 CNT 1
-Ref 00000898 Set 6 RI 2025 CNT 17
-Ref 00000898 Set 6 RI 2029 CNT 58
-Ref 00000898 Set 6 RI 89284 CNT 1
-Ref 00000898 Set 6 RI 109574 CNT 1
-Ref 00000898 Set 6 RI 113632 CNT 1
-Ref 00000898 Set 7 RI 2025 CNT 16
-Ref 00000898 Set 7 RI 2029 CNT 52
-Ref 00000898 Set 7 RI 2033 CNT 2
-Ref 00000898 Set 7 RI 24356 CNT 1
-Ref 00000898 Set 7 RI 38559 CNT 1
-Ref 00000898 Set 7 RI 71023 CNT 1
-Ref 00000898 Set 7 RI 109574 CNT 1
-Ref 00000898 Set 7 RI 123777 CNT 1
-Ref 00000898 Set 8 RI 2025 CNT 25
-Ref 00000898 Set 8 RI 2029 CNT 52
-Ref 00000898 Set 8 RI 95371 CNT 1
-Ref 00000898 Set 9 RI 2025 CNT 16
-Ref 00000898 Set 9 RI 2029 CNT 60
-Ref 00000898 Set 9 RI 12182 CNT 1
-Ref 00000898 Set 9 RI 24356 CNT 1
-Ref 00000898 Set 9 RI 89284 CNT 1
-Ref 00000898 Set 9 RI 91313 CNT 1
-Ref 00000898 Set 9 RI 95371 CNT 1
-Ref 00000898 Set 10 RI 2025 CNT 11
-Ref 00000898 Set 10 RI 2029 CNT 59
-Ref 00000898 Set 10 RI 81168 CNT 1
-Ref 00000898 Set 10 RI 111603 CNT 1
-Ref 00000898 Set 10 RI 115661 CNT 1
-Ref 00000898 Set 11 RI 2025 CNT 18
-Ref 00000898 Set 11 RI 2029 CNT 57
-Ref 00000898 Set 11 RI 75081 CNT 1
-Ref 00000898 Set 11 RI 119719 CNT 1
-Ref 00000898 Set 12 RI 2025 CNT 22
-Ref 00000898 Set 12 RI 2029 CNT 67
-Ref 00000898 Set 12 RI 56820 CNT 1
-Ref 00000898 Set 12 RI 60878 CNT 1
-Ref 00000898 Set 12 RI 95371 CNT 1
-Ref 00000898 Set 12 RI 107545 CNT 1
-Ref 00000898 Set 12 RI 129864 CNT 1
-Ref 00000898 Set 13 RI 2025 CNT 12
-Ref 00000898 Set 13 RI 2029 CNT 68
-Ref 00000898 Set 13 RI 48704 CNT 1
-Ref 00000898 Set 14 RI 2025 CNT 19
-Ref 00000898 Set 14 RI 2029 CNT 52
-Ref 00000898 Set 14 RI 54791 CNT 1
-Ref 00000898 Set 14 RI 85226 CNT 1
-Ref 00000898 Set 14 RI 105516 CNT 1
-Ref 00000898 Set 14 RI 123777 CNT 1
-Ref 00000898 Set 15 RI 2025 CNT 13
-Ref 00000898 Set 15 RI 2029 CNT 54
-Ref 00000898 Set 15 RI 2033 CNT 3
-Ref 00000898 Set 15 RI 44646 CNT 1
-Ref 00000898 Set 15 RI 50733 CNT 1
-Ref 00000898 Set 15 RI 66965 CNT 1
-Ref 00000898 Set 15 RI 107545 CNT 1
-Ref 000008a0 Set 14 RI 1 CNT 1198
-Ref 000008b8 Set 14 RI 1 CNT 1307
-Ref 000008c4 Set 14 RI 2 CNT 1241
-Ref 000008d0 Set 0 RI 8 CNT 89
-Ref 000008d0 Set 1 RI 8 CNT 83
-Ref 000008d0 Set 2 RI 8 CNT 84
-Ref 000008d0 Set 3 RI 8 CNT 84
-Ref 000008d0 Set 4 RI 8 CNT 83
-Ref 000008d0 Set 5 RI 8 CNT 96
-Ref 000008d0 Set 6 RI 8 CNT 79
-Ref 000008d0 Set 7 RI 8 CNT 87
-Ref 000008d0 Set 8 RI 8 CNT 74
-Ref 000008d0 Set 9 RI 8 CNT 76
-Ref 000008d0 Set 10 RI 8 CNT 73
-Ref 000008d0 Set 11 RI 8 CNT 77
-Ref 000008d0 Set 12 RI 8 CNT 92
-Ref 000008d0 Set 13 RI 8 CNT 78
-Ref 000008d0 Set 14 RI 8 CNT 89
-Ref 000008d0 Set 15 RI 8 CNT 77
-Ref 000008d4 Set 14 RI 1 CNT 1305
-Ref 000008dc Set 14 RI 1 CNT 1232
-Ref 000008e0 Set 14 RI 1 CNT 1270
-Ref 000008e4 Set 14 RI 1 CNT 1302
-Ref 000008ec Set 14 RI 1 CNT 11
-Ref 00000904 Set 14 RI 1 CNT 12
-Ref 0000090c Set 14 RI 2 CNT 12
-Ref 00000918 Set 2 RI 6 CNT 2
-Ref 00000918 Set 4 RI 6 CNT 1
-Ref 00000918 Set 5 RI 6 CNT 1
-Ref 00000918 Set 7 RI 6 CNT 3
-Ref 00000918 Set 8 RI 6 CNT 1
-Ref 00000918 Set 9 RI 6 CNT 1
-Ref 00000918 Set 13 RI 6 CNT 1
-Ref 00000918 Set 14 RI 6 CNT 2
-Ref 0000091c Set 14 RI 2 CNT 11
-Ref 00000924 Set 11 RI 2029 CNT 14
-Ref 0000092c Set 14 RI 1 CNT 20
-Ref 00000944 Set 14 RI 1 CNT 8
-Ref 00000950 Set 14 RI 2 CNT 12
-Ref 0000095c Set 2 RI 6 CNT 1
-Ref 0000095c Set 4 RI 6 CNT 1
-Ref 0000095c Set 5 RI 6 CNT 2
-Ref 0000095c Set 7 RI 6 CNT 1
-Ref 0000095c Set 8 RI 6 CNT 1
-Ref 0000095c Set 10 RI 6 CNT 1
-Ref 0000095c Set 11 RI 6 CNT 2
-Ref 0000095c Set 12 RI 6 CNT 1
-Ref 0000095c Set 13 RI 6 CNT 2
-Ref 00000960 Set 14 RI 1 CNT 9
-Ref 00000978 Set 14 RI 1 CNT 14
-Ref 00000980 Set 14 RI 1 CNT 7
-Ref 00000998 Set 14 RI 1 CNT 12
-Ref 000009a0 Set 14 RI 2 CNT 18
-Ref 000009ac Set 0 RI 10 CNT 1
-Ref 000009ac Set 1 RI 10 CNT 2
-Ref 000009ac Set 2 RI 10 CNT 1
-Ref 000009ac Set 3 RI 10 CNT 3
-Ref 000009ac Set 4 RI 10 CNT 2
-Ref 000009ac Set 5 RI 10 CNT 1
-Ref 000009ac Set 6 RI 10 CNT 3
-Ref 000009ac Set 8 RI 2 CNT 1
-Ref 000009ac Set 8 RI 10 CNT 1
-Ref 000009ac Set 12 RI 10 CNT 1
-Ref 000009ac Set 13 RI 10 CNT 2
-Ref 000009ac Set 14 RI 10 CNT 1
-Ref 000009b0 Set 14 RI 2 CNT 11
-Ref 000009bc Set 2 RI 83197 CNT 1
-Ref 000009bc Set 3 RI 8 CNT 1
-Ref 000009bc Set 3 RI 135951 CNT 1
-Ref 000009bc Set 3 RI 154212 CNT 1
-Ref 000009bc Set 7 RI 81168 CNT 1
-Ref 000009bc Set 8 RI 160299 CNT 1
-Ref 000009bc Set 9 RI 111603 CNT 1
-Ref 000009bc Set 9 RI 154212 CNT 1
-Ref 000009bc Set 10 RI 14211 CNT 1
-Ref 000009bc Set 11 RI 115661 CNT 1
-Ref 000009bc Set 12 RI 135951 CNT 1
-Ref 000009bc Set 13 RI 123777 CNT 1
-Ref 000009bc Set 15 RI 6095 CNT 1
-Ref 000009c0 Set 14 RI 1 CNT 13
-Ref 000009c8 Set 14 RI 1 CNT 12
-Ref 000009cc Set 14 RI 1 CNT 13
-Ref 000009d0 Set 14 RI 1 CNT 6
-Ref 000009d8 Set 14 RI 1 CNT 2
-
-phase ID 2
-refT 25582 cache size (per set) 128 sample distance 257 here
-here2
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here3
-here4
-here
-targetCost (single set) 204656
-Dump lease assignement procedure
-Assign lease 1 to ref 000007d4 avg cache size (max among all sets) 0.00062544 miss ratio 0.999375
-total cost (single set) 16 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000007ec avg cache size (max among all sets) 0.00109452 miss ratio 0.998905
-total cost (single set) 28 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000804 avg cache size (max among all sets) 0.00168087 miss ratio 0.998319
-total cost (single set) 43 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 0000080c avg cache size (max among all sets) 0.0518724 miss ratio 0.948128
-total cost (single set) 1327 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000824 avg cache size (max among all sets) 0.100969 miss ratio 0.899031
-total cost (single set) 2583 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 0000083c avg cache size (max among all sets) 0.151669 miss ratio 0.848331
-total cost (single set) 3880 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000854 avg cache size (max among all sets) 0.199476 miss ratio 0.800524
-total cost (single set) 5103 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 0000086c avg cache size (max among all sets) 0.248964 miss ratio 0.751036
-total cost (single set) 6369 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000884 avg cache size (max among all sets) 0.297436 miss ratio 0.702564
-total cost (single set) 7609 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008a0 avg cache size (max among all sets) 0.344265 miss ratio 0.655735
-total cost (single set) 8807 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008b8 avg cache size (max among all sets) 0.395356 miss ratio 0.604644
-total cost (single set) 10114 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008d4 avg cache size (max among all sets) 0.446369 miss ratio 0.553631
-total cost (single set) 11419 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008dc avg cache size (max among all sets) 0.494527 miss ratio 0.505473
-total cost (single set) 12651 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008e0 avg cache size (max among all sets) 0.544172 miss ratio 0.455828
-total cost (single set) 13921 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008e4 avg cache size (max among all sets) 0.595067 miss ratio 0.404933
-total cost (single set) 15223 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000008ec avg cache size (max among all sets) 0.595497 miss ratio 0.404503
-total cost (single set) 15234 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000904 avg cache size (max among all sets) 0.595966 miss ratio 0.404034
-total cost (single set) 15246 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 0000092c avg cache size (max among all sets) 0.596748 miss ratio 0.403252
-total cost (single set) 15266 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000944 avg cache size (max among all sets) 0.59706 miss ratio 0.40294
-total cost (single set) 15274 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000960 avg cache size (max among all sets) 0.597412 miss ratio 0.402588
-total cost (single set) 15283 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000978 avg cache size (max among all sets) 0.59796 miss ratio 0.40204
-total cost (single set) 15297 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000980 avg cache size (max among all sets) 0.598233 miss ratio 0.401767
-total cost (single set) 15304 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 00000998 avg cache size (max among all sets) 0.598702 miss ratio 0.401298
-total cost (single set) 15316 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000009c0 avg cache size (max among all sets) 0.59921 miss ratio 0.40079
-total cost (single set) 15329 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000009c8 avg cache size (max among all sets) 0.599679 miss ratio 0.400321
-total cost (single set) 15341 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000009cc avg cache size (max among all sets) 0.600188 miss ratio 0.399812
-total cost (single set) 15354 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000009d0 avg cache size (max among all sets) 0.600422 miss ratio 0.399578
-total cost (single set) 15360 set ID 14 target cost (single set) 204656
-Assign lease 1 to ref 000009d8 avg cache size (max among all sets) 0.6005 miss ratio 0.3995
-total cost (single set) 15362 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 000007f4 avg cache size (max among all sets) 0.601595 miss ratio 0.398952
-total cost (single set) 15390 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 0000082c avg cache size (max among all sets) 0.698382 miss ratio 0.350559
-total cost (single set) 17866 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 0000085c avg cache size (max among all sets) 0.793605 miss ratio 0.302947
-total cost (single set) 20302 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 0000088c avg cache size (max among all sets) 0.894144 miss ratio 0.252678
-total cost (single set) 22874 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 000008c4 avg cache size (max among all sets) 0.991166 miss ratio 0.204167
-total cost (single set) 25356 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 0000090c avg cache size (max among all sets) 0.992104 miss ratio 0.203698
-total cost (single set) 25380 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 0000091c avg cache size (max among all sets) 0.992964 miss ratio 0.203268
-total cost (single set) 25402 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 00000950 avg cache size (max among all sets) 0.993902 miss ratio 0.202799
-total cost (single set) 25426 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 000009a0 avg cache size (max among all sets) 0.995309 miss ratio 0.202095
-total cost (single set) 25462 set ID 14 target cost (single set) 204656
-Assign lease 2 to ref 000009b0 avg cache size (max among all sets) 0.996169 miss ratio 0.201665
-total cost (single set) 25484 set ID 14 target cost (single set) 204656
-Assign lease 6 to ref 00000918 avg cache size (max among all sets) 0.996638 miss ratio 0.201196
-total cost (single set) 25496 set ID 14 target cost (single set) 204656
-Assign lease 6 to ref 0000095c avg cache size (max among all sets) 0.996638 miss ratio 0.200727
-total cost (single set) 25496 set ID 14 target cost (single set) 204656
-Assign lease 7 to ref 00000800 avg cache size (max among all sets) 0.996912 miss ratio 0.200141
-total cost (single set) 25503 set ID 14 target cost (single set) 204656
-Assign lease 8 to ref 000008d0 avg cache size (max among all sets) 1.02474 miss ratio 0.148503
-total cost (single set) 26215 set ID 14 target cost (single set) 204656
-Assign lease 10 to ref 000009ac avg cache size (max among all sets) 1.02513 miss ratio 0.14776
-total cost (single set) 26225 set ID 14 target cost (single set) 204656
-Assign lease 12 to ref 00000838 avg cache size (max among all sets) 1.06032 miss ratio 0.0997576
-total cost (single set) 27125 set ID 14 target cost (single set) 204656
-Assign lease 4 to ref 00000868 avg cache size (max among all sets) 1.07439 miss ratio 0.0892033
-total cost (single set) 27485 set ID 14 target cost (single set) 204656
-Assign lease 8 to ref 000009bc avg cache size (max among all sets) 1.07439 miss ratio 0.0891643
-total cost (single set) 27485 set ID 14 target cost (single set) 204656
-Assign lease 2029 to ref 00000924 avg cache size (max among all sets) 1.1795 miss ratio 0.088617
-total cost (single set) 30174 set ID 11 target cost (single set) 204656
-Assign lease 2037 to ref 00000868 avg cache size (max among all sets) 6.81225 miss ratio 0.0489016
-total cost (single set) 174271 set ID 10 target cost (single set) 204656
-Assign lease 2033 to ref 00000898 with percentage 0.202688
-             0 to ref 00000898 with percentage 0.797312
-             max set ID c
-total cost (single set) 204656 set ID 12 target cost (single set) 204656
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1616 phase 0 lease 1
+calculate cost increase
+assign leases
 ******Cache status (each X/- means 1% occupy/empty) ******
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------
-Set     1: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------
-Set     2: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------------------
-Set     3: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------
-Set     4: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
-Set     5: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------
-Set     6: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX---------------
-Set     7: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------
-Set     8: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------
-Set     9: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
-Set    10: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-
-Set    11: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------
-Set    12: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Set    13: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------------
-Set    14: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-
-Set    15: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------
-******Overall utilization 0.805625***************
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1640 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1664 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1688 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1696 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1700 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1704 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1748 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1772 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1808 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1832 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1856 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1876 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1900 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1928 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1936 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1940 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1944 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1952 phase 1 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2004 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2028 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2052 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2060 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2084 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2108 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2132 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2156 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2180 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2208 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2232 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2260 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2268 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2272 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2276 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2284 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2308 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2348 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2372 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2400 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2424 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2432 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2456 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2496 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2504 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2508 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2512 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2520 phase 2 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2700 phase 0 lease 1
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1576 phase 0 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1604 phase 0 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1648 phase 0 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1672 phase 0 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1720 phase 0 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1840 phase 1 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1864 phase 1 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1912 phase 1 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2036 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2092 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2140 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2188 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2244 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2316 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2332 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2384 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2464 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2480 phase 2 lease 2
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2328 phase 2 lease 6
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2396 phase 2 lease 6
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1852 phase 1 lease 7
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2048 phase 2 lease 7
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1924 phase 1 lease 8
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2256 phase 2 lease 8
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.00333333***************
+get max ppuc: 0 ref 2476 phase 2 lease 10
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.00333333***************
+get max ppuc: 0 ref 2104 phase 2 lease 12
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.00333333***************
+get max ppuc: 0 ref 1612 phase 0 lease 14
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: X---------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.00666667***************
+get max ppuc: 0 ref 1684 phase 0 lease 14
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XX--------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 1872 phase 1 lease 15
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XX--------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 2152 phase 2 lease 4
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XX--------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 2492 phase 2 lease 8
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XX--------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 1872 phase 1 lease 982
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XX--------------------------------------------------------------------------------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 1660 phase 0 lease 1416
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.253333***************
+get max ppuc: 0 ref 2340 phase 2 lease 2029
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XX--------------------------------------------------------------------------------------------------
+******Overall utilization 0.256667***************
+get max ppuc: 0 ref 2152 phase 2 lease 2037
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------
+******Overall utilization 0.466667***************
+get max ppuc: 0 ref 2200 phase 2 lease 2033
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.583333***************
+get max ppuc: 0 ref 2492 phase 2 lease 6095
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.583333***************
+get max ppuc: 0 ref 1660 phase 0 lease 161235
+calculate cost increase
+assign leases
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.583333***************
+get max ppuc: 1 ref 1660 phase 0 lease 161235
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+Phase: 1
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-------------------------
+Phase: 2
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.583333***************
 finished dumping the assignment procedure
-the FINAL avg cache size 8 miss ratio 0.0397936
-Dump single leases (last one may be dual)
-000007d4 1
-000007ec 1
-000007f4 2
-00000800 7
-00000804 1
-0000080c 1
-00000824 1
-0000082c 2
-00000838 c
-0000083c 1
-00000854 1
-0000085c 2
-00000868 7f5
-0000086c 1
-00000884 1
-0000088c 2
-00000898 7f1 percentage 0.202688
-00000898 0 percentage 0.797312
-000008a0 1
-000008b8 1
-000008c4 2
-000008d0 8
-000008d4 1
-000008dc 1
-000008e0 1
-000008e4 1
-000008ec 1
-00000904 1
-0000090c 2
-00000918 6
-0000091c 2
-00000924 7ed
-0000092c 1
-00000944 1
-00000950 2
-0000095c 6
-00000960 1
-00000978 1
-00000980 1
-00000998 1
-000009a0 2
-000009ac a
-000009b0 2
-000009bc 8
-000009c0 1
-000009c8 1
-000009cc 1
-000009d0 1
-000009d8 1
-
+the FINAL avg cache size 0 miss ratio 0
 Dump formated leases 
 0, 628, 2, 0, 1
 0, 63c, 1, 0, 1
@@ -762,7 +990,7 @@ Dump formated leases
 0, 650, 1, 0, 1
 0, 668, 1, 0, 1
 0, 670, 2, 0, 1
-0, 67c, 0, 588, 0.415607
+0, 67c, 588, 275d3, 1
 0, 680, 1, 0, 1
 0, 688, 2, 0, 1
 0, 694, e, 0, 1
@@ -773,14 +1001,13 @@ Dump formated leases
 0, 6b8, 2, 0, 1
 0, 6d4, 1, 0, 1
 0, 6ec, 1, 0, 1
-0, a8c, 1, 0, 1
 1, 710, 1, 0, 1
 1, 728, 1, 0, 1
 1, 730, 2, 0, 1
 1, 73c, 7, 0, 1
 1, 740, 1, 0, 1
 1, 748, 2, 0, 1
-1, 750, 0, 3d6, 0
+1, 750, 3d6, 0, 1
 1, 754, 1, 0, 1
 1, 76c, 1, 0, 1
 1, 778, 2, 0, 1
@@ -806,7 +1033,7 @@ Dump formated leases
 2, 86c, 1, 0, 1
 2, 884, 1, 0, 1
 2, 88c, 2, 0, 1
-2, 898, 0, 7f1, 0.797312
+2, 898, 0, 7f1, 0.55209
 2, 8a0, 1, 0, 1
 2, 8b8, 1, 0, 1
 2, 8c4, 2, 0, 1
@@ -832,94 +1059,11 @@ Dump formated leases
 2, 9a0, 2, 0, 1
 2, 9ac, a, 0, 1
 2, 9b0, 2, 0, 1
-2, 9bc, 8, 0, 1
+2, 9bc, 8, 17cf, 1
 2, 9c0, 1, 0, 1
 2, 9c8, 1, 0, 1
 2, 9cc, 1, 0, 1
 2, 9d0, 1, 0, 1
 2, 9d8, 1, 0, 1
+0, a8c, 1, 0, 1
 
-Dump formated leases with limited entry 128
-0, 628, 2, 0, 1
-0, 63c, 1, 0, 1
-0, 644, 2, 0, 1
-0, 64c, e, 0, 1
-0, 650, 1, 0, 1
-0, 668, 1, 0, 1
-0, 670, 2, 0, 1
-0, 67c, 0, 588, 0.415607
-0, 680, 1, 0, 1
-0, 688, 2, 0, 1
-0, 694, e, 0, 1
-0, 698, 1, 0, 1
-0, 6a0, 1, 0, 1
-0, 6a4, 1, 0, 1
-0, 6a8, 1, 0, 1
-0, 6b8, 2, 0, 1
-0, 6d4, 1, 0, 1
-0, 6ec, 1, 0, 1
-0, a8c, 1, 0, 1
-1, 710, 1, 0, 1
-1, 728, 1, 0, 1
-1, 730, 2, 0, 1
-1, 73c, 7, 0, 1
-1, 740, 1, 0, 1
-1, 748, 2, 0, 1
-1, 750, 0, 3d6, 0
-1, 754, 1, 0, 1
-1, 76c, 1, 0, 1
-1, 778, 2, 0, 1
-1, 784, 8, 0, 1
-1, 788, 1, 0, 1
-1, 790, 1, 0, 1
-1, 794, 1, 0, 1
-1, 798, 1, 0, 1
-1, 7a0, 1, 0, 1
-2, 7d4, 1, 0, 1
-2, 7ec, 1, 0, 1
-2, 7f4, 2, 0, 1
-2, 800, 7, 0, 1
-2, 804, 1, 0, 1
-2, 80c, 1, 0, 1
-2, 824, 1, 0, 1
-2, 82c, 2, 0, 1
-2, 838, c, 0, 1
-2, 83c, 1, 0, 1
-2, 854, 1, 0, 1
-2, 85c, 2, 0, 1
-2, 868, 7f5, 0, 1
-2, 86c, 1, 0, 1
-2, 884, 1, 0, 1
-2, 88c, 2, 0, 1
-2, 898, 0, 7f1, 0.797312
-2, 8a0, 1, 0, 1
-2, 8b8, 1, 0, 1
-2, 8c4, 2, 0, 1
-2, 8d0, 8, 0, 1
-2, 8d4, 1, 0, 1
-2, 8dc, 1, 0, 1
-2, 8e0, 1, 0, 1
-2, 8e4, 1, 0, 1
-2, 8ec, 1, 0, 1
-2, 904, 1, 0, 1
-2, 90c, 2, 0, 1
-2, 918, 6, 0, 1
-2, 91c, 2, 0, 1
-2, 924, 7ed, 0, 1
-2, 92c, 1, 0, 1
-2, 944, 1, 0, 1
-2, 950, 2, 0, 1
-2, 95c, 6, 0, 1
-2, 960, 1, 0, 1
-2, 978, 1, 0, 1
-2, 980, 1, 0, 1
-2, 998, 1, 0, 1
-2, 9a0, 2, 0, 1
-2, 9ac, a, 0, 1
-2, 9b0, 2, 0, 1
-2, 9bc, 8, 0, 1
-2, 9c0, 1, 0, 1
-2, 9c8, 1, 0, 1
-2, 9cc, 1, 0, 1
-2, 9d0, 1, 0, 1
-2, 9d8, 1, 0, 1
