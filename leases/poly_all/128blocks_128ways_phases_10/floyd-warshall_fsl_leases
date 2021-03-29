@@ -1,0 +1,366 @@
+Dump phase appearance count
+    phase 0 cnt 1
+Dump phase transition
+Start to init hits and costs
+Finished to init hits and costs
+cache size (per set) 128 sample distance 257
+Phase 0 length 140178851 single_set_budget 6.98167e+07
+Dump lease assignement procedure
+get max ppuc: 0 ref 1616 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.43232e-08
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1624 phase 0 lease 1
+calculate cost increase
+assign leases
+0 2.27739e-06
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1632 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325366
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1644 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.00032455
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1668 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000324378
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1680 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.00032518
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1704 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325023
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1716 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000324693
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1752 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325452
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1764 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000324392
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1868 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000324679
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1880 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325209
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1904 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325051
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1912 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000325538
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1916 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000326612
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1920 phase 0 lease 1
+calculate cost increase
+assign leases
+0 0.000327286
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1928 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.7904e-06
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1936 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.91931e-06
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1940 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.76176e-06
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1944 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.80473e-06
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1952 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.43232e-08
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1960 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.43232e-08
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1964 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.43232e-08
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 2068 phase 0 lease 1
+calculate cost increase
+assign leases
+0 1.43232e-08
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1652 phase 0 lease 2
+calculate cost increase
+assign leases
+0 0.000650704
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1688 phase 0 lease 2
+calculate cost increase
+assign leases
+0 0.000650217
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1724 phase 0 lease 2
+calculate cost increase
+assign leases
+0 0.000648154
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1772 phase 0 lease 2
+calculate cost increase
+assign leases
+0 0.000649357
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1888 phase 0 lease 2
+calculate cost increase
+assign leases
+0 0.000650618
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1784 phase 0 lease 4
+calculate cost increase
+assign leases
+0 0.00130049
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: ----------------------------------------------------------------------------------------------------
+******Overall utilization 0***************
+get max ppuc: 0 ref 1900 phase 0 lease 8
+calculate cost increase
+assign leases
+0 0.00259663
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 1664 phase 0 lease 12
+calculate cost increase
+assign leases
+0 0.0036778
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: X---------------------------------------------------------------------------------------------------
+******Overall utilization 0.01***************
+get max ppuc: 0 ref 1700 phase 0 lease 24
+calculate cost increase
+assign leases
+0 0.00735217
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XX--------------------------------------------------------------------------------------------------
+******Overall utilization 0.02***************
+get max ppuc: 0 ref 1736 phase 0 lease 24
+calculate cost increase
+assign leases
+0 0.00775763
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXX-------------------------------------------------------------------------------------------------
+******Overall utilization 0.03***************
+get max ppuc: 0 ref 1900 phase 0 lease 12
+calculate cost increase
+assign leases
+0 8.66268e-05
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXX-------------------------------------------------------------------------------------------------
+******Overall utilization 0.03***************
+get max ppuc: 0 ref 1900 phase 0 lease 15
+calculate cost increase
+assign leases
+0 5.90403e-05
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXX-------------------------------------------------------------------------------------------------
+******Overall utilization 0.03***************
+get max ppuc: 0 ref 1736 phase 0 lease 4255
+calculate cost increase
+assign leases
+0 0.0824388
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXXXXXXXXXX-----------------------------------------------------------------------------------------
+******Overall utilization 0.11***************
+get max ppuc: 0 ref 1700 phase 0 lease 419
+calculate cost increase
+assign leases
+0 0.000667605
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXXXXXXXXXX-----------------------------------------------------------------------------------------
+******Overall utilization 0.11***************
+get max ppuc: 0 ref 1736 phase 0 lease 458301
+calculate cost increase
+assign leases
+0 0.0332524
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXXXXXXXXXXXXX--------------------------------------------------------------------------------------
+******Overall utilization 0.14***************
+get max ppuc: 0 ref 1700 phase 0 lease 778023
+calculate cost increase
+assign leases
+0 1.29758
+******Cache status (each X/- means 1% occupy/empty) ******
+Phase: 0
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 1***************
+finished dumping the assignment procedure
+the FINAL avg cache size 0 miss ratio 0
+Dump formated leases 
+0, 650, 1, 0, 1
+0, 658, 1, 0, 1
+0, 660, 1, 0, 1
+0, 66c, 1, 0, 1
+0, 674, 2, 0, 1
+0, 680, c, 0, 1
+0, 684, 1, 0, 1
+0, 690, 1, 0, 1
+0, 698, 2, 0, 1
+0, 6a4, 1a3, bdf27, 0.342622
+0, 6a8, 1, 0, 1
+0, 6b4, 1, 0, 1
+0, 6bc, 2, 0, 1
+0, 6c8, 6fe3d, 0, 1
+0, 6d8, 1, 0, 1
+0, 6e4, 1, 0, 1
+0, 6ec, 2, 0, 1
+0, 6f8, 4, 0, 1
+0, 74c, 1, 0, 1
+0, 758, 1, 0, 1
+0, 760, 2, 0, 1
+0, 76c, f, 0, 1
+0, 770, 1, 0, 1
+0, 778, 1, 0, 1
+0, 77c, 1, 0, 1
+0, 780, 1, 0, 1
+0, 788, 1, 0, 1
+0, 790, 1, 0, 1
+0, 794, 1, 0, 1
+0, 798, 1, 0, 1
+0, 7a0, 1, 0, 1
+0, 7a8, 1, 0, 1
+0, 7ac, 1, 0, 1
+0, 814, 1, 0, 1
+
