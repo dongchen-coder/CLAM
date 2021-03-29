@@ -2151,8 +2151,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------
-******Overall utilization 0.566667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 get max ppuc: 0 ref 1884 phase 1 lease 727160
 calculate cost increase
 assign leases
@@ -2164,8 +2164,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------
-******Overall utilization 0.566667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 get max ppuc: 0 ref 2780 phase 2 lease 727160
 calculate cost increase
 assign leases
@@ -2177,8 +2177,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------
-******Overall utilization 0.566667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 get max ppuc: 0 ref 2096 phase 1 lease 727105
 calculate cost increase
 assign leases
@@ -2190,8 +2190,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------
-******Overall utilization 0.566667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 get max ppuc: 0 ref 2992 phase 2 lease 727105
 calculate cost increase
 assign leases
@@ -2203,8 +2203,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------
-******Overall utilization 0.61***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 get max ppuc: 1 ref 2992 phase 2 lease 727105
 ******Cache status (each X/- means 1% occupy/empty) ******
 Phase: 0
@@ -2212,8 +2212,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------
-******Overall utilization 0.61***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+******Overall utilization 0.666667***************
 finished dumping the assignment procedure
 the FINAL avg cache size 0 miss ratio 0
 Dump formated leases 
@@ -2312,7 +2312,7 @@ Dump formated leases
 2, b80, 1, 0, 1
 2, b88, 1, 0, 1
 2, ba0, 2, 0, 1
-2, bb0, b1841, 0, 1
+2, bb0, 108, b1841, 1
 2, bb4, 1, 0, 1
 2, bc0, 1, 0, 1
 2, bc8, 1, 0, 1
@@ -2322,7 +2322,7 @@ Dump formated leases
 2, c04, 1, 0, 1
 2, c0c, 1, 0, 1
 2, c24, 3, 0, 1
-2, c34, 4916, b1841, 1
+2, c34, 4916, b1841, 0.207467
 2, c40, 10, 0, 1
 2, c4c, 1, 0, 1
 2, c58, 1, 0, 1

@@ -877,8 +877,8 @@ Set     0: ---------------------------------------------------------------------
 Phase: 1
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXX---------------------------------------------------------------------------------
-******Overall utilization 0.183333***************
+Set     0: XXX-------------------------------------------------------------------------------------------------
+******Overall utilization 0.13***************
 get max ppuc: 0 ref 2864 phase 2 lease 2287
 calculate cost increase
 assign leases
@@ -888,10 +888,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-******Overall utilization 0.346667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------
+******Overall utilization 0.236667***************
 get max ppuc: 0 ref 2440 phase 1 lease 2339
 calculate cost increase
 assign leases
@@ -901,10 +901,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-******Overall utilization 0.346667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------
+******Overall utilization 0.236667***************
 get max ppuc: 0 ref 2440 phase 1 lease 2387
 calculate cost increase
 assign leases
@@ -914,10 +914,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-******Overall utilization 0.346667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------
+******Overall utilization 0.236667***************
 get max ppuc: 0 ref 2864 phase 2 lease 2347
 calculate cost increase
 assign leases
@@ -927,10 +927,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-******Overall utilization 0.346667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------------------------------------------
+******Overall utilization 0.236667***************
 get max ppuc: 0 ref 2920 phase 2 lease 11722
 calculate cost increase
 assign leases
@@ -940,10 +940,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
-******Overall utilization 0.346667***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
+******Overall utilization 0.24***************
 get max ppuc: 0 ref 2920 phase 2 lease 105242
 calculate cost increase
 assign leases
@@ -953,10 +953,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------------------------
 Phase: 2
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------------------------------
-******Overall utilization 0.353333***************
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------------------------------------
+******Overall utilization 0.246667***************
 get max ppuc: 0 ref 2864 phase 2 lease 128826
 calculate cost increase
 assign leases
@@ -966,10 +966,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--------------------------------
 Phase: 2
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-******Overall utilization 0.586667***************
+******Overall utilization 0.56***************
 get max ppuc: 0 ref 2616 phase 1 lease 125791
 calculate cost increase
 assign leases
@@ -979,10 +979,10 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------
 Phase: 2
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-******Overall utilization 0.593333***************
+******Overall utilization 0.57***************
 get max ppuc: 0 ref 2440 phase 1 lease 143754
 calculate cost increase
 assign leases
@@ -992,19 +992,19 @@ assign leases
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------
 Phase: 2
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-******Overall utilization 0.593333***************
+******Overall utilization 0.57***************
 get max ppuc: 1 ref 2440 phase 1 lease 143754
 ******Cache status (each X/- means 1% occupy/empty) ******
 Phase: 0
 Set     0: ----------------------------------------------------------------------------------------------------
 Phase: 1
-Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----------------------
+Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----------------------------
 Phase: 2
 Set     0: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-******Overall utilization 0.593333***************
+******Overall utilization 0.57***************
 finished dumping the assignment procedure
 the FINAL avg cache size 0 miss ratio 0
 Dump formated leases 
@@ -1061,7 +1061,7 @@ Dump formated leases
 2, b04, 1, 0, 1
 2, b1c, 1, 0, 1
 2, b24, 2, 0, 1
-2, b30, 92b, 1f73a, 0.723031
+2, b30, 92b, 1f73a, 0.621291
 2, b38, 1, 0, 1
 2, b50, 1, 0, 1
 2, b5c, 2, 0, 1
